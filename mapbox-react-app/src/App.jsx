@@ -176,6 +176,13 @@ function App() {
           mapRef.current.on('mouseleave', 'unclustered-point', () => {
             mapRef.current.getCanvas().style.cursor = '';
           });
+          // Change cursor on hover for clusters
+          mapRef.current.on('mouseenter', 'clusters', () => {
+            mapRef.current.getCanvas().style.cursor = 'pointer';
+          });
+          mapRef.current.on('mouseleave', 'clusters', () => {
+            mapRef.current.getCanvas().style.cursor = '';
+          });
           
           console.log(`Loaded ${features.length} mine locations`);
         })
