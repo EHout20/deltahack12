@@ -6,13 +6,14 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 import './App.css'
 
 const accessToken = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN;
-const center = [-71.05953, 42.36290];
+const center = [-79.8711, 43.2557];
 
 function App() {
 
   const mapRef = useRef()
   const mapContainerRef = useRef()
   const [inputValue, setInputValue] = useState("");
+  const [popup, setPopup] = useState(null);
 
   useEffect(() => {
     mapboxgl.accessToken = accessToken
@@ -20,7 +21,8 @@ function App() {
      mapRef.current = new mapboxgl.Map({
       container: mapContainerRef.current,
       center:  center,
-      zoom: 13,
+      zoom: 8,
+      projection: 'mercator',
     });
 
     // Wait for map to load before adding data
@@ -123,6 +125,23 @@ function App() {
             }
           });
           
+          // Add click listener to unclustered points
+          mapRef.current.on('click', 'unclustered-point', (e) => {
+            const feature = e.features[0];
+            setPopup({
+              coordinates: feature.geometry.coordinates,
+              properties: feature.properties
+            });
+          });
+          
+          // Change cursor on hover
+          mapRef.current.on('mouseenter', 'unclustered-point', () => {
+            mapRef.current.getCanvas().style.cursor = 'pointer';
+          });
+          mapRef.current.on('mouseleave', 'unclustered-point', () => {
+            mapRef.current.getCanvas().style.cursor = '';
+          });
+          
           console.log(`Loaded ${features.length} mine locations`);
         })
         .catch(error => console.error('Error loading CSV:', error));
@@ -142,7 +161,7 @@ return (
         right: 0,
         top: 0,
         position: 'absolute',
-        zIndex: 10 }}>
+        zIndex: 30 }}>
         <SearchBox
             accessToken={accessToken}
             map={mapRef.current}
@@ -156,6 +175,57 @@ return (
         />
     </div>
     <div id='map-container' ref={mapContainerRef} />
+    
+    {/* Popup Box */}
+    {popup && (
+      <div style={{
+        position: 'absolute',
+        right: 0,
+        top: 0,
+        bottom: 0,
+        backgroundColor: 'white',
+        padding: '20px',
+        boxShadow: '-2px 0 10px rgba(0, 0, 0, 0.2)',
+        zIndex: 20,
+        width: '35%',
+        overflowY: 'auto'
+      }}>
+        <button
+          onClick={() => setPopup(null)}
+          style={{
+            position: 'absolute',
+            top: '15px',
+            right: '15px',
+            backgroundColor: 'transparent',
+            border: 'none',
+            fontSize: '28px',
+            cursor: 'pointer',
+            fontWeight: 'bold',
+            color: '#333',
+            padding: '0',
+            width: '30px',
+            height: '30px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}
+        >
+          ✕
+        </button>
+        
+        <h3 style={{ marginTop: 0, marginBottom: '10px' }}>Mine Location</h3>
+        <p><strong>Latitude:</strong> {popup.coordinates[1].toFixed(4)}</p>
+        <p><strong>Longitude:</strong> {popup.coordinates[0].toFixed(4)}</p>
+        {popup.properties && Object.keys(popup.properties).length > 0 && (
+          <div>
+            <h4>Details:</h4>
+            {Object.entries(popup.properties).map(([key, value]) => (
+              <p key={key}><strong>{key}:</strong> {value}</p>
+            ))}
+          </div>
+        )}
+      </div>
+    )}
   </>
   )
 }
