@@ -252,7 +252,7 @@ return (
         fontWeight: 'bold',
         color: popup.properties.ph < 5.0 ? '#f44336' : (popup.properties.ph < 6.8 ? '#ff9800' : '#4caf50') 
     }}>
-      {popup.properties.ph < 5.0 ? '⚠ Critical Acid' : (popup.properties.ph < 6.8 ? '⚠ Acidic Warning' : '✓ Normal Range')}
+      {popup.properties.ph < 5.0 ? '✗ Hazardous' : (popup.properties.ph < 6.8 ? '⚠ Warning' : '✓ Safe')}
     </div>
   </div>
 
@@ -267,7 +267,7 @@ return (
         fontWeight: 'bold',
         color: popup.properties.lead > 70 ? '#f44336' : (popup.properties.lead > 40 ? '#ff9800' : '#4caf50') 
     }}>
-      {popup.properties.lead > 70 ? '⚠ Toxic Contamination' : (popup.properties.lead > 40 ? '⚠ Elevated Levels' : '✓ Safe Levels')}
+      {popup.properties.lead > 70 ? '✗ Hazardous' : (popup.properties.lead > 40 ? '⚠ Warning' : '✓ Safe')}
     </div>
   </div>
 
@@ -282,7 +282,7 @@ return (
         fontWeight: 'bold',
         color: popup.properties.pm25 > 80 ? '#f44336' : (popup.properties.pm25 > 20 ? '#ff9800' : '#4caf50') 
     }}>
-      {popup.properties.pm25 > 80 ? '⚠ Hazardous' : (popup.properties.pm25 > 20 ? '⚠ Poor Quality' : '✓ Good Air')}
+      {popup.properties.pm25 > 80 ? '✗ Hazardous' : (popup.properties.pm25 > 20 ? '⚠ Warning' : '✓ Safe')}
     </div>
   </div>
 </div>
