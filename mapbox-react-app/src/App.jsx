@@ -5,8 +5,12 @@ import { generateSensorData } from './risk';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import './App.css'
 
-const accessToken = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN;
-const center = [-79.8711, 43.2557];
+const accessToken = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN
+const canadaCenter = [-106.3, 56.1]; // Center of Canada
+const canadaBounds = [
+  [-145.0, 38.0],   // SW corner - extended bottom and left
+  [-48.0, 83.1]     // NE corner - extended right
+];
 
 function App() {
 
@@ -20,9 +24,12 @@ function App() {
 
      mapRef.current = new mapboxgl.Map({
       container: mapContainerRef.current,
-      center:  center,
-      zoom: 8,
+      center: canadaCenter,
+      zoom: 3.5,
       projection: 'mercator',
+      maxBounds: canadaBounds,
+      minZoom: 3,
+      maxZoom: 15
     });
 
     // Wait for map to load before adding data
@@ -209,7 +216,7 @@ return (
             map={mapRef.current}
             mapboxgl={mapboxgl}
             value={inputValue}
-            proximity={center}
+            proximity={canadaCenter}
             onChange={(d) => {
             setInputValue(d);
             }}
