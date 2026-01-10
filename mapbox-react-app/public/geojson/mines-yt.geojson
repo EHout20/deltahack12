@@ -1,0 +1,3273 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -139.5275,
+          61.46527804
+        ]
+      },
+      "properties": {
+        "name": "WELLGREEN",
+        "jurisdiction": "YT",
+        "status": "Underground Past Producer",
+        "commodity": "\"CU",
+        "mineType": "PT\"",
+        "latitude": 61.46527804,
+        "longitude": -139.5275
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -138.8204754,
+          62.72024967
+        ]
+      },
+      "properties": {
+        "name": "BOMBER",
+        "jurisdiction": "YT",
+        "status": "Underground Past Producer",
+        "commodity": "\"PB",
+        "mineType": "NULL",
+        "latitude": 62.72024967,
+        "longitude": -138.8204754
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -140.920556,
+          63.06000004
+        ]
+      },
+      "properties": {
+        "name": "MOOSEHORN",
+        "jurisdiction": "YT",
+        "status": "Open Pit Past Producer",
+        "commodity": "\"AU",
+        "mineType": "NULL",
+        "latitude": 63.06000004,
+        "longitude": -140.920556
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -140.816667,
+          63.92416704
+        ]
+      },
+      "properties": {
+        "name": "LERNER",
+        "jurisdiction": "YT",
+        "status": "Open Pit Past Producer",
+        "commodity": "\"PB",
+        "mineType": "NULL",
+        "latitude": 63.92416704,
+        "longitude": -140.816667
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -140.798333,
+          63.91333304
+        ]
+      },
+      "properties": {
+        "name": "CONNAUGHT",
+        "jurisdiction": "YT",
+        "status": "Open Pit Past Producer",
+        "commodity": "\"PB",
+        "mineType": "NULL",
+        "latitude": 63.91333304,
+        "longitude": -140.798333
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -139.224444,
+          63.89250004
+        ]
+      },
+      "properties": {
+        "name": "LONE STAR",
+        "jurisdiction": "YT",
+        "status": "Underground Past Producer",
+        "commodity": "\"AU",
+        "mineType": "NULL",
+        "latitude": 63.89250004,
+        "longitude": -139.224444
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -139.280556,
+          63.85694404
+        ]
+      },
+      "properties": {
+        "name": "VIOLET",
+        "jurisdiction": "YT",
+        "status": "Underground Past Producer",
+        "commodity": "AU",
+        "mineType": "Mine",
+        "latitude": 63.85694404,
+        "longitude": -139.280556
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -138.942778,
+          64.13361104
+        ]
+      },
+      "properties": {
+        "name": "COLLIERY",
+        "jurisdiction": "YT",
+        "status": "Underground Past Producer",
+        "commodity": "CL",
+        "mineType": "Mine",
+        "latitude": 64.13361104,
+        "longitude": -138.942778
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -139.235833,
+          64.00111104
+        ]
+      },
+      "properties": {
+        "name": "VIRGIN",
+        "jurisdiction": "YT",
+        "status": "Underground Past Producer",
+        "commodity": "AU",
+        "mineType": "Mine",
+        "latitude": 64.00111104,
+        "longitude": -139.235833
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -139.876667,
+          64.31000004
+        ]
+      },
+      "properties": {
+        "name": "SILVERCITY",
+        "jurisdiction": "YT",
+        "status": "Underground Past Producer",
+        "commodity": "AG",
+        "mineType": "Mine",
+        "latitude": 64.31000004,
+        "longitude": -139.876667
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -138.239722,
+          64.05777804
+        ]
+      },
+      "properties": {
+        "name": "BREWERY CREEK",
+        "jurisdiction": "YT",
+        "status": "Open Pit Past Producer",
+        "commodity": "AU",
+        "mineType": "Mine",
+        "latitude": 64.05777804,
+        "longitude": -138.239722
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -140.716111,
+          64.43916704
+        ]
+      },
+      "properties": {
+        "name": "CLINTON CREEK",
+        "jurisdiction": "YT",
+        "status": "Open Pit Past Producer",
+        "commodity": "AB",
+        "mineType": "Mine",
+        "latitude": 64.43916704,
+        "longitude": -140.716111
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -140.458056,
+          64.54694404
+        ]
+      },
+      "properties": {
+        "name": "CLIFF CREEK MINE",
+        "jurisdiction": "YT",
+        "status": "Underground Past Producer",
+        "commodity": "CL",
+        "mineType": "Mine",
+        "latitude": 64.54694404,
+        "longitude": -140.458056
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -140.119444,
+          64.45916704
+        ]
+      },
+      "properties": {
+        "name": "SOURDOUGH MINE",
+        "jurisdiction": "YT",
+        "status": "Underground Past Producer",
+        "commodity": "CL",
+        "mineType": "Mine",
+        "latitude": 64.45916704,
+        "longitude": -140.119444
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -140.196389,
+          64.30694404
+        ]
+      },
+      "properties": {
+        "name": "CALEY",
+        "jurisdiction": "YT",
+        "status": "Open Pit Past Producer",
+        "commodity": "AB",
+        "mineType": "Mine",
+        "latitude": 64.30694404,
+        "longitude": -140.196389
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -133.335278,
+          60.70722204
+        ]
+      },
+      "properties": {
+        "name": "MARLIN",
+        "jurisdiction": "YT",
+        "status": "Open Pit Producer",
+        "commodity": "MN",
+        "mineType": "Mine",
+        "latitude": 60.70722204,
+        "longitude": -133.335278
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -134.634722,
+          60.02500004
+        ]
+      },
+      "properties": {
+        "name": "VENUS",
+        "jurisdiction": "YT",
+        "status": "Underground Past Producer",
+        "commodity": "\"AU",
+        "mineType": "NULL",
+        "latitude": 60.02500004,
+        "longitude": -134.634722
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -134.700278,
+          60.07611104
+        ]
+      },
+      "properties": {
+        "name": "BIG THING",
+        "jurisdiction": "YT",
+        "status": "Underground Past Producer",
+        "commodity": "\"AU",
+        "mineType": "NULL",
+        "latitude": 60.07611104,
+        "longitude": -134.700278
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -135.053333,
+          60.24472204
+        ]
+      },
+      "properties": {
+        "name": "TALLY-HO",
+        "jurisdiction": "YT",
+        "status": "Underground Past Producer",
+        "commodity": "\"AU",
+        "mineType": "NULL",
+        "latitude": 60.24472204,
+        "longitude": -135.053333
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -135.040833,
+          60.31416704
+        ]
+      },
+      "properties": {
+        "name": "UNION MINES",
+        "jurisdiction": "YT",
+        "status": "Underground Past Producer",
+        "commodity": "\"AU",
+        "mineType": "NULL",
+        "latitude": 60.31416704,
+        "longitude": -135.040833
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -135.285556,
+          60.49722204
+        ]
+      },
+      "properties": {
+        "name": "WHITEHORSE COAL",
+        "jurisdiction": "YT",
+        "status": "Open Pit Past Producer",
+        "commodity": "\"CL",
+        "mineType": "NULL",
+        "latitude": 60.49722204,
+        "longitude": -135.285556
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -135.055556,
+          60.62666704
+        ]
+      },
+      "properties": {
+        "name": "WHITEHORSE COPPER",
+        "jurisdiction": "YT",
+        "status": "Underground Past Producer",
+        "commodity": "\"CU",
+        "mineType": "NULL",
+        "latitude": 60.62666704,
+        "longitude": -135.055556
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -135.469167,
+          60.20666704
+        ]
+      },
+      "properties": {
+        "name": "SKUKUM",
+        "jurisdiction": "YT",
+        "status": "Underground Past Producer",
+        "commodity": "\"AU",
+        "mineType": "NULL",
+        "latitude": 60.20666704,
+        "longitude": -135.469167
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -132.271111,
+          61.53805604
+        ]
+      },
+      "properties": {
+        "name": "KETZA",
+        "jurisdiction": "YT",
+        "status": "Underground Past Producer",
+        "commodity": "\"AU",
+        "mineType": "NULL",
+        "latitude": 61.53805604,
+        "longitude": -132.271111
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -132.5325,
+          61.97472204
+        ]
+      },
+      "properties": {
+        "name": "WHISKEY LAKE",
+        "jurisdiction": "YT",
+        "status": "Open Pit Producer",
+        "commodity": "CL",
+        "mineType": "Mine",
+        "latitude": 61.97472204,
+        "longitude": -132.5325
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -132.214167,
+          61.57333304
+        ]
+      },
+      "properties": {
+        "name": "KEY",
+        "jurisdiction": "YT",
+        "status": "Underground Past Producer",
+        "commodity": "\"PB",
+        "mineType": "NULL",
+        "latitude": 61.57333304,
+        "longitude": -132.214167
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -133.1884773,
+          62.25002798
+        ]
+      },
+      "properties": {
+        "name": "VANGORDA",
+        "jurisdiction": "YT",
+        "status": "Open Pit Past Producer",
+        "commodity": "\"PB",
+        "mineType": "NULL",
+        "latitude": 62.25002798,
+        "longitude": -133.1884773
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -133.2218309,
+          62.26637114
+        ]
+      },
+      "properties": {
+        "name": "GRUM",
+        "jurisdiction": "YT",
+        "status": "Open Pit Past Producer",
+        "commodity": "\"PB",
+        "mineType": "NULL",
+        "latitude": 62.26637114,
+        "longitude": -133.2218309
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -133.373056,
+          62.35722204
+        ]
+      },
+      "properties": {
+        "name": "FARO",
+        "jurisdiction": "YT",
+        "status": "Open Pit Past Producer",
+        "commodity": "\"PB",
+        "mineType": "NULL",
+        "latitude": 62.35722204,
+        "longitude": -133.373056
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -135.300278,
+          63.90972204
+        ]
+      },
+      "properties": {
+        "name": "UNITED KENO HILL",
+        "jurisdiction": "YT",
+        "status": "Underground Past Producer",
+        "commodity": "\"PB",
+        "mineType": "NULL",
+        "latitude": 63.90972204,
+        "longitude": -135.300278
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -135.144167,
+          63.94305604
+        ]
+      },
+      "properties": {
+        "name": "DUNCAN",
+        "jurisdiction": "YT",
+        "status": "Underground Past Producer",
+        "commodity": "\"PB",
+        "mineType": "NULL",
+        "latitude": 63.94305604,
+        "longitude": -135.144167
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -135.199167,
+          63.93861104
+        ]
+      },
+      "properties": {
+        "name": "COMSTOCK",
+        "jurisdiction": "YT",
+        "status": "Underground Past Producer",
+        "commodity": "\"PB",
+        "mineType": "NULL",
+        "latitude": 63.93861104,
+        "longitude": -135.199167
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -135.22,
+          63.92250004
+        ]
+      },
+      "properties": {
+        "name": "VANGUARD",
+        "jurisdiction": "YT",
+        "status": "Underground Past Producer",
+        "commodity": "\"PB",
+        "mineType": "NULL",
+        "latitude": 63.92250004,
+        "longitude": -135.22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -135.251667,
+          63.89833304
+        ]
+      },
+      "properties": {
+        "name": "MAYBRUN",
+        "jurisdiction": "YT",
+        "status": "Underground Past Producer",
+        "commodity": "\"PB",
+        "mineType": "NULL",
+        "latitude": 63.89833304,
+        "longitude": -135.251667
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -135.2425,
+          63.91388904
+        ]
+      },
+      "properties": {
+        "name": "RUNER",
+        "jurisdiction": "YT",
+        "status": "Underground Past Producer",
+        "commodity": "\"PB",
+        "mineType": "NULL",
+        "latitude": 63.91388904,
+        "longitude": -135.2425
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -135.366944,
+          63.93722204
+        ]
+      },
+      "properties": {
+        "name": "FORMO",
+        "jurisdiction": "YT",
+        "status": "Underground Past Producer",
+        "commodity": "\"PB",
+        "mineType": "NULL",
+        "latitude": 63.93722204,
+        "longitude": -135.366944
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -135.386944,
+          63.94972204
+        ]
+      },
+      "properties": {
+        "name": "PADDY",
+        "jurisdiction": "YT",
+        "status": "Underground Past Producer",
+        "commodity": "\"AU",
+        "mineType": "ZN\"",
+        "latitude": 63.94972204,
+        "longitude": -135.386944
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -135.421944,
+          63.92722204
+        ]
+      },
+      "properties": {
+        "name": "CREAM AND JEAN",
+        "jurisdiction": "YT",
+        "status": "Underground Past Producer",
+        "commodity": "\"PB",
+        "mineType": "NULL",
+        "latitude": 63.92722204,
+        "longitude": -135.421944
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -135.678889,
+          63.88333304
+        ]
+      },
+      "properties": {
+        "name": "MCQUESTEN",
+        "jurisdiction": "YT",
+        "status": "Open Pit Past Producer",
+        "commodity": "\"AU",
+        "mineType": "ZN\"",
+        "latitude": 63.88333304,
+        "longitude": -135.678889
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -135.868889,
+          63.86472204
+        ]
+      },
+      "properties": {
+        "name": "MT HALDANE",
+        "jurisdiction": "YT",
+        "status": "Underground Past Producer",
+        "commodity": "\"PB",
+        "mineType": "NULL",
+        "latitude": 63.86472204,
+        "longitude": -135.868889
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -134.971111,
+          63.97833304
+        ]
+      },
+      "properties": {
+        "name": "COBALT",
+        "jurisdiction": "YT",
+        "status": "Open Pit Past Producer",
+        "commodity": "\"PB",
+        "mineType": "NULL",
+        "latitude": 63.97833304,
+        "longitude": -134.971111
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -135.128611,
+          63.94527804
+        ]
+      },
+      "properties": {
+        "name": "SEGSWORTH",
+        "jurisdiction": "YT",
+        "status": "Underground Past Producer",
+        "commodity": "\"PB",
+        "mineType": "NULL",
+        "latitude": 63.94527804,
+        "longitude": -135.128611
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -135.216944,
+          63.94722204
+        ]
+      },
+      "properties": {
+        "name": "GAMBLER",
+        "jurisdiction": "YT",
+        "status": "Underground Past Producer",
+        "commodity": "\"PB",
+        "mineType": "NULL",
+        "latitude": 63.94722204,
+        "longitude": -135.216944
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -132.031944,
+          63.58583304
+        ]
+      },
+      "properties": {
+        "name": "PLATA",
+        "jurisdiction": "YT",
+        "status": "Open Pit Past Producer",
+        "commodity": "\"AU",
+        "mineType": "NULL",
+        "latitude": 63.58583304,
+        "longitude": -132.031944
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -135.3525,
+          64.34916704
+        ]
+      },
+      "properties": {
+        "name": "MCKAY HILL",
+        "jurisdiction": "YT",
+        "status": "Open Pit Past Producer",
+        "commodity": "\"CU",
+        "mineType": "NULL",
+        "latitude": 64.34916704,
+        "longitude": -135.3525
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -137.135833,
+          60.11361104
+        ]
+      },
+      "properties": {
+        "name": "KANE",
+        "jurisdiction": "YT",
+        "status": "Open Pit Past Producer",
+        "commodity": "\"PB",
+        "mineType": "NULL",
+        "latitude": 60.11361104,
+        "longitude": -137.135833
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -137.5575,
+          60.47944404
+        ]
+      },
+      "properties": {
+        "name": "JOHOBO",
+        "jurisdiction": "YT",
+        "status": "Open Pit Past Producer",
+        "commodity": "\"CU",
+        "mineType": "NULL",
+        "latitude": 60.47944404,
+        "longitude": -137.5575
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -137.560556,
+          60.49055604
+        ]
+      },
+      "properties": {
+        "name": "JOHOBO",
+        "jurisdiction": "YT",
+        "status": "Open Pit Past Producer",
+        "commodity": "\"CU",
+        "mineType": "NULL",
+        "latitude": 60.49055604,
+        "longitude": -137.560556
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -136.263889,
+          62.09333304
+        ]
+      },
+      "properties": {
+        "name": "TANTALUS MINE",
+        "jurisdiction": "YT",
+        "status": "Underground Past Producer",
+        "commodity": "CL",
+        "mineType": "Mine",
+        "latitude": 62.09333304,
+        "longitude": -136.263889
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -136.263611,
+          62.12361104
+        ]
+      },
+      "properties": {
+        "name": "TANTALUS BUTTE",
+        "jurisdiction": "YT",
+        "status": "Underground Past Producer",
+        "commodity": "CL",
+        "mineType": "Mine",
+        "latitude": 62.12361104,
+        "longitude": -136.263611
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -136.340278,
+          62.20250004
+        ]
+      },
+      "properties": {
+        "name": "FIVE FINGERS",
+        "jurisdiction": "YT",
+        "status": "Underground Past Producer",
+        "commodity": "CL",
+        "mineType": "Mine",
+        "latitude": 62.20250004,
+        "longitude": -136.340278
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -137.184722,
+          62.25861104
+        ]
+      },
+      "properties": {
+        "name": "CARIBOU CREEK",
+        "jurisdiction": "YT",
+        "status": "Open Pit Past Producer",
+        "commodity": "\"AU",
+        "mineType": "NULL",
+        "latitude": 62.25861104,
+        "longitude": -137.184722
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -137.121944,
+          62.05000004
+        ]
+      },
+      "properties": {
+        "name": "BROWN-MCDADE",
+        "jurisdiction": "YT",
+        "status": "Open Pit Past Producer",
+        "commodity": "\"AU",
+        "mineType": "NULL",
+        "latitude": 62.05000004,
+        "longitude": -137.121944
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -128.8775,
+          60.51777804
+        ]
+      },
+      "properties": {
+        "name": "MT. HUNDERE",
+        "jurisdiction": "YT",
+        "status": "Underground Past Producer",
+        "commodity": "\"PB",
+        "mineType": "NULL",
+        "latitude": 60.51777804,
+        "longitude": -128.8775
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -128.878889,
+          60.54777804
+        ]
+      },
+      "properties": {
+        "name": "RITCO",
+        "jurisdiction": "YT",
+        "status": "Underground Past Producer",
+        "commodity": "\"PB",
+        "mineType": "NULL",
+        "latitude": 60.54777804,
+        "longitude": -128.878889
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -130.477222,
+          60.01861104
+        ]
+      },
+      "properties": {
+        "name": "DALE",
+        "jurisdiction": "YT",
+        "status": "Underground Past Producer",
+        "commodity": "\"AU",
+        "mineType": "ZN\"",
+        "latitude": 60.01861104,
+        "longitude": -130.477222
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -129.786111,
+          61.28138904
+        ]
+      },
+      "properties": {
+        "name": "TUCHITUA",
+        "jurisdiction": "YT",
+        "status": "Open Pit Past Producer",
+        "commodity": "JD",
+        "mineType": "Mine",
+        "latitude": 61.28138904,
+        "longitude": -129.786111
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -131.959722,
+          63.60555604
+        ]
+      },
+      "properties": {
+        "name": "INCA",
+        "jurisdiction": "YT",
+        "status": "Open Pit Past Producer",
+        "commodity": "\"PB",
+        "mineType": "NULL",
+        "latitude": 63.60555604,
+        "longitude": -131.959722
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -140.537778,
+          61.95305604
+        ]
+      },
+      "properties": {
+        "name": "CANALASK",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"CU",
+        "mineType": "NULL",
+        "latitude": 61.95305604,
+        "longitude": -140.537778
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -138.828056,
+          62.73777804
+        ]
+      },
+      "properties": {
+        "name": "CASINO",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"CU",
+        "mineType": "NULL",
+        "latitude": 62.73777804,
+        "longitude": -138.828056
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -138.805833,
+          64.48694404
+        ]
+      },
+      "properties": {
+        "name": "MARN",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"CU",
+        "mineType": "NULL",
+        "latitude": 64.48694404,
+        "longitude": -138.805833
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -140.279722,
+          66.52361104
+        ]
+      },
+      "properties": {
+        "name": "ALTO",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "FE",
+        "mineType": "Unknown",
+        "latitude": 66.52361104,
+        "longitude": -140.279722
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -133.749444,
+          60.98916704
+        ]
+      },
+      "properties": {
+        "name": "RED MOUNTAIN",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"CU",
+        "mineType": "WO\"",
+        "latitude": 60.98916704,
+        "longitude": -133.749444
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -135.404444,
+          60.17138904
+        ]
+      },
+      "properties": {
+        "name": "SKUKUM CREEK",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"AU",
+        "mineType": "NULL",
+        "latitude": 60.17138904,
+        "longitude": -135.404444
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -135.281944,
+          60.19222204
+        ]
+      },
+      "properties": {
+        "name": "GODDELL",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"SB",
+        "mineType": "NULL",
+        "latitude": 60.19222204,
+        "longitude": -135.281944
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -135.215,
+          60.18472204
+        ]
+      },
+      "properties": {
+        "name": "BECKER-COCHRAN",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"SB",
+        "mineType": "NULL",
+        "latitude": 60.18472204,
+        "longitude": -135.215
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -135.036667,
+          60.25305604
+        ]
+      },
+      "properties": {
+        "name": "WHEATON MOUNTAIN",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"AU",
+        "mineType": "NULL",
+        "latitude": 60.25305604,
+        "longitude": -135.036667
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -132.802778,
+          61.49722204
+        ]
+      },
+      "properties": {
+        "name": "STORMY",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"MO",
+        "mineType": "NULL",
+        "latitude": 61.49722204,
+        "longitude": -132.802778
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -132.828333,
+          61.65000004
+        ]
+      },
+      "properties": {
+        "name": "GROUNDHOG",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"PB",
+        "mineType": "NULL",
+        "latitude": 61.65000004,
+        "longitude": -132.828333
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -133.384444,
+          61.85972204
+        ]
+      },
+      "properties": {
+        "name": "RISBY",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"AU",
+        "mineType": "NULL",
+        "latitude": 61.85972204,
+        "longitude": -133.384444
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -133.010278,
+          61.83805604
+        ]
+      },
+      "properties": {
+        "name": "BARITE MOUNTAIN",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "ZN",
+        "mineType": "Unknown",
+        "latitude": 61.83805604,
+        "longitude": -133.010278
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -132.156944,
+          61.55083304
+        ]
+      },
+      "properties": {
+        "name": "KETZAKEY",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"AU",
+        "mineType": "NULL",
+        "latitude": 61.55083304,
+        "longitude": -132.156944
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -132.854167,
+          62.04638904
+        ]
+      },
+      "properties": {
+        "name": "GREW CREEK",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"AU",
+        "mineType": "NULL",
+        "latitude": 62.04638904,
+        "longitude": -132.854167
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -133.0334283,
+          62.21201086
+        ]
+      },
+      "properties": {
+        "name": "SWIM",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"PB",
+        "mineType": "NULL",
+        "latitude": 62.21201086,
+        "longitude": -133.0334283
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -133.1301523,
+          62.22982523
+        ]
+      },
+      "properties": {
+        "name": "DY",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"PB",
+        "mineType": "NULL",
+        "latitude": 62.22982523,
+        "longitude": -133.1301523
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -135.132222,
+          62.78527804
+        ]
+      },
+      "properties": {
+        "name": "CLEAR LAKE",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"PB",
+        "mineType": "NULL",
+        "latitude": 62.78527804,
+        "longitude": -135.132222
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -132.546389,
+          64.42861104
+        ]
+      },
+      "properties": {
+        "name": "GOZ",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "ZN",
+        "mineType": "Unknown",
+        "latitude": 64.42861104,
+        "longitude": -132.546389
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -133.356111,
+          64.15583304
+        ]
+      },
+      "properties": {
+        "name": "CRAIG",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"PB",
+        "mineType": "NULL",
+        "latitude": 64.15583304,
+        "longitude": -133.356111
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -133.747222,
+          64.30666704
+        ]
+      },
+      "properties": {
+        "name": "VERA",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"PB",
+        "mineType": "NULL",
+        "latitude": 64.30666704,
+        "longitude": -133.747222
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -133.693056,
+          64.26694404
+        ]
+      },
+      "properties": {
+        "name": "VAL",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"PB",
+        "mineType": "NULL",
+        "latitude": 64.26694404,
+        "longitude": -133.693056
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -134.466944,
+          64.00583304
+        ]
+      },
+      "properties": {
+        "name": "MARG",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"CU",
+        "mineType": "ZN\"",
+        "latitude": 64.00583304,
+        "longitude": -134.466944
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -134.956667,
+          64.11694404
+        ]
+      },
+      "properties": {
+        "name": "CLARK",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"PB",
+        "mineType": "NULL",
+        "latitude": 64.11694404,
+        "longitude": -134.956667
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -135.945,
+          64.02444404
+        ]
+      },
+      "properties": {
+        "name": "PESO",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"PB",
+        "mineType": "NULL",
+        "latitude": 64.02444404,
+        "longitude": -135.945
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -135.7975,
+          64.03222204
+        ]
+      },
+      "properties": {
+        "name": "DUBLIN GULCH",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"AU",
+        "mineType": "NULL",
+        "latitude": 64.03222204,
+        "longitude": -135.7975
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -135.751111,
+          64.02777804
+        ]
+      },
+      "properties": {
+        "name": "RAY GULCH",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "WO",
+        "mineType": "Unknown",
+        "latitude": 64.02777804,
+        "longitude": -135.751111
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -134.2825,
+          64.83416704
+        ]
+      },
+      "properties": {
+        "name": "PAGISTEEL",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "FE",
+        "mineType": "Unknown",
+        "latitude": 64.83416704,
+        "longitude": -134.2825
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -134.6725,
+          64.41083304
+        ]
+      },
+      "properties": {
+        "name": "BLENDE",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"PB",
+        "mineType": "NULL",
+        "latitude": 64.41083304,
+        "longitude": -134.6725
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -135.278333,
+          65.21777804
+        ]
+      },
+      "properties": {
+        "name": "MARATHON",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "CL",
+        "mineType": "Unknown",
+        "latitude": 65.21777804,
+        "longitude": -135.278333
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -135.025833,
+          65.20694404
+        ]
+      },
+      "properties": {
+        "name": "POLE",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "CL",
+        "mineType": "Unknown",
+        "latitude": 65.20694404,
+        "longitude": -135.025833
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -134.851389,
+          65.34111104
+        ]
+      },
+      "properties": {
+        "name": "GARLIC RING",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "CL",
+        "mineType": "Unknown",
+        "latitude": 65.34111104,
+        "longitude": -134.851389
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -135.005,
+          65.26694404
+        ]
+      },
+      "properties": {
+        "name": "ILLTYD",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "CL",
+        "mineType": "Unknown",
+        "latitude": 65.26694404,
+        "longitude": -135.005
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -135.016111,
+          65.23972204
+        ]
+      },
+      "properties": {
+        "name": "PAN OCEAN",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "CL",
+        "mineType": "Unknown",
+        "latitude": 65.23972204,
+        "longitude": -135.016111
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -135.435556,
+          65.43638904
+        ]
+      },
+      "properties": {
+        "name": "DESLAURIER",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "CL",
+        "mineType": "Unknown",
+        "latitude": 65.43638904,
+        "longitude": -135.435556
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -134.918611,
+          65.22083304
+        ]
+      },
+      "properties": {
+        "name": "SPACESHIP",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "CL",
+        "mineType": "Unknown",
+        "latitude": 65.22083304,
+        "longitude": -134.918611
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -133.039444,
+          65.25222204
+        ]
+      },
+      "properties": {
+        "name": "CREST",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "FE",
+        "mineType": "Unknown",
+        "latitude": 65.25222204,
+        "longitude": -133.039444
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -137.301111,
+          60.73861104
+        ]
+      },
+      "properties": {
+        "name": "REX",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "AB",
+        "mineType": "Unknown",
+        "latitude": 60.73861104,
+        "longitude": -137.301111
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -136.090833,
+          61.34583304
+        ]
+      },
+      "properties": {
+        "name": "DIVISION",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "CL",
+        "mineType": "Unknown",
+        "latitude": 61.34583304,
+        "longitude": -136.090833
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -136.252778,
+          62.08027804
+        ]
+      },
+      "properties": {
+        "name": "SOUTH TANTALUS",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "CL",
+        "mineType": "Unknown",
+        "latitude": 62.08027804,
+        "longitude": -136.252778
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -136.693611,
+          62.34888904
+        ]
+      },
+      "properties": {
+        "name": "WILLIAMS CREEK",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "CU",
+        "mineType": "Unknown",
+        "latitude": 62.34888904,
+        "longitude": -136.693611
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -137.62,
+          62.42916704
+        ]
+      },
+      "properties": {
+        "name": "CASH",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"CU",
+        "mineType": "NULL",
+        "latitude": 62.42916704,
+        "longitude": -137.62
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -137.145,
+          62.29250004
+        ]
+      },
+      "properties": {
+        "name": "GUDER",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"AU",
+        "mineType": "NULL",
+        "latitude": 62.29250004,
+        "longitude": -137.145
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -137.117778,
+          62.26888904
+        ]
+      },
+      "properties": {
+        "name": "LAFORMA",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"AU",
+        "mineType": "NULL",
+        "latitude": 62.26888904,
+        "longitude": -137.117778
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -136.977778,
+          62.29333304
+        ]
+      },
+      "properties": {
+        "name": "TINTA HILL",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"AU",
+        "mineType": "ZN\"",
+        "latitude": 62.29333304,
+        "longitude": -136.977778
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -137.176111,
+          62.05444404
+        ]
+      },
+      "properties": {
+        "name": "MOUNT NANSEN",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"AU",
+        "mineType": "NULL",
+        "latitude": 62.05444404,
+        "longitude": -137.176111
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -137.335833,
+          62.33416704
+        ]
+      },
+      "properties": {
+        "name": "NUCLEUS",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"CU",
+        "mineType": "NULL",
+        "latitude": 62.33416704,
+        "longitude": -137.335833
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -137.098889,
+          62.27027804
+        ]
+      },
+      "properties": {
+        "name": "ANTONIUK",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "AU",
+        "mineType": "Unknown",
+        "latitude": 62.27027804,
+        "longitude": -137.098889
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -137.18,
+          63.98583304
+        ]
+      },
+      "properties": {
+        "name": "OMEGA",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "BA",
+        "mineType": "Unknown",
+        "latitude": 63.98583304,
+        "longitude": -137.18
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -137.291944,
+          63.98972204
+        ]
+      },
+      "properties": {
+        "name": "ZETA",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"AG",
+        "mineType": "NULL",
+        "latitude": 63.98972204,
+        "longitude": -137.291944
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -136.825,
+          64.63472204
+        ]
+      },
+      "properties": {
+        "name": "HART RIVER",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"CU",
+        "mineType": "NULL",
+        "latitude": 64.63472204,
+        "longitude": -136.825
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -136.7825,
+          68.55972204
+        ]
+      },
+      "properties": {
+        "name": "RAPID",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "FE",
+        "mineType": "Unknown",
+        "latitude": 68.55972204,
+        "longitude": -136.7825
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -136.4725,
+          68.47972204
+        ]
+      },
+      "properties": {
+        "name": "BIG FISH",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "FE",
+        "mineType": "Unknown",
+        "latitude": 68.47972204,
+        "longitude": -136.4725
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -136.5225,
+          68.49972204
+        ]
+      },
+      "properties": {
+        "name": "BOUNDARY",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "FE",
+        "mineType": "Unknown",
+        "latitude": 68.49972204,
+        "longitude": -136.5225
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -127.4,
+          60.35
+        ]
+      },
+      "properties": {
+        "name": "MEL",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"BA",
+        "mineType": "NULL",
+        "latitude": 60.35,
+        "longitude": -127.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -127.942778,
+          60.49055604
+        ]
+      },
+      "properties": {
+        "name": "MCMILLAN",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"PB",
+        "mineType": "NULL",
+        "latitude": 60.49055604,
+        "longitude": -127.942778
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -127.851667,
+          60.51166704
+        ]
+      },
+      "properties": {
+        "name": "HYLAND GOLD",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "AU",
+        "mineType": "Unknown",
+        "latitude": 60.51166704,
+        "longitude": -127.851667
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -127.211111,
+          60.69388904
+        ]
+      },
+      "properties": {
+        "name": "SULPETRO",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "CL",
+        "mineType": "Unknown",
+        "latitude": 60.69388904,
+        "longitude": -127.211111
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -128.880833,
+          60.75027804
+        ]
+      },
+      "properties": {
+        "name": "BAILEY",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "WO",
+        "mineType": "Unknown",
+        "latitude": 60.75027804,
+        "longitude": -128.880833
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -130.744722,
+          60.32916704
+        ]
+      },
+      "properties": {
+        "name": "HART",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"PB",
+        "mineType": "NULL",
+        "latitude": 60.32916704,
+        "longitude": -130.744722
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -131.601667,
+          60.02555604
+        ]
+      },
+      "properties": {
+        "name": "LOGJAM",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"AU",
+        "mineType": "NULL",
+        "latitude": 60.02555604,
+        "longitude": -131.601667
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -131.597778,
+          60.00527804
+        ]
+      },
+      "properties": {
+        "name": "LOGTUNG",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"MO",
+        "mineType": "NULL",
+        "latitude": 60.00527804,
+        "longitude": -131.597778
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -130.47,
+          60.50138904
+        ]
+      },
+      "properties": {
+        "name": "LOGAN",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"AG",
+        "mineType": "NULL",
+        "latitude": 60.50138904,
+        "longitude": -130.47
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -131.150556,
+          61.14166704
+        ]
+      },
+      "properties": {
+        "name": "TINTINA",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"PB",
+        "mineType": "NULL",
+        "latitude": 61.14166704,
+        "longitude": -131.150556
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -131.493889,
+          61.34000004
+        ]
+      },
+      "properties": {
+        "name": "HASSELBERG",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"PB",
+        "mineType": "NULL",
+        "latitude": 61.34000004,
+        "longitude": -131.493889
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -130.515278,
+          61.22611104
+        ]
+      },
+      "properties": {
+        "name": "FYRE",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "CU",
+        "mineType": "Unknown",
+        "latitude": 61.22611104,
+        "longitude": -130.515278
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -130.61,
+          61.45805604
+        ]
+      },
+      "properties": {
+        "name": "TAG",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"CU",
+        "mineType": "AG",
+        "latitude": 61.45805604,
+        "longitude": -130.61
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -131.360278,
+          61.87472204
+        ]
+      },
+      "properties": {
+        "name": "ICE",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "CU",
+        "mineType": "Unknown",
+        "latitude": 61.87472204,
+        "longitude": -131.360278
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -130.5105792,
+          61.44545019
+        ]
+      },
+      "properties": {
+        "name": "GP4F",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"AU",
+        "mineType": "ZN\"",
+        "latitude": 61.44545019,
+        "longitude": -130.5105792
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -129.403889,
+          61.47555604
+        ]
+      },
+      "properties": {
+        "name": "MATT BERRY",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"PB",
+        "mineType": "NULL",
+        "latitude": 61.47555604,
+        "longitude": -129.403889
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -129.213611,
+          62.46916704
+        ]
+      },
+      "properties": {
+        "name": "HOWARDS PASS",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"PB",
+        "mineType": "NULL",
+        "latitude": 62.46916704,
+        "longitude": -129.213611
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -129.527222,
+          62.56444404
+        ]
+      },
+      "properties": {
+        "name": "ANNIV",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"PB",
+        "mineType": "NULL",
+        "latitude": 62.56444404,
+        "longitude": -129.527222
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -130.695,
+          62.16694404
+        ]
+      },
+      "properties": {
+        "name": "PIKE",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"CU",
+        "mineType": "NULL",
+        "latitude": 62.16694404,
+        "longitude": -130.695
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -130.144444,
+          63.16472204
+        ]
+      },
+      "properties": {
+        "name": "TOM",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"BA",
+        "mineType": "ZN\"",
+        "latitude": 63.16472204,
+        "longitude": -130.144444
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -130.152778,
+          63.28222204
+        ]
+      },
+      "properties": {
+        "name": "MACTUNG",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "WO",
+        "mineType": "Unknown",
+        "latitude": 63.28222204,
+        "longitude": -130.152778
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -130.210278,
+          63.07083304
+        ]
+      },
+      "properties": {
+        "name": "RACICOT",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "BA",
+        "mineType": "Unknown",
+        "latitude": 63.07083304,
+        "longitude": -130.210278
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -130.264722,
+          63.14861104
+        ]
+      },
+      "properties": {
+        "name": "JASON",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"BA",
+        "mineType": "ZN\"",
+        "latitude": 63.14861104,
+        "longitude": -130.264722
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -130.615278,
+          63.01972204
+        ]
+      },
+      "properties": {
+        "name": "SAMOVAR",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "BA",
+        "mineType": "Unknown",
+        "latitude": 63.01972204,
+        "longitude": -130.615278
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -130.563333,
+          63.27638904
+        ]
+      },
+      "properties": {
+        "name": "WALT",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"BA",
+        "mineType": "NULL",
+        "latitude": 63.27638904,
+        "longitude": -130.563333
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -130.192778,
+          63.08833304
+        ]
+      },
+      "properties": {
+        "name": "GARY",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "BA",
+        "mineType": "Unknown",
+        "latitude": 63.08833304,
+        "longitude": -130.192778
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -140.837778,
+          63.93055604
+        ]
+      },
+      "properties": {
+        "name": "LERNER",
+        "jurisdiction": "YT",
+        "status": "Open Pit Past Producer",
+        "commodity": "\"PB",
+        "mineType": "NULL",
+        "latitude": 63.93055604,
+        "longitude": -140.837778
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -140.765556,
+          63.92861104
+        ]
+      },
+      "properties": {
+        "name": "CONNAUGHT",
+        "jurisdiction": "YT",
+        "status": "Open Pit Past Producer",
+        "commodity": "\"PB",
+        "mineType": "NULL",
+        "latitude": 63.92861104,
+        "longitude": -140.765556
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -140.763889,
+          63.92166704
+        ]
+      },
+      "properties": {
+        "name": "CONNAUGHT",
+        "jurisdiction": "YT",
+        "status": "Open Pit Past Producer",
+        "commodity": "\"PB",
+        "mineType": "NULL",
+        "latitude": 63.92166704,
+        "longitude": -140.763889
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -140.733056,
+          64.44250004
+        ]
+      },
+      "properties": {
+        "name": "CLINTON CREEK",
+        "jurisdiction": "YT",
+        "status": "Open Pit Past Producer",
+        "commodity": "AB",
+        "mineType": "Mine",
+        "latitude": 64.44250004,
+        "longitude": -140.733056
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -135.045833,
+          60.30750004
+        ]
+      },
+      "properties": {
+        "name": "UNION MINES",
+        "jurisdiction": "YT",
+        "status": "Underground Past Producer",
+        "commodity": "\"AU",
+        "mineType": "NULL",
+        "latitude": 60.30750004,
+        "longitude": -135.045833
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -135.012222,
+          60.31027804
+        ]
+      },
+      "properties": {
+        "name": "UNION MINES",
+        "jurisdiction": "YT",
+        "status": "Underground Past Producer",
+        "commodity": "\"AU",
+        "mineType": "NULL",
+        "latitude": 60.31027804,
+        "longitude": -135.012222
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -135.0275,
+          60.32611104
+        ]
+      },
+      "properties": {
+        "name": "UNION MINES",
+        "jurisdiction": "YT",
+        "status": "Underground Past Producer",
+        "commodity": "\"AU",
+        "mineType": "NULL",
+        "latitude": 60.32611104,
+        "longitude": -135.0275
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -132.503611,
+          61.97222204
+        ]
+      },
+      "properties": {
+        "name": "WHISKEY LAKE",
+        "jurisdiction": "YT",
+        "status": "Open Pit Producer",
+        "commodity": "CL",
+        "mineType": "Mine",
+        "latitude": 61.97222204,
+        "longitude": -132.503611
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -135.871111,
+          63.85888904
+        ]
+      },
+      "properties": {
+        "name": "MT HALDANE",
+        "jurisdiction": "YT",
+        "status": "Underground Past Producer",
+        "commodity": "\"PB",
+        "mineType": "NULL",
+        "latitude": 63.85888904,
+        "longitude": -135.871111
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -135.868611,
+          63.87138904
+        ]
+      },
+      "properties": {
+        "name": "MT HALDANE",
+        "jurisdiction": "YT",
+        "status": "Underground Past Producer",
+        "commodity": "\"PB",
+        "mineType": "NULL",
+        "latitude": 63.87138904,
+        "longitude": -135.868611
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -135.388333,
+          64.34750004
+        ]
+      },
+      "properties": {
+        "name": "MCKAY HILL",
+        "jurisdiction": "YT",
+        "status": "Open Pit Past Producer",
+        "commodity": "\"CU",
+        "mineType": "NULL",
+        "latitude": 64.34750004,
+        "longitude": -135.388333
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -129.766667,
+          61.25888904
+        ]
+      },
+      "properties": {
+        "name": "TUCHITUA",
+        "jurisdiction": "YT",
+        "status": "Open Pit Past Producer",
+        "commodity": "JD",
+        "mineType": "Mine",
+        "latitude": 61.25888904,
+        "longitude": -129.766667
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -135.390278,
+          60.17666704
+        ]
+      },
+      "properties": {
+        "name": "SKUKUM CREEK",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"AU",
+        "mineType": "NULL",
+        "latitude": 60.17666704,
+        "longitude": -135.390278
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -135.411667,
+          60.17916704
+        ]
+      },
+      "properties": {
+        "name": "SKUKUM CREEK",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"AU",
+        "mineType": "NULL",
+        "latitude": 60.17916704,
+        "longitude": -135.411667
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -132.825556,
+          61.63527804
+        ]
+      },
+      "properties": {
+        "name": "GROUNDHOG",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"PB",
+        "mineType": "NULL",
+        "latitude": 61.63527804,
+        "longitude": -132.825556
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -132.812778,
+          61.64416704
+        ]
+      },
+      "properties": {
+        "name": "GROUNDHOG",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"PB",
+        "mineType": "NULL",
+        "latitude": 61.64416704,
+        "longitude": -132.812778
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -132.794722,
+          61.64888904
+        ]
+      },
+      "properties": {
+        "name": "GROUNDHOG",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"PB",
+        "mineType": "NULL",
+        "latitude": 61.64888904,
+        "longitude": -132.794722
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -133.240833,
+          64.13527804
+        ]
+      },
+      "properties": {
+        "name": "CRAIG",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"PB",
+        "mineType": "NULL",
+        "latitude": 64.13527804,
+        "longitude": -133.240833
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -133.282222,
+          64.14972204
+        ]
+      },
+      "properties": {
+        "name": "CRAIG",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"PB",
+        "mineType": "NULL",
+        "latitude": 64.14972204,
+        "longitude": -133.282222
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -133.319167,
+          64.15333304
+        ]
+      },
+      "properties": {
+        "name": "CRAIG",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"PB",
+        "mineType": "NULL",
+        "latitude": 64.15333304,
+        "longitude": -133.319167
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -133.330833,
+          64.15500004
+        ]
+      },
+      "properties": {
+        "name": "CRAIG",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"PB",
+        "mineType": "NULL",
+        "latitude": 64.15500004,
+        "longitude": -133.330833
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -135.918333,
+          64.01805604
+        ]
+      },
+      "properties": {
+        "name": "PESO",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"PB",
+        "mineType": "NULL",
+        "latitude": 64.01805604,
+        "longitude": -135.918333
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -137.148333,
+          62.04888904
+        ]
+      },
+      "properties": {
+        "name": "MOUNT NANSEN",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"AU",
+        "mineType": "NULL",
+        "latitude": 62.04888904,
+        "longitude": -137.148333
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -137.176111,
+          62.05444404
+        ]
+      },
+      "properties": {
+        "name": "MOUNT NANSEN",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"AU",
+        "mineType": "NULL",
+        "latitude": 62.05444404,
+        "longitude": -137.176111
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -136.976389,
+          68.49472204
+        ]
+      },
+      "properties": {
+        "name": "RAPID",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "FE",
+        "mineType": "Unknown",
+        "latitude": 68.49472204,
+        "longitude": -136.976389
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -136.838056,
+          68.53305604
+        ]
+      },
+      "properties": {
+        "name": "RAPID",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "FE",
+        "mineType": "Unknown",
+        "latitude": 68.53305604,
+        "longitude": -136.838056
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -128.854444,
+          60.77777804
+        ]
+      },
+      "properties": {
+        "name": "BAILEY",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "WO",
+        "mineType": "Unknown",
+        "latitude": 60.77777804,
+        "longitude": -128.854444
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -128.852222,
+          60.78666704
+        ]
+      },
+      "properties": {
+        "name": "BAILEY",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "WO",
+        "mineType": "Unknown",
+        "latitude": 60.78666704,
+        "longitude": -128.852222
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -130.1325,
+          63.16111104
+        ]
+      },
+      "properties": {
+        "name": "TOM",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"BA",
+        "mineType": "ZN\"",
+        "latitude": 63.16111104,
+        "longitude": -130.1325
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -130.318889,
+          63.16611104
+        ]
+      },
+      "properties": {
+        "name": "JASON",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"BA",
+        "mineType": "ZN\"",
+        "latitude": 63.16611104,
+        "longitude": -130.318889
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -130.268889,
+          63.15722204
+        ]
+      },
+      "properties": {
+        "name": "JASON",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"BA",
+        "mineType": "ZN\"",
+        "latitude": 63.15722204,
+        "longitude": -130.268889
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -130.508333,
+          63.28750004
+        ]
+      },
+      "properties": {
+        "name": "WALT",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"BA",
+        "mineType": "NULL",
+        "latitude": 63.28750004,
+        "longitude": -130.508333
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -130.540556,
+          63.28111104
+        ]
+      },
+      "properties": {
+        "name": "WALT",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"BA",
+        "mineType": "NULL",
+        "latitude": 63.28111104,
+        "longitude": -130.540556
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -130.565833,
+          63.28638904
+        ]
+      },
+      "properties": {
+        "name": "WALT",
+        "jurisdiction": "YT",
+        "status": "Deposit",
+        "commodity": "\"BA",
+        "mineType": "NULL",
+        "latitude": 63.28638904,
+        "longitude": -130.565833
+      }
+    }
+  ]
+}

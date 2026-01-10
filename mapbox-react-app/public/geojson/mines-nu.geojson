@@ -1,0 +1,62 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.4825,
+          65.997778
+        ]
+      },
+      "properties": {
+        "name": "Jericho Diamond Mine",
+        "jurisdiction": "NU",
+        "status": "NULL",
+        "commodity": "DI",
+        "mineType": "NULL",
+        "latitude": 65.997778,
+        "longitude": -111.4825
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -92.083333,
+          62.816667
+        ]
+      },
+      "properties": {
+        "name": "North Rankin Inlet",
+        "jurisdiction": "NU",
+        "status": "NULL",
+        "commodity": "\"NI",
+        "mineType": " PD\"",
+        "latitude": 62.816667,
+        "longitude": -92.083333
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -106.5581,
+          68.1797
+        ]
+      },
+      "properties": {
+        "name": "Roberts Bay Mine",
+        "jurisdiction": "NU",
+        "status": "NULL",
+        "commodity": "\"AG",
+        "mineType": " ZN\"",
+        "latitude": 68.1797,
+        "longitude": -106.5581
+      }
+    }
+  ]
+}
