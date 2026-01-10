@@ -1,7 +1,7 @@
 import { useRef, useEffect, useState } from 'react'
 import mapboxgl from 'mapbox-gl'
 import { SearchBox } from '@mapbox/search-js-react'
-
+import { generateSensorData } from './risk';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import './App.css'
 
@@ -47,13 +47,16 @@ function App() {
             const lng = parseFloat(row[lngIndex]);
             
             if (!isNaN(lat) && !isNaN(lng)) {
+              const simData = generateSensorData(); //sim data 
               features.push({
                 type: 'Feature',
                 geometry: {
                   type: 'Point',
                   coordinates: [lng, lat]
                 },
-                properties: {}
+                properties: {id: i,
+                   ...simData
+                  }
               });
             }
           }
@@ -118,10 +121,23 @@ function App() {
             source: 'mines',
             filter: ['!', ['has', 'point_count']],
             paint: {
-              'circle-color': '#11b4da',
-              'circle-radius': 6,
+              // --- OPTIONAL: COLOR DOTS BY RISK ---
+                // If the risk status is 'CRITICAL', make the dot red on the map!
+               'circle-color': [
+                    'match',
+                    ['get', 'status'], // check the 'status' property
+                    'CRITICAL', '#f44336', // if Critical -> Red
+                    'MODERATE', '#ff9800', // if Moderate -> Orange
+                    '#4caf50' // Default -> Green
+               ],
+              'circle-radius': 8, // Made them slightly bigger
               'circle-stroke-width': 1,
               'circle-stroke-color': '#fff'
+
+              //'circle-color': '#11b4da',
+              //'circle-radius': 6,
+              //'circle-stroke-width': 1,
+              //'circle-stroke-color': '#fff'
             }
           });
           
@@ -184,41 +200,95 @@ return (
         top: 0,
         bottom: 0,
         backgroundColor: 'white',
-        padding: '20px',
-        boxShadow: '-2px 0 10px rgba(0, 0, 0, 0.2)',
+        padding: '24px',
+        boxShadow: '-4px 0 20px rgba(0,0,0,0.15)',
         zIndex: 20,
-        width: '35%',
+        width: '400px', 
         overflowY: 'auto',
-        display: 'flex',
-        flexDirection: 'column'
+        fontFamily: 'Arial, sans-serif'
       }}>
-        <h3 style={{ marginTop: 0, marginBottom: '10px' }}>Mine Location</h3>
-        <p><strong>Latitude:</strong> {popup.coordinates[1].toFixed(4)}</p>
-        <p><strong>Longitude:</strong> {popup.coordinates[0].toFixed(4)}</p>
-        {popup.properties && Object.keys(popup.properties).length > 0 && (
-          <div>
-            <h4>Details:</h4>
-            {Object.entries(popup.properties).map(([key, value]) => (
-              <p key={key}><strong>{key}:</strong> {value}</p>
-            ))}
-          </div>
-        )}
         
+        {/* HEADER */}
+        <div style={{ borderBottom: '1px solid #eee', paddingBottom: '15px', marginBottom: '20px' }}>
+          <h2 style={{ margin: 0, fontSize: '24px', color: '#333' }}>Analytics</h2>
+          <p style={{ margin: '5px 0 0', color: '#666' }}>
+            Latitude: {popup.coordinates[1].toFixed(4)}, Longitude: {popup.coordinates[0].toFixed(4)}
+          </p>
+        </div>
+
+        {/* risk */}
+        <div style={{ 
+          backgroundColor: popup.properties.color, 
+          color: 'white',
+          borderRadius: '12px',
+          padding: '20px',
+          marginBottom: '25px',
+          textAlign: 'center'
+        }}>
+          <div style={{ fontSize: '14px', textTransform: 'uppercase', letterSpacing: '1px' }}>
+            Ecological Risk Index
+          </div>
+          <div style={{ fontSize: '48px', fontWeight: 'bold', margin: '10px 0' }}>
+            {popup.properties.riskScore}/100
+          </div>
+          <div style={{ fontSize: '18px', fontWeight: 'bold' }}>
+            {popup.properties.status}
+          </div>
+        </div>
+
+        
+        <h4 style={{ color: '#888', textTransform: 'uppercase', fontSize: '12px' }}>Live Sensor Readings</h4>
+        
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px', marginBottom: '30px' }}>
+          
+          {/* Water  */}
+          <div style={{ background: '#f8f9fa', padding: '15px', borderRadius: '8px' }}>
+            <div style={{ color: '#666', fontSize: '12px' }}>Water Acidity</div>
+            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#333' }}>
+              {popup.properties.ph} <span style={{fontSize:'14px'}}>pH</span>
+            </div>
+            <div style={{ fontSize: '11px', color: popup.properties.ph < 5 ? 'red' : 'green' }}>
+              {popup.properties.ph < 5 ? '⚠ Acidic' : '✓ Normal'}
+            </div>
+          </div>
+
+          {/* Soil  */}
+          <div style={{ background: '#f8f9fa', padding: '15px', borderRadius: '8px' }}>
+            <div style={{ color: '#666', fontSize: '12px' }}>Soil Lead (Pb)</div>
+            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#333' }}>
+              {popup.properties.lead} <span style={{fontSize:'14px'}}>ppm</span>
+            </div>
+            <div style={{ fontSize: '11px', color: popup.properties.lead > 70 ? 'red' : 'green' }}>
+              {popup.properties.lead > 70 ? '⚠ Contaminated' : '✓ Safe'}
+            </div>
+          </div>
+
+          {/* Air  */}
+          <div style={{ background: '#f8f9fa', padding: '15px', borderRadius: '8px' }}>
+            <div style={{ color: '#666', fontSize: '12px' }}>Air Quality</div>
+            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#333' }}>
+              {popup.properties.pm25} <span style={{fontSize:'14px'}}>µg/m³</span>
+            </div>
+            <div style={{ fontSize: '11px', color: popup.properties.pm25 > 35 ? 'orange' : 'green' }}>
+              {popup.properties.pm25 > 35 ? '⚠ High Dust' : '✓ Clear'}
+            </div>
+          </div>
+        </div>
+
         <button
           onClick={() => setPopup(null)}
           style={{
-            marginTop: 'auto',
-            padding: '12px 20px',
-            backgroundColor: '#ff4444',
-            color: 'white',
+            width: '100%',
+            padding: '12px',
+            backgroundColor: '#eee',
             border: 'none',
-            borderRadius: '4px',
-            fontSize: '16px',
+            borderRadius: '8px',
             cursor: 'pointer',
-            fontWeight: 'bold'
+            fontWeight: 'bold',
+            color: '#555'
           }}
         >
-          Close
+          Close Dashboard
         </button>
       </div>
     )}
@@ -227,4 +297,3 @@ return (
 }
 
 export default App
-
