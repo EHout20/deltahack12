@@ -23,33 +23,110 @@ function App() {
       zoom: 13,
     });
 
-    // Fetch and parse CSV data
-    fetch('/data.csv')
-      .then(response => response.text())
-      .then(csvText => {
-        // Parse CSV
-        const lines = csvText.split('\n');
-        const headers = lines[0].split(',');
-        
-        // Find column indexes
-        const latIndex = headers.indexOf('Lat_DD');
-        const lngIndex = headers.indexOf('Long_DD');
-        
-        // Add markers for each row
-        for (let i = 1; i < lines.length; i++) {
-          const row = lines[i].split(',');
-          const lat = parseFloat(row[latIndex]);
-          const lng = parseFloat(row[lngIndex]);
+    // Wait for map to load before adding data
+    mapRef.current.on('load', () => {
+      // Fetch and parse CSV data once
+      fetch('/data.csv')
+        .then(response => response.text())
+        .then(csvText => {
+          // Parse CSV efficiently
+          const lines = csvText.trim().split('\n');
+          const headers = lines[0].split(',');
           
-          // Only add marker if coordinates are valid
-          if (!isNaN(lat) && !isNaN(lng)) {
-            new mapboxgl.Marker()
-              .setLngLat([lng, lat])
-              .addTo(mapRef.current);
+          const latIndex = headers.indexOf('Lat_DD');
+          const lngIndex = headers.indexOf('Long_DD');
+          
+          // Build GeoJSON features array (much faster than individual markers)
+          const features = [];
+          
+          for (let i = 1; i < lines.length; i++) {
+            const row = lines[i].split(',');
+            const lat = parseFloat(row[latIndex]);
+            const lng = parseFloat(row[lngIndex]);
+            
+            if (!isNaN(lat) && !isNaN(lng)) {
+              features.push({
+                type: 'Feature',
+                geometry: {
+                  type: 'Point',
+                  coordinates: [lng, lat]
+                },
+                properties: {}
+              });
+            }
           }
-        }
-      })
-      .catch(error => console.error('Error loading CSV:', error));
+          
+          // Add source and layer once with all points
+          mapRef.current.addSource('mines', {
+            type: 'geojson',
+            data: {
+              type: 'FeatureCollection',
+              features: features
+            },
+            cluster: true,
+            clusterMaxZoom: 14,
+            clusterRadius: 50
+          });
+          
+          // Add clustered circle layer
+          mapRef.current.addLayer({
+            id: 'clusters',
+            type: 'circle',
+            source: 'mines',
+            filter: ['has', 'point_count'],
+            paint: {
+              'circle-color': [
+                'step',
+                ['get', 'point_count'],
+                '#51bbd6',
+                100,
+                '#f1f075',
+                750,
+                '#f28cb1'
+              ],
+              'circle-radius': [
+                'step',
+                ['get', 'point_count'],
+                20,
+                100,
+                30,
+                750,
+                40
+              ]
+            }
+          });
+          
+          // Add cluster count label
+          mapRef.current.addLayer({
+            id: 'cluster-count',
+            type: 'symbol',
+            source: 'mines',
+            filter: ['has', 'point_count'],
+            layout: {
+              'text-field': '{point_count_abbreviated}',
+              'text-font': ['DIN Offc Pro Medium', 'Arial Unicode MS Bold'],
+              'text-size': 12
+            }
+          });
+          
+          // Add unclustered points
+          mapRef.current.addLayer({
+            id: 'unclustered-point',
+            type: 'circle',
+            source: 'mines',
+            filter: ['!', ['has', 'point_count']],
+            paint: {
+              'circle-color': '#11b4da',
+              'circle-radius': 6,
+              'circle-stroke-width': 1,
+              'circle-stroke-color': '#fff'
+            }
+          });
+          
+          console.log(`Loaded ${features.length} mine locations`);
+        })
+        .catch(error => console.error('Error loading CSV:', error));
+    });
 
     return () => {
       mapRef.current.remove()
