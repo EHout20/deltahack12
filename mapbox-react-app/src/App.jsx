@@ -149,6 +149,25 @@ function App() {
               properties: feature.properties
             });
           });
+
+          // Add click listener to clusters: zoom in to cluster expansion
+          mapRef.current.on('click', 'clusters', (e) => {
+            const features = mapRef.current.queryRenderedFeatures(e.point, { layers: ['clusters'] });
+            if (!features.length) return;
+            const cluster = features[0];
+            const clusterId = cluster.properties.cluster_id;
+
+            mapRef.current.getSource('mines').getClusterExpansionZoom(clusterId, (err, zoom) => {
+              if (err) {
+                console.error('getClusterExpansionZoom error:', err);
+                return;
+              }
+              mapRef.current.easeTo({
+                center: cluster.geometry.coordinates,
+                zoom: zoom
+              });
+            });
+          });
           
           // Change cursor on hover
           mapRef.current.on('mouseenter', 'unclustered-point', () => {
