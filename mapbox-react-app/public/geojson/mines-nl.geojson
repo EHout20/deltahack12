@@ -1,0 +1,1297 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -58.77516818,
+          48.55130708
+        ]
+      },
+      "properties": {
+        "name": "Aguathuna",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Dorm)",
+        "commodity": "\"LS",
+        "mineType": "NULL",
+        "latitude": 48.55130708,
+        "longitude": -58.77516818
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -56.19399958,
+          49.97776675
+        ]
+      },
+      "properties": {
+        "name": "Baie Verte Mines",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Dorm)",
+        "commodity": "AB",
+        "mineType": "Unknown",
+        "latitude": 49.97776675,
+        "longitude": -56.19399958
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -55.80609076,
+          49.80982275
+        ]
+      },
+      "properties": {
+        "name": "Betts Cove Mine",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Dorm)",
+        "commodity": "CU",
+        "mineType": "Unknown",
+        "latitude": 49.80982275,
+        "longitude": -55.80609076
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -58.33149562,
+          48.40120094
+        ]
+      },
+      "properties": {
+        "name": "Bishop Iron Mines (Steel Mountain Magnitite)",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Dorm)",
+        "commodity": "FE",
+        "mineType": "Unknown",
+        "latitude": 48.40120094,
+        "longitude": -58.33149562
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -56.09319307,
+          49.87952375
+        ]
+      },
+      "properties": {
+        "name": "Consolidated Rambler Mines",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Exh'd)",
+        "commodity": "\"CU",
+        "mineType": "NULL",
+        "latitude": 49.87952375,
+        "longitude": -56.09319307
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -57.46511789,
+          50.29379086
+        ]
+      },
+      "properties": {
+        "name": "Daniel's Harbour Mine",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Exh'd)",
+        "commodity": "ZN",
+        "mineType": "Unknown",
+        "latitude": 50.29379086,
+        "longitude": -57.46511789
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -53.78449091,
+          47.30959866
+        ]
+      },
+      "properties": {
+        "name": "Dunville Mine",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Dorm)",
+        "commodity": "SI",
+        "mineType": "Unknown",
+        "latitude": 47.30959866,
+        "longitude": -53.78449091
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -58.56057546,
+          48.38122713
+        ]
+      },
+      "properties": {
+        "name": "Flat Bay Mine",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Dorm)",
+        "commodity": "GY",
+        "mineType": "Unknown",
+        "latitude": 48.38122713,
+        "longitude": -58.56057546
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -58.09530255,
+          47.73609606
+        ]
+      },
+      "properties": {
+        "name": "Hope Brook",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Exh'd)",
+        "commodity": "AU",
+        "mineType": "Unknown",
+        "latitude": 47.73609606,
+        "longitude": -58.09530255
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -55.94736014,
+          49.59549765
+        ]
+      },
+      "properties": {
+        "name": "Little Bay (Sleepy Hollow/Polly Porter)",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Exh'd)",
+        "commodity": "\"CU",
+        "mineType": "NULL",
+        "latitude": 49.59549765,
+        "longitude": -55.94736014
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.74929922,
+          54.68572237
+        ]
+      },
+      "properties": {
+        "name": "Schefferville",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Exh'd)",
+        "commodity": "FE",
+        "mineType": "Unknown",
+        "latitude": 54.68572237,
+        "longitude": -66.74929922
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -55.43142045,
+          46.87456993
+        ]
+      },
+      "properties": {
+        "name": "St. Lawrence Mines",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Dorm)",
+        "commodity": "FL",
+        "mineType": "Unknown",
+        "latitude": 46.87456993,
+        "longitude": -55.43142045
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -56.22896375,
+          49.91936173
+        ]
+      },
+      "properties": {
+        "name": "Terra Nova Mine",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Exh'd)",
+        "commodity": "CU",
+        "mineType": "Unknown",
+        "latitude": 49.91936173,
+        "longitude": -56.22896375
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -52.95307961,
+          47.63966823
+        ]
+      },
+      "properties": {
+        "name": "Wabana Mines",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Dorm)",
+        "commodity": "FE",
+        "mineType": "Unknown",
+        "latitude": 47.63966823,
+        "longitude": -52.95307961
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -56.0060465,
+          49.59484717
+        ]
+      },
+      "properties": {
+        "name": "Whalesback Mine",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Dorm)",
+        "commodity": "CU",
+        "mineType": "Unknown",
+        "latitude": 49.59484717,
+        "longitude": -56.0060465
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -55.70373598,
+          49.50946083
+        ]
+      },
+      "properties": {
+        "name": "Pilley's Island Mines",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Dorm)",
+        "commodity": "\"CU",
+        "mineType": "NULL",
+        "latitude": 49.50946083,
+        "longitude": -55.70373598
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -58.30768181,
+          49.05011078
+        ]
+      },
+      "properties": {
+        "name": "York Harbour Copper Mine",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Dorm)",
+        "commodity": "CU",
+        "mineType": "Unknown",
+        "latitude": 49.05011078,
+        "longitude": -58.30768181
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -57.17075496,
+          49.11766309
+        ]
+      },
+      "properties": {
+        "name": "Alderly Brook",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Dorm)",
+        "commodity": "CL",
+        "mineType": "Unknown",
+        "latitude": 49.11766309,
+        "longitude": -57.17075496
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -58.24369998,
+          49.00898734
+        ]
+      },
+      "properties": {
+        "name": "Blow-Me-Down Mine",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Exh'd)",
+        "commodity": "CR",
+        "mineType": "Unknown",
+        "latitude": 49.00898734,
+        "longitude": -58.24369998
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -58.59929476,
+          48.77520108
+        ]
+      },
+      "properties": {
+        "name": "Bluff Head Mine",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Dorm)",
+        "commodity": "CR",
+        "mineType": "Unknown",
+        "latitude": 48.77520108,
+        "longitude": -58.59929476
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -53.18292052,
+          47.53195161
+        ]
+      },
+      "properties": {
+        "name": "Brigus",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Dorm)",
+        "commodity": "\"MN",
+        "mineType": "NULL",
+        "latitude": 47.53195161,
+        "longitude": -53.18292052
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -56.92564677,
+          49.71602055
+        ]
+      },
+      "properties": {
+        "name": "Brownings Mine",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Exh'd)",
+        "commodity": "AU",
+        "mineType": "Unknown",
+        "latitude": 49.71602055,
+        "longitude": -56.92564677
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -55.65668578,
+          52.22165455
+        ]
+      },
+      "properties": {
+        "name": "Cape St. Charles",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Dorm)",
+        "commodity": "MI",
+        "mineType": "Unknown",
+        "latitude": 52.22165455,
+        "longitude": -55.65668578
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -58.49913478,
+          48.54236778
+        ]
+      },
+      "properties": {
+        "name": "Cliff Mine",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Dorm)",
+        "commodity": "FE",
+        "mineType": "Unknown",
+        "latitude": 48.54236778,
+        "longitude": -58.49913478
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -57.13832103,
+          49.13389826
+        ]
+      },
+      "properties": {
+        "name": "Coal Brook Mine",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Dorm)",
+        "commodity": "CL",
+        "mineType": "Unknown",
+        "latitude": 49.13389826,
+        "longitude": -57.13832103
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -58.9660014,
+          47.93008396
+        ]
+      },
+      "properties": {
+        "name": "Coal Brook Prospect",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Exh'd)",
+        "commodity": "CL",
+        "mineType": "Unknown",
+        "latitude": 47.93008396,
+        "longitude": -58.9660014
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -56.08094632,
+          49.63702229
+        ]
+      },
+      "properties": {
+        "name": "Colchester Mine",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Dorm)",
+        "commodity": "CU",
+        "mineType": "Unknown",
+        "latitude": 49.63702229,
+        "longitude": -56.08094632
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -55.21554652,
+          49.50179007
+        ]
+      },
+      "properties": {
+        "name": "Cook Iron Mine",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Exh'd)",
+        "commodity": "FE",
+        "mineType": "Unknown",
+        "latitude": 49.50179007,
+        "longitude": -55.21554652
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -55.84456193,
+          49.48333812
+        ]
+      },
+      "properties": {
+        "name": "Crescent Lake Mine",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Dorm)",
+        "commodity": "CU",
+        "mineType": "Unknown",
+        "latitude": 49.48333812,
+        "longitude": -55.84456193
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.86878027,
+          49.57337287
+        ]
+      },
+      "properties": {
+        "name": "Cross Cove",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Dorm)",
+        "commodity": "SB",
+        "mineType": "Unknown",
+        "latitude": 49.57337287,
+        "longitude": -54.86878027
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -56.05735716,
+          49.98995854
+        ]
+      },
+      "properties": {
+        "name": "Goldenville Main Shaft",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Exh'd)",
+        "commodity": "AU",
+        "mineType": "Unknown",
+        "latitude": 49.98995854,
+        "longitude": -56.05735716
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -57.84973621,
+          49.19382271
+        ]
+      },
+      "properties": {
+        "name": "Goose Arm Brook",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Dorm)",
+        "commodity": "PB",
+        "mineType": "Unknown",
+        "latitude": 49.19382271,
+        "longitude": -57.84973621
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -57.04267629,
+          49.18299799
+        ]
+      },
+      "properties": {
+        "name": "Goose Brook",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Dorm)",
+        "commodity": "CL",
+        "mineType": "Unknown",
+        "latitude": 49.18299799,
+        "longitude": -57.04267629
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -55.27211395,
+          49.51533261
+        ]
+      },
+      "properties": {
+        "name": "Grey Copper Mine",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Exh'd)",
+        "commodity": "CU",
+        "mineType": "Unknown",
+        "latitude": 49.51533261,
+        "longitude": -55.27211395
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -53.93899568,
+          47.68693527
+        ]
+      },
+      "properties": {
+        "name": "La Manche",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Dorm)",
+        "commodity": "PB",
+        "mineType": "Unknown",
+        "latitude": 47.68693527,
+        "longitude": -53.93899568
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -56.04151531,
+          49.54315567
+        ]
+      },
+      "properties": {
+        "name": "Lady Pond Mine",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Exh'd)",
+        "commodity": "CU",
+        "mineType": "Unknown",
+        "latitude": 49.54315567,
+        "longitude": -56.04151531
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -55.4981185,
+          49.45291186
+        ]
+      },
+      "properties": {
+        "name": "Lockport Mine",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Dorm)",
+        "commodity": "CU",
+        "mineType": "Unknown",
+        "latitude": 49.45291186,
+        "longitude": -55.4981185
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -56.08854995,
+          49.6303363
+        ]
+      },
+      "properties": {
+        "name": "McNeilly",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Exh'd)",
+        "commodity": "CU",
+        "mineType": "Unknown",
+        "latitude": 49.6303363,
+        "longitude": -56.08854995
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -55.79062733,
+          49.5373872
+        ]
+      },
+      "properties": {
+        "name": "Miles Cove Mine",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Dorm)",
+        "commodity": "CU",
+        "mineType": "Unknown",
+        "latitude": 49.5373872,
+        "longitude": -55.79062733
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -56.07571829,
+          49.65712901
+        ]
+      },
+      "properties": {
+        "name": "Old English",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Exh'd)",
+        "commodity": "CU",
+        "mineType": "Unknown",
+        "latitude": 49.65712901,
+        "longitude": -56.07571829
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -56.18110629,
+          49.56104822
+        ]
+      },
+      "properties": {
+        "name": "Rendell-Jackman",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Dorm)",
+        "commodity": "\"CU",
+        "mineType": "NULL",
+        "latitude": 49.56104822,
+        "longitude": -56.18110629
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.41691787,
+          47.44183309
+        ]
+      },
+      "properties": {
+        "name": "Rocky Cove",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Exh'd)",
+        "commodity": "CU",
+        "mineType": "Unknown",
+        "latitude": 47.44183309,
+        "longitude": -54.41691787
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -52.70697588,
+          47.40433076
+        ]
+      },
+      "properties": {
+        "name": "Shoal Bay",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Exh'd)",
+        "commodity": "CU",
+        "mineType": "Unknown",
+        "latitude": 47.40433076,
+        "longitude": -52.70697588
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -53.94442536,
+          47.29947855
+        ]
+      },
+      "properties": {
+        "name": "Silver Cliff",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Dorm)",
+        "commodity": "PB",
+        "mineType": "Unknown",
+        "latitude": 47.29947855,
+        "longitude": -53.94442536
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -58.48886623,
+          48.53872244
+        ]
+      },
+      "properties": {
+        "name": "Skindles Mine",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Dorm)",
+        "commodity": "FE",
+        "mineType": "Unknown",
+        "latitude": 48.53872244,
+        "longitude": -58.48886623
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -56.07412555,
+          49.51454734
+        ]
+      },
+      "properties": {
+        "name": "Sterling Mine",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Exh'd)",
+        "commodity": "CU",
+        "mineType": "Unknown",
+        "latitude": 49.51454734,
+        "longitude": -56.07412555
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.85443771,
+          49.57868509
+        ]
+      },
+      "properties": {
+        "name": "Stewart Mine",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Dorm)",
+        "commodity": "AU",
+        "mineType": "Unknown",
+        "latitude": 49.57868509,
+        "longitude": -54.85443771
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.11057313,
+          47.05213766
+        ]
+      },
+      "properties": {
+        "name": "Stoneyhouse",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Dorm)",
+        "commodity": "CU",
+        "mineType": "Unknown",
+        "latitude": 47.05213766,
+        "longitude": -54.11057313
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -56.04759769,
+          49.67102291
+        ]
+      },
+      "properties": {
+        "name": "Swatridge",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Exh'd)",
+        "commodity": "CU",
+        "mineType": "Unknown",
+        "latitude": 49.67102291,
+        "longitude": -56.04759769
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -53.20072881,
+          47.50029623
+        ]
+      },
+      "properties": {
+        "name": "Turk's Gut",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Dorm)",
+        "commodity": "CU",
+        "mineType": "Unknown",
+        "latitude": 47.50029623,
+        "longitude": -53.20072881
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -58.48599973,
+          48.53336145
+        ]
+      },
+      "properties": {
+        "name": "Upper Drill Brook Mine",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Dorm)",
+        "commodity": "FE",
+        "mineType": "Unknown",
+        "latitude": 48.53336145,
+        "longitude": -58.48599973
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -53.0186242,
+          47.99899375
+        ]
+      },
+      "properties": {
+        "name": "Workington",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Exh'd)",
+        "commodity": "FE",
+        "mineType": "Unknown",
+        "latitude": 47.99899375,
+        "longitude": -53.0186242
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -58.91870538,
+          47.75884382
+        ]
+      },
+      "properties": {
+        "name": "Cape Ray Deposit",
+        "jurisdiction": "NL",
+        "status": "Dev Prosp",
+        "commodity": "AU",
+        "mineType": "Unknown",
+        "latitude": 47.75884382,
+        "longitude": -58.91870538
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -56.92437386,
+          48.83260228
+        ]
+      },
+      "properties": {
+        "name": "Clementine Prospect",
+        "jurisdiction": "NL",
+        "status": "Dev Prosp",
+        "commodity": "ZN",
+        "mineType": "Unknown",
+        "latitude": 48.83260228,
+        "longitude": -56.92437386
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -56.59568713,
+          48.82652057
+        ]
+      },
+      "properties": {
+        "name": "Connel Option Prospect",
+        "jurisdiction": "NL",
+        "status": "Dev Prosp",
+        "commodity": "PB",
+        "mineType": "Unknown",
+        "latitude": 48.82652057,
+        "longitude": -56.59568713
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -56.04441135,
+          50.01527042
+        ]
+      },
+      "properties": {
+        "name": "Deer Cove Prospect",
+        "jurisdiction": "NL",
+        "status": "Dev Prosp",
+        "commodity": "AU",
+        "mineType": "Unknown",
+        "latitude": 50.01527042,
+        "longitude": -56.04441135
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -57.10180735,
+          47.619809
+        ]
+      },
+      "properties": {
+        "name": "Galena # 1 Vein Prospect",
+        "jurisdiction": "NL",
+        "status": "Dev Prosp",
+        "commodity": "PB",
+        "mineType": "Unknown",
+        "latitude": 47.619809,
+        "longitude": -57.10180735
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -57.10341499,
+          47.59146446
+        ]
+      },
+      "properties": {
+        "name": "Grey River Prospect",
+        "jurisdiction": "NL",
+        "status": "Dev Prosp",
+        "commodity": "W",
+        "mineType": "Unknown",
+        "latitude": 47.59146446,
+        "longitude": -57.10341499
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -59.48717105,
+          54.99585975
+        ]
+      },
+      "properties": {
+        "name": "Kitts Prospect",
+        "jurisdiction": "NL",
+        "status": "Dev Prosp",
+        "commodity": "UR",
+        "mineType": "Unknown",
+        "latitude": 54.99585975,
+        "longitude": -59.48717105
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -58.56547346,
+          48.76873831
+        ]
+      },
+      "properties": {
+        "name": "Lewis Brook Mine",
+        "jurisdiction": "NL",
+        "status": "Dev Prosp",
+        "commodity": "AB",
+        "mineType": "Unknown",
+        "latitude": 48.76873831,
+        "longitude": -58.56547346
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -59.9805202,
+          54.58368486
+        ]
+      },
+      "properties": {
+        "name": "Michelin Deposit",
+        "jurisdiction": "NL",
+        "status": "Dev Prosp",
+        "commodity": "UR",
+        "mineType": "Unknown",
+        "latitude": 54.58368486,
+        "longitude": -59.9805202
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -58.66750236,
+          48.55336703
+        ]
+      },
+      "properties": {
+        "name": "Romaines Brook Prospect",
+        "jurisdiction": "NL",
+        "status": "Dev Prosp",
+        "commodity": "GY",
+        "mineType": "Unknown",
+        "latitude": 48.55336703,
+        "longitude": -58.66750236
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -57.20208936,
+          48.51263728
+        ]
+      },
+      "properties": {
+        "name": "Tulks Hill Deposit",
+        "jurisdiction": "NL",
+        "status": "Dev Prosp",
+        "commodity": "ZN",
+        "mineType": "Unknown",
+        "latitude": 48.51263728,
+        "longitude": -57.20208936
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -56.70473156,
+          48.73734149
+        ]
+      },
+      "properties": {
+        "name": "Victoria Mine",
+        "jurisdiction": "NL",
+        "status": "Dev Prosp",
+        "commodity": "CU",
+        "mineType": "Unknown",
+        "latitude": 48.73734149,
+        "longitude": -56.70473156
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -56.15502268,
+          49.19646631
+        ]
+      },
+      "properties": {
+        "name": "Gullbridge Mine",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Exh'd)",
+        "commodity": "CU",
+        "mineType": "Unknown",
+        "latitude": 49.19646631,
+        "longitude": -56.15502268
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -55.62343261,
+          51.30812332
+        ]
+      },
+      "properties": {
+        "name": "Goose Cove Mine",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Dorm)",
+        "commodity": "CU",
+        "mineType": "Unknown",
+        "latitude": 51.30812332,
+        "longitude": -55.62343261
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -55.62813668,
+          49.88017027
+        ]
+      },
+      "properties": {
+        "name": "Tilt Cove",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Exh'd)",
+        "commodity": "CU",
+        "mineType": "Unknown",
+        "latitude": 49.88017027,
+        "longitude": -55.62813668
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -56.86580863,
+          48.82372404
+        ]
+      },
+      "properties": {
+        "name": "Buchans",
+        "jurisdiction": "NL",
+        "status": "P. Prod (Exh'd)",
+        "commodity": "Zn",
+        "mineType": "Unknown",
+        "latitude": 48.82372404,
+        "longitude": -56.86580863
+      }
+    }
+  ]
+}
