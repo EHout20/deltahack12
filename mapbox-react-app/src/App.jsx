@@ -188,31 +188,10 @@ return (
         boxShadow: '-2px 0 10px rgba(0, 0, 0, 0.2)',
         zIndex: 20,
         width: '35%',
-        overflowY: 'auto'
+        overflowY: 'auto',
+        display: 'flex',
+        flexDirection: 'column'
       }}>
-        <button
-          onClick={() => setPopup(null)}
-          style={{
-            position: 'absolute',
-            top: '15px',
-            right: '15px',
-            backgroundColor: 'transparent',
-            border: 'none',
-            fontSize: '28px',
-            cursor: 'pointer',
-            fontWeight: 'bold',
-            color: '#333',
-            padding: '0',
-            width: '30px',
-            height: '30px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center'
-          }}
-        >
-          ✕
-        </button>
-        
         <h3 style={{ marginTop: 0, marginBottom: '10px' }}>Mine Location</h3>
         <p><strong>Latitude:</strong> {popup.coordinates[1].toFixed(4)}</p>
         <p><strong>Longitude:</strong> {popup.coordinates[0].toFixed(4)}</p>
@@ -224,6 +203,23 @@ return (
             ))}
           </div>
         )}
+        
+        <button
+          onClick={() => setPopup(null)}
+          style={{
+            marginTop: 'auto',
+            padding: '12px 20px',
+            backgroundColor: '#ff4444',
+            color: 'white',
+            border: 'none',
+            borderRadius: '4px',
+            fontSize: '16px',
+            cursor: 'pointer',
+            fontWeight: 'bold'
+          }}
+        >
+          Close
+        </button>
       </div>
     )}
   </>
