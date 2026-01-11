@@ -1,5 +1,5 @@
 import SensorVisualization from './SensorVisualization';
-import { getOneYearPrediction } from './predictionEngine';
+import { getOneYearPrediction, calculateFutureRiskScore } from './predictionEngine';
 
 export default function MineDetailsDashboard({ 
   popup, 
@@ -15,9 +15,23 @@ export default function MineDetailsDashboard({
 
   // Get current live data for this specific mine
   const currentMine = allMines.find(m => m.id === popup.properties.id) || popup.properties;
-  // Each mine has its own independent telemetry history
   const mineHistory = telemetryHistory[currentMine.id] || [];
   const mineId = currentMine.id;
+
+  const rawFutureRisk = calculateFutureRiskScore(mineHistory, currentMine.riskScore);
+  
+  // if risk > 85, simulate a restoration event (reset to 25)
+  let futureRiskScore = rawFutureRisk;
+  let restorationCount = 0;
+  let isRestored = false;
+
+  if (rawFutureRisk > 85) {
+      futureRiskScore = 25; 
+      restorationCount = 1;
+      isRestored = true;
+  }
+
+  const riskTrend = futureRiskScore - currentMine.riskScore;
 
   return (
     <div style={{
@@ -30,6 +44,7 @@ export default function MineDetailsDashboard({
       zIndex: 20,
       width: '400px', 
       overflowY: 'auto',
+      overflowX: 'hidden',
       fontFamily: 'Arial, sans-serif',
       transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)'
     }}>
@@ -42,7 +57,10 @@ export default function MineDetailsDashboard({
                 {currentMine.name || 'Unknown Mine'}
               </h2>
               <p style={{ margin: '5px 0 0', color: theme === 'light' ? '#666' : '#aaa' }}>
-                Latitude: {popup.coordinates[1].toFixed(4)}, Longitude: {popup.coordinates[0].toFixed(4)}
+                Latitude: {popup.coordinates[1].toFixed(4)}
+              </p>
+              <p style={{ margin: '2px 0 0', color: theme === 'light' ? '#666' : '#aaa' }}>
+                Longitude: {popup.coordinates[0].toFixed(4)}
               </p>
             </div>
             <div 
@@ -80,11 +98,12 @@ export default function MineDetailsDashboard({
         </h4>
 
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px', marginBottom: '30px', width: '100%' }}>
+          
           {/* Water Acidity */}
           <div style={{ background: theme === 'light' ? '#f8f9fa' : '#2a2a2a', padding: '15px', borderRadius: '8px', minWidth: 0 }}>
             <div className="tooltip-trigger" style={{ color: theme === 'light' ? '#666' : '#aaa', fontSize: '12px', marginBottom: '5px' }}>
               Water Acidity
-              <span className="tooltip-text" style={{ textAlign: 'left' }}>
+              <span className="tooltip-text" style={{ textAlign: 'left', left: 0, transform: 'none' }}>
                 <strong>pH Scale</strong><br/>
                 Measures water acidity. Low pH (&lt;6.5) can kill fish and leach heavy metals.
               </span>
@@ -97,11 +116,10 @@ export default function MineDetailsDashboard({
               fontWeight: 'bold',
               width: '85px',
               display: 'inline-block',
-              color: currentMine.ph < 5.0 ? '#f44336' : (currentMine.ph < 6.8 ? '#ff9800' : '#4caf50') 
+              color: currentMine.ph < 5.0 ? '#ff1744' : (currentMine.ph < 6.8 ? '#ff9800' : '#4caf50') 
             }}>
               {currentMine.ph < 5.0 ? '✗ Hazardous' : (currentMine.ph < 6.8 ? '⚠ Warning' : '✓ Safe')}
             </div>
-            {/* forecast */}
             <div style={{ marginTop: '12px', paddingTop: '10px', borderTop: `1px solid ${theme === 'light' ? '#ddd' : '#444'}` }}>
                 <div style={{ fontSize: '10px', color: theme === 'light' ? '#888' : '#aaa', textTransform: 'uppercase' }}>
                     1-Year Forecast
@@ -116,7 +134,7 @@ export default function MineDetailsDashboard({
           <div style={{ background: theme === 'light' ? '#f8f9fa' : '#2a2a2a', padding: '15px', borderRadius: '8px', minWidth: 0 }}>
             <div className="tooltip-trigger" style={{ color: theme === 'light' ? '#666' : '#aaa', fontSize: '12px', marginBottom: '5px' }}>
               Soil Lead (Pb)
-              <span className="tooltip-text" style={{ textAlign: 'left' }}>
+              <span className="tooltip-text" style={{ textAlign: 'left', left: '50%', transform: 'translateX(-50%)' }}>
                 <strong>lead parts per million (ppm)</strong><br/>
                 Concentration of lead in soil. Levels above 70 ppm are toxic to wildlife and humans.
               </span>
@@ -129,11 +147,10 @@ export default function MineDetailsDashboard({
               fontWeight: 'bold',
               width: '85px',
               display: 'inline-block',
-              color: currentMine.lead > 70 ? '#f44336' : (currentMine.lead > 40 ? '#ff9800' : '#4caf50') 
+              color: currentMine.lead > 70 ? '#ff1744' : (currentMine.lead > 40 ? '#ff9800' : '#4caf50') 
             }}>
               {currentMine.lead > 70 ? '✗ Hazardous' : (currentMine.lead > 40 ? '⚠ Warning' : '✓ Safe')}
             </div>
-            {/* forecast */}
             <div style={{ marginTop: '12px', paddingTop: '10px', borderTop: `1px solid ${theme === 'light' ? '#ddd' : '#444'}` }}>
                 <div style={{ fontSize: '10px', color: theme === 'light' ? '#888' : '#aaa', textTransform: 'uppercase' }}>
                     1-Year Forecast
@@ -148,7 +165,7 @@ export default function MineDetailsDashboard({
           <div style={{ background: theme === 'light' ? '#f8f9fa' : '#2a2a2a', padding: '15px', borderRadius: '8px', minWidth: 0 }}>
             <div className="tooltip-trigger" style={{ color: theme === 'light' ? '#666' : '#aaa', fontSize: '12px', marginBottom: '5px' }}>
               Air Quality 
-              <span className="tooltip-text" style={{ textAlign: 'left' }}>
+              <span className="tooltip-text" style={{ textAlign: 'left', left: 0, transform: 'none' }}>
                 <strong>particulate matter (µg/m³)</strong><br/>
                 Measures microscopic dust particles. High levels indicate industrial pollution.
               </span>
@@ -161,11 +178,10 @@ export default function MineDetailsDashboard({
               fontWeight: 'bold',
               width: '85px',
               display: 'inline-block',
-              color: currentMine.pm25 > 80 ? '#f44336' : (currentMine.pm25 > 20 ? '#ff9800' : '#4caf50') 
+              color: currentMine.pm25 > 80 ? '#ff1744' : (currentMine.pm25 > 20 ? '#ff9800' : '#4caf50') 
             }}>
               {currentMine.pm25 > 80 ? '✗ Hazardous' : (currentMine.pm25 > 20 ? '⚠ Warning' : '✓ Safe')}
             </div>
-            {/* forecase */}
             <div style={{ marginTop: '12px', paddingTop: '10px', borderTop: `1px solid ${theme === 'light' ? '#ddd' : '#444'}` }}>
                 <div style={{ fontSize: '10px', color: theme === 'light' ? '#888' : '#aaa', textTransform: 'uppercase' }}>
                     1-Year Forecast
@@ -175,9 +191,62 @@ export default function MineDetailsDashboard({
                 </div>
             </div>
           </div>
+
+          {/* Future Risk Index */}
+          <div style={{ 
+            background: theme === 'light' ? (isRestored ? '#f0fff4' : '#eef2ff') : '#1e2a38', 
+            padding: '15px', 
+            borderRadius: '8px', 
+            border: `1px solid ${isRestored ? '#48bb78' : (theme === 'light' ? '#c7d2fe' : '#374151')}`,
+            minWidth: 0 
+          }}>
+            <div className="tooltip-trigger" style={{ 
+              color: isRestored ? '#38a169' : (theme === 'light' ? '#4f46e5' : '#818cf8'), 
+              fontSize: '11px', 
+              fontWeight: 'bold', 
+              marginBottom: '5px', 
+              cursor: 'help'
+            }}>
+              Future Risk Index
+              <span className="tooltip-text" style={{ textAlign: 'left', width: '150px' }}>
+                <strong>Risk index 1 year from now</strong><br/>
+              </span>
+            </div>
+
+            <div style={{ fontSize: '24px', fontWeight: 'bold', color: theme === 'light' ? '#333' : '#fff' }}>
+              {futureRiskScore}/100
+            </div>
+
+            {/* trend icon */}
+            <div style={{ 
+              fontSize: '11px', 
+              fontWeight: 'bold', 
+              color: isRestored ? '#38a169' : (riskTrend > 0 ? '#ff1744' : (riskTrend < 0 ? '#4caf50' : '#888')) 
+            }}>
+              {isRestored ? '✓ Restored (Safe)' : (riskTrend > 0 ? `↗ +${Math.abs(riskTrend)} Increasing` : (riskTrend < 0 ? `↘ -${Math.abs(riskTrend)} Improving` : '→ Stable'))}
+            </div>
+
+            {/* Restoration Counter */}
+            <div style={{ 
+                marginTop: '8px', 
+                paddingTop: '8px', 
+                borderTop: `1px solid ${theme === 'light' ? '#e2e8f0' : '#4a5568'}`,
+                display: 'flex', 
+                justifyContent: 'space-between',
+                fontSize: '10px', 
+                color: theme === 'light' ? '#555' : '#aaa'
+            }}>
+                <span>Restorations:</span>
+                <strong style={{ color: isRestored ? '#38a169' : 'inherit' }}>{restorationCount}</strong>
+            </div>
+
+            <div style={{ fontSize: '9px', color: theme === 'light' ? '#888' : '#aaa', marginTop: '6px' }}>
+               Based on {mineHistory.length} historical readings
+            </div>
+          </div>
+
         </div>
 
-        {/* Each mine gets its own isolated graph with key={mineId} to force re-render on mine change */}
         <SensorVisualization 
           key={`sensor-${mineId}-${mineHistory.length}`}
           mine={currentMine} 

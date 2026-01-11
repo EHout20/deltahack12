@@ -122,6 +122,33 @@ function App() {
   useMapboxInit(mapRef, mapContainerRef, minesGeoRef, setAllMines, setPopup, setLocationSearch);
   useMapboxTheme(mapRef, minesGeoRef, theme);
 
+  // Update GeoJSON source when mine data changes (for color updates)
+  useEffect(() => {
+    if (mapRef.current && minesGeoRef.current && allMines.length > 0) {
+      const source = mapRef.current.getSource('mines');
+      if (source) {
+        // Update the properties in the GeoJSON features
+        const updatedFeatures = minesGeoRef.current.features.map(feature => {
+          const mine = allMines.find(m => m.id === feature.properties.id);
+          if (mine) {
+            return {
+              ...feature,
+              properties: mine
+            };
+          }
+          return feature;
+        });
+        
+        minesGeoRef.current = {
+          type: 'FeatureCollection',
+          features: updatedFeatures
+        };
+        
+        source.setData(minesGeoRef.current);
+      }
+    }
+  }, [allMines]);
+
   const handleSuggestionClick = useCallback((name) => {
     const matchingMines = allMines.filter(mine => mine.name === name);
     
