@@ -1,4 +1,5 @@
 import SensorVisualization from './SensorVisualization';
+import { getOneYearPrediction } from './predictionEngine';
 
 export default function MineDetailsDashboard({ 
   popup, 
@@ -97,6 +98,15 @@ export default function MineDetailsDashboard({
             }}>
               {currentMine.ph < 5.0 ? '✗ Hazardous' : (currentMine.ph < 6.8 ? '⚠ Warning' : '✓ Safe')}
             </div>
+            {/* NEW: AI PREDICTION FOR WATER */}
+            <div style={{ marginTop: '12px', paddingTop: '10px', borderTop: `1px solid ${theme === 'light' ? '#ddd' : '#444'}` }}>
+                <div style={{ fontSize: '10px', color: theme === 'light' ? '#888' : '#aaa', textTransform: 'uppercase' }}>
+                    1-Year Forecast
+                </div>
+                <div style={{ fontSize: '12px', fontWeight: 'bold', color: theme === 'light' ? '#555' : '#ccc' }}>
+                    {getOneYearPrediction(currentMine.ph, 'ph', currentMine.riskScore).text}
+                </div>
+            </div>
           </div>
 
           {/* Soil Lead */}
@@ -118,6 +128,15 @@ export default function MineDetailsDashboard({
             }}>
               {currentMine.lead > 70 ? '✗ Hazardous' : (currentMine.lead > 40 ? '⚠ Warning' : '✓ Safe')}
             </div>
+            {/* NEW: AI PREDICTION FOR LEAD */}
+            <div style={{ marginTop: '12px', paddingTop: '10px', borderTop: `1px solid ${theme === 'light' ? '#ddd' : '#444'}` }}>
+                <div style={{ fontSize: '10px', color: theme === 'light' ? '#888' : '#aaa', textTransform: 'uppercase' }}>
+                    1-Year Forecast
+                </div>
+                <div style={{ fontSize: '12px', fontWeight: 'bold', color: theme === 'light' ? '#555' : '#ccc' }}>
+                    {getOneYearPrediction(currentMine.lead, 'lead', currentMine.riskScore).text}
+                </div>
+            </div>
           </div>
 
           {/* Air Quality */}
@@ -138,6 +157,15 @@ export default function MineDetailsDashboard({
               color: currentMine.pm25 > 80 ? '#f44336' : (currentMine.pm25 > 20 ? '#ff9800' : '#4caf50') 
             }}>
               {currentMine.pm25 > 80 ? '✗ Hazardous' : (currentMine.pm25 > 20 ? '⚠ Warning' : '✓ Safe')}
+            </div>
+            {/* NEW: AI PREDICTION FOR AIR */}
+            <div style={{ marginTop: '12px', paddingTop: '10px', borderTop: `1px solid ${theme === 'light' ? '#ddd' : '#444'}` }}>
+                <div style={{ fontSize: '10px', color: theme === 'light' ? '#888' : '#aaa', textTransform: 'uppercase' }}>
+                    1-Year Forecast
+                </div>
+                <div style={{ fontSize: '12px', fontWeight: 'bold', color: theme === 'light' ? '#555' : '#ccc' }}>
+                    {getOneYearPrediction(currentMine.pm25, 'pm25', currentMine.riskScore).text}
+                </div>
             </div>
           </div>
         </div>
