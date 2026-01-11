@@ -4,7 +4,7 @@ import { generateSensorData } from './risk';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import './App.css'
 
-const accessToken = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN;
+const accessToken = "pk.eyJ1IjoiYXl1c2huYWlyIiwiYSI6ImNtazhxZnN3azFpZ3YzZ3BsbjBvM2RnZmwifQ.uvDsRFbJ4PVoXXkrCPVmJQ";
 const canadaCenter = [-106.3, 56.1]; // Center of Canada
 const canadaBounds = [
   [-145.0, 38.0],   // SW corner - extended bottom and left
@@ -226,17 +226,17 @@ return (
     {/* Search bar - always visible, transitions position */}
     <div style={{
         position: 'absolute',
-        right: popup ? '0' : '0',
-        top: popup ? '0' : '0',
-        width: popup ? '400px' : '300px',
-        margin: popup ? '0' : '10px 10px 0 0',
+        right: (popup || locationSearch) ? '0' : '0',
+        top: (popup || locationSearch) ? '0' : '0',
+        width: (popup || locationSearch) ? '400px' : '300px',
+        margin: (popup || locationSearch) ? '0' : '10px 10px 0 0',
         zIndex: 40,
         transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)'
       }}>
       <div style={{ 
-        padding: popup ? '10px' : '0', 
-        backgroundColor: popup ? '#f8f9fa' : 'transparent',
-        borderBottom: popup ? '1px solid #e0e0e0' : 'none',
+        padding: (popup || locationSearch) ? '10px' : '0', 
+        backgroundColor: (popup || locationSearch) ? '#f8f9fa' : 'transparent',
+        borderBottom: (popup || locationSearch) ? '1px solid #e0e0e0' : 'none',
         transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)'
       }}>
         <input
@@ -246,6 +246,10 @@ return (
           onChange={(e) => {
             const query = e.target.value;
             setInputValue(query);
+            
+            // Close any open dashboards when user starts typing
+            if (popup) setPopup(null);
+            if (locationSearch) setLocationSearch(null);
             
             if (query.length >= 2) {
               // Filter mines by name
@@ -261,21 +265,20 @@ return (
             }
           }}
           style={{
-            width: popup ? 'calc(100% + 20px)' : '100%',
-            marginLeft: popup ? '-10px' : '0',
+            width: (popup || locationSearch) ? 'calc(100% + 20px)' : '100%',
+            marginLeft: (popup || locationSearch) ? '-10px' : '0',
             padding: '12px',
             fontSize: '14px',
             border: '1px solid #ccc',
-            borderRadius: popup ? '0' : '8px',
-            boxShadow: popup ? 'none' : '0 2px 4px rgba(0,0,0,0.1)',
-            transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
-            pointerEvents: popup ? 'none' : 'auto'
+            borderRadius: (popup || locationSearch) ? '0' : '8px',
+            boxShadow: (popup || locationSearch) ? 'none' : '0 2px 4px rgba(0,0,0,0.1)',
+            transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)'
           }}
         />
       </div>
         
         {/* Search Suggestions Dropdown */}
-        {searchSuggestions.length > 0 && !popup && (
+        {searchSuggestions.length > 0 && !popup && !locationSearch && (
           <div style={{
             position: 'absolute',
             top: '50px',
@@ -338,76 +341,104 @@ return (
       <div style={{
         position: 'absolute',
         right: 0,
-        top: 0,
+        top: '60px',
         bottom: 0,
         backgroundColor: 'white',
-        padding: '24px',
         boxShadow: '-4px 0 20px rgba(0,0,0,0.15)',
         zIndex: 20,
-        width: '450px', 
+        width: '400px', 
         overflowY: 'auto',
-        fontFamily: 'Arial, sans-serif'
+        fontFamily: 'Arial, sans-serif',
+        transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)'
       }}>
-        <div style={{ borderBottom: '1px solid #eee', paddingBottom: '15px', marginBottom: '20px' }}>
-          <h2 style={{ margin: 0, fontSize: '24px', color: '#333' }}>{locationSearch.name}</h2>
-          <p style={{ margin: '5px 0 0', color: '#666' }}>
-            {locationSearch.mines.length} mines found in this area
-          </p>
-        </div>
-        
-        <div style={{ marginBottom: '20px' }}>
-          {locationSearch.mines.map((mine, idx) => (
-            <div key={idx} style={{
+        <div style={{ padding: '24px' }}>
+          {/* HEADER */}
+          <div style={{ borderBottom: '1px solid #eee', paddingBottom: '15px', marginBottom: '20px' }}>
+            <h2 style={{ margin: 0, fontSize: '24px', color: '#333' }}>{locationSearch.name}</h2>
+            <p style={{ margin: '5px 0 0', color: '#666' }}>
+              {locationSearch.mines.length} mines found in this area
+            </p>
+          </div>
+          
+          <div style={{ marginBottom: '20px' }}>
+            {locationSearch.mines.map((mine, idx) => (
+              <div key={idx} style={{
+                padding: '16px',
+                marginBottom: '15px',
+                border: '1px solid #e0e0e0',
+                borderRadius: '12px',
+                cursor: 'pointer',
+                transition: 'all 0.2s',
+                boxShadow: '0 2px 4px rgba(0,0,0,0.05)'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = '#f8f9fa';
+                e.currentTarget.style.boxShadow = '0 4px 8px rgba(0,0,0,0.1)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = 'white';
+                e.currentTarget.style.boxShadow = '0 2px 4px rgba(0,0,0,0.05)';
+              }}
+              onClick={() => {
+                mapRef.current.flyTo({
+                  center: mine.coordinates,
+                  zoom: 12
+                });
+                setLocationSearch(null);
+                setPopup({
+                  coordinates: mine.coordinates,
+                  properties: mine
+                });
+              }}>
+                <div style={{ fontWeight: 'bold', color: '#333', marginBottom: '8px', fontSize: '16px' }}>
+                  {mine.name}
+                </div>
+                
+                {/* Risk Badge */}
+                <div style={{
+                  display: 'inline-block',
+                  backgroundColor: mine.color,
+                  color: 'white',
+                  padding: '4px 10px',
+                  borderRadius: '6px',
+                  fontSize: '11px',
+                  fontWeight: 'bold',
+                  marginBottom: '8px',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.5px'
+                }}>
+                  {mine.status} - {mine.riskScore}/100
+                </div>
+                
+                <div style={{ fontSize: '13px', color: '#666', marginTop: '6px' }}>
+                  {mine.location !== 'Unknown' && `📍 ${mine.location}`}
+                  {mine.county !== 'Unknown' && ` • ${mine.county}`}
+                </div>
+                
+                <div style={{ fontSize: '12px', color: '#888', marginTop: '6px' }}>
+                  Lat: {mine.coordinates[1].toFixed(4)}, Lng: {mine.coordinates[0].toFixed(4)}
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          <button
+            onClick={() => setLocationSearch(null)}
+            style={{
+              width: 'calc(100% - 48px)',
+              margin: '0 24px 24px 24px',
               padding: '12px',
-              marginBottom: '10px',
-              border: '1px solid #e0e0e0',
+              backgroundColor: '#eee',
+              border: 'none',
               borderRadius: '8px',
               cursor: 'pointer',
-              transition: 'background 0.2s'
+              fontWeight: 'bold',
+              color: '#555'
             }}
-            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#f5f5f5'}
-            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'white'}
-            onClick={() => {
-              mapRef.current.flyTo({
-                center: mine.coordinates,
-                zoom: 12
-              });
-              setLocationSearch(null);
-              setPopup({
-                coordinates: mine.coordinates,
-                properties: mine
-              });
-            }}>
-              <div style={{ fontWeight: 'bold', color: '#333', marginBottom: '4px' }}>
-                {mine.name}
-              </div>
-              <div style={{ fontSize: '13px', color: '#666' }}>
-                {mine.location !== 'Unknown' && `📍 ${mine.location}`}
-                {mine.county !== 'Unknown' && ` • ${mine.county}`}
-              </div>
-              <div style={{ fontSize: '12px', color: '#999', marginTop: '4px' }}>
-                Status: {mine.status}
-              </div>
-            </div>
-          ))}
+          >
+            Close Dashboard
+          </button>
         </div>
-        
-        <button
-          onClick={() => setLocationSearch(null)}
-          style={{
-            width: '100%',
-            padding: '12px',
-            backgroundColor: '#007bff',
-            color: 'white',
-            border: 'none',
-            borderRadius: '6px',
-            fontSize: '14px',
-            cursor: 'pointer',
-            fontWeight: 'bold'
-          }}
-        >
-          Close
-        </button>
       </div>
     )}
     
