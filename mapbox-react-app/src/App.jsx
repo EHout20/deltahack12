@@ -7,9 +7,10 @@ import LocationDashboard from './components/LocationDashboard';
 import MineDetailsDashboard from './components/MineDetailsDashboard';
 import { useTelemetry } from './hooks/useTelemetry';
 import { useMapboxInit, useMapboxTheme } from './hooks/useMapbox';
+import Title from './components/Title';
 
 function App() {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
   const [theme, setTheme] = useState("light");
   const mapRef = useRef();
   const minesGeoRef = useRef(null);
@@ -239,15 +240,22 @@ function App() {
       setIsVisible(false);
     };
 
-    document.addEventListener(`click`, handleTitleVisibility);
+    const events = ['click', 'scroll', 'keydown', 'touchstart', 'mousemove'];
+    
+    events.forEach(event => {
+      document.addEventListener(event, handleTitleVisibility);
+    });
+    
     return () => {
-      document.removeEventListener(`click`, handleTitleVisibility);
+      events.forEach(event => {
+        document.removeEventListener(event, handleTitleVisibility);
+      });
     };
   }, []);
 
   return (
     <>
-      {isVisible && <Title theme={theme} />}
+      <Title theme={theme} isVisible={isVisible} />
       <ThemeToggleButton 
         theme={theme} 
         onToggle={() => setTheme(theme === 'light' ? 'dark' : 'light')} 
