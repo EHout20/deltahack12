@@ -88,8 +88,12 @@ export default function LocationDashboard({
               </div>
               
               <div style={{ fontSize: '13px', color: theme === 'light' ? '#666' : '#aaa', marginTop: '6px' }}>
-                {mine.location !== 'Unknown' && `📍 ${mine.location}`}
-                {mine.county !== 'Unknown' && ` • ${mine.county}`}
+                {mine.location && 
+                 mine.location !== 'Unknown' && 
+                 mine.location.toUpperCase().includes('NULL') === false &&
+                 mine.location !== mine.name && 
+                 `📍 ${mine.location}`}
+                {mine.county && mine.county !== 'Unknown' && mine.county.toUpperCase() !== 'NULL' && ` • ${mine.county}`}
               </div>
               
               <div style={{ fontSize: '12px', color: theme === 'light' ? '#888' : '#666', marginTop: '6px' }}>

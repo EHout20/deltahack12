@@ -99,7 +99,7 @@ function SensorVisualization({ mine, theme, history, mineId, totalReadings }) {
             y={chartHeight - padding.bottom - ((5.0 - 4) / 4) * (chartHeight - padding.top - padding.bottom)}
             width={chartWidth - padding.left - padding.right - 10}
             height={((5.0 - 4) / 4) * (chartHeight - padding.top - padding.bottom)}
-            fill="#f443361a"
+            fill="#ff17441a"
           />
 
           {/* Line */}
@@ -128,7 +128,7 @@ function SensorVisualization({ mine, theme, history, mineId, totalReadings }) {
             fontSize="10"
             fill={textColor}
           >
-            Time (days simulated)
+            Time (days)
           </text>
         </svg>
       </div>
@@ -184,7 +184,7 @@ function SensorVisualization({ mine, theme, history, mineId, totalReadings }) {
             y={padding.top}
             width={chartWidth - padding.left - padding.right - 10}
             height={(30 / 100) * (chartHeight - padding.top - padding.bottom)}
-            fill="#f443361a"
+            fill="#ff17441a"
           />
 
           {/* Line */}
@@ -213,7 +213,7 @@ function SensorVisualization({ mine, theme, history, mineId, totalReadings }) {
             fontSize="10"
             fill={textColor}
           >
-            Time (days simulated)
+            Time (days)
           </text>
         </svg>
       </div>
@@ -268,7 +268,7 @@ function SensorVisualization({ mine, theme, history, mineId, totalReadings }) {
             y={padding.top}
             width={chartWidth - padding.left - padding.right - 10}
             height={(20 / 100) * (chartHeight - padding.top - padding.bottom)}
-            fill="#f443361a"
+            fill="#ff17441a"
           />
 
           {/* Line */}
@@ -297,7 +297,7 @@ function SensorVisualization({ mine, theme, history, mineId, totalReadings }) {
             fontSize="10"
             fill={textColor}
           >
-            Time (days simulated)
+            Time (days)
           </text>
         </svg>
       </div>

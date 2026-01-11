@@ -12,12 +12,17 @@ import {
 export function useMapboxInit(mapRef, mapContainerRef, minesGeoRef, setAllMines, setPopup, setLocationSearch) {
   useEffect(() => {
     mapboxgl.accessToken = accessToken;
+    
+    // Hide map container initially to prevent visible transition
+    if (mapContainerRef.current) {
+      mapContainerRef.current.style.opacity = '0';
+    }
 
     mapRef.current = new mapboxgl.Map({
       container: mapContainerRef.current,
       style: lightStyle,
       center: canadaCenter,
-      zoom: 3.5,
+      zoom: 2.5,
       projection: 'mercator',
       maxBounds: canadaBounds,
       minZoom: 3,
@@ -48,12 +53,20 @@ export function useMapboxInit(mapRef, mapContainerRef, minesGeoRef, setAllMines,
             
             if (!isNaN(lat) && !isNaN(lng)) {
               const simData = generateSensorData();
+              const mineName = row[nameIndex] || 'Unknown';
+              const locationValue = row[locationIndex] || '';
+              const countyValue = row[countyIndex] || '';
+              
+              // Replace NULL or empty location with mine name (check if contains NULL anywhere)
+              const location = (locationValue.toUpperCase().includes('NULL') || !locationValue.trim()) ? mineName : locationValue;
+              const county = (countyValue.toUpperCase().includes('NULL') || !countyValue.trim()) ? 'Unknown' : countyValue;
+              
               const mineData = {
                 id: i,
                 coordinates: [lng, lat],
-                location: row[locationIndex] || 'Unknown',
-                county: row[countyIndex] || 'Unknown',
-                name: row[nameIndex] || 'Unknown',
+                location: location,
+                county: county,
+                name: mineName,
                 status: row[statusIndex] || 'Unknown',
                 ...simData
               };
@@ -78,6 +91,26 @@ export function useMapboxInit(mapRef, mapContainerRef, minesGeoRef, setAllMines,
             features: features
           };
           
+          // Calculate bounds to fit all mines
+          if (features.length > 0) {
+            const bounds = new mapboxgl.LngLatBounds();
+            features.forEach(feature => {
+              bounds.extend(feature.geometry.coordinates);
+            });
+            
+            // Fit the map to show all mines with padding (instant, no animation)
+            mapRef.current.fitBounds(bounds, {
+              padding: { top: 50, bottom: 50, left: 50, right: 50 },
+              maxZoom: 10,
+              duration: 0
+            });
+            
+            // Show map after bounds are set
+            if (mapContainerRef.current) {
+              mapContainerRef.current.style.opacity = '1';
+            }
+          }
+          
           mapRef.current.addSource('mines', {
             type: 'geojson',
             data: minesGeoRef.current,
@@ -92,15 +125,7 @@ export function useMapboxInit(mapRef, mapContainerRef, minesGeoRef, setAllMines,
             source: 'mines',
             filter: ['has', 'point_count'],
             paint: {
-              'circle-color': [
-                'step',
-                ['get', 'point_count'],
-                '#51bbd6',
-                100,
-                '#f1f075',
-                750,
-                '#f28cb1'
-              ],
+              'circle-color': '#800000',
               'circle-radius': [
                 'step',
                 ['get', 'point_count'],
@@ -109,7 +134,9 @@ export function useMapboxInit(mapRef, mapContainerRef, minesGeoRef, setAllMines,
                 30,
                 750,
                 40
-              ]
+              ],
+              'circle-stroke-width': 2,
+              'circle-stroke-color': '#ffffff'
             }
           });
           
@@ -121,10 +148,18 @@ export function useMapboxInit(mapRef, mapContainerRef, minesGeoRef, setAllMines,
             layout: {
               'text-field': '{point_count_abbreviated}',
               'text-font': ['DIN Offc Pro Medium', 'Arial Unicode MS Bold'],
-              'text-size': 12
+              'text-size': [
+                'step',
+                ['get', 'point_count'],
+                12,
+                100,
+                15,
+                750,
+                18
+              ]
             },
             paint: {
-              'text-color': '#000'
+              'text-color': '#ffffff'
             }
           });
           
@@ -137,7 +172,7 @@ export function useMapboxInit(mapRef, mapContainerRef, minesGeoRef, setAllMines,
               'circle-color': [
                 'match',
                 ['get', 'status'],
-                'CRITICAL', '#f44336',
+                'CRITICAL', '#ff1744',
                 'MODERATE', '#ff9800',
                 '#4caf50'
               ],
@@ -183,7 +218,9 @@ export function useMapboxInit(mapRef, mapContainerRef, minesGeoRef, setAllMines,
                   'circle-opacity': 0.3,
                   'circle-stroke-width': 2,
                   'circle-stroke-color': '#ff6b6b',
-                  'circle-stroke-opacity': 0.6
+                  'circle-stroke-opacity': 0.6,
+                  'circle-pitch-alignment': 'map',
+                  'circle-pitch-scale': 'map'
                 }
               });
               
@@ -294,15 +331,7 @@ export function useMapboxTheme(mapRef, minesGeoRef, theme) {
           source: 'mines',
           filter: ['has', 'point_count'],
           paint: {
-            'circle-color': [
-              'step',
-              ['get', 'point_count'],
-              '#51bbd6',
-              100,
-              '#f1f075',
-              750,
-              '#f28cb1'
-            ],
+            'circle-color': '#800000',
             'circle-radius': [
               'step',
               ['get', 'point_count'],
@@ -311,7 +340,9 @@ export function useMapboxTheme(mapRef, minesGeoRef, theme) {
               30,
               750,
               40
-            ]
+            ],
+            'circle-stroke-width': 2,
+            'circle-stroke-color': '#ffffff'
           }
         });
 
@@ -323,10 +354,18 @@ export function useMapboxTheme(mapRef, minesGeoRef, theme) {
           layout: {
             'text-field': '{point_count_abbreviated}',
             'text-font': ['DIN Offc Pro Medium', 'Arial Unicode MS Bold'],
-            'text-size': 12
+            'text-size': [
+              'step',
+              ['get', 'point_count'],
+              12,
+              100,
+              15,
+              750,
+              18
+            ]
           },
           paint: {
-            'text-color': theme === 'light' ? '#000' : '#fff'
+            'text-color': '#ffffff'
           }
         });
 
@@ -339,7 +378,7 @@ export function useMapboxTheme(mapRef, minesGeoRef, theme) {
             'circle-color': [
               'match',
               ['get', 'status'],
-              'CRITICAL', '#f44336',
+              'CRITICAL', '#ff1744',
               'MODERATE', '#ff9800',
               '#4caf50'
             ],

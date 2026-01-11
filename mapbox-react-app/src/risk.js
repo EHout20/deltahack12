@@ -4,45 +4,40 @@
  */
 
   export function generateSensorData() {
-    const rand = Math.random();
-
-    let ph, lead, pm25;
-
-    //  20% chance for red
-    if (rand > 0.8) {
-        ph = (Math.random() * (4.5 - 2.5) + 2.5).toFixed(1); 
-        lead = Math.floor(Math.random() * (400 - 150) + 150); 
-        pm25 = Math.floor(Math.random() * (300 - 100) + 100); 
+    // Use the same formulas as useTelemetry hook, starting at day 0
+    const timeFactorDays = 0;
     
-    // 30 chance for moderate
-    } else if (rand > 0.5) {
-        ph = (Math.random() * (6.0 - 5.0) + 5.0).toFixed(1); 
-        lead = Math.floor(Math.random() * (65 - 40) + 40);  
-        pm25 = Math.floor(Math.random() * (45 - 20) + 20);   
+    const phNoise = (Math.random() - 0.5) * 0.4;
+    const leadNoise = (Math.random() - 0.5) * 8;
+    const pm25Noise = (Math.random() - 0.5) * 6;
+    
+    const basePh = 7.0;
+    const phTrend = basePh - (2.0 * (1 - Math.exp(-timeFactorDays / 50)));
+    const ph = Math.max(2, Math.min(10, (phTrend + phNoise)));
+    
+    const baseLead = 20;
+    const leadTrend = baseLead * Math.exp(timeFactorDays / 100);
+    const lead = Math.max(0, Math.min(300, (leadTrend + leadNoise)));
+    
+    const basePm25 = 15;
+    const pm25Trend = basePm25 + (Math.log(1 + timeFactorDays / 5) * 8);
+    const pm25 = Math.max(0, Math.min(200, (pm25Trend + pm25Noise)));
 
-    // 50% chance for green
-    } else {
-        ph = (Math.random() * (8.5 - 6.5) + 6.5).toFixed(1); 
-        lead = Math.floor(Math.random() * (50 - 5) + 5);     
-        pm25 = Math.floor(Math.random() * (30 - 5) + 5);     
-    }
-
-    // normalization (bc we cannot compare ph,air and lead on the same scale need to convert to risk percen)
-    const phRisk = Math.min((Math.abs(7 - ph) / 3) * 100, 100); 
-    const leadRisk = Math.min((lead / 70) * 100, 100);
-    const airRisk = Math.min((pm25 / 50) * 100, 100); 
-
-    const totalRisk = Math.floor((phRisk + leadRisk + airRisk) / 3);
+    // Calculate risk score using same logic as telemetry
+    const phScore = Math.max(0, Math.min(100, (7 - ph) * 15));
+    const leadScore = Math.max(0, Math.min(100, (lead / 100) * 50));
+    const pm25Score = Math.max(0, Math.min(100, (pm25 / 50) * 50));
+    const totalRisk = Math.round((phScore + leadScore + pm25Score) / 3);
 
     let status = "LOW RISK";
     let color = "#4caf50"; 
-    if (totalRisk > 40) { status = "MODERATE"; color = "#ff9800"; }
-    if (totalRisk > 70) { status = "CRITICAL"; color = "#f44336"; } 
+    if (totalRisk >= 35) { status = "MODERATE"; color = "#ff9800"; }
+    if (totalRisk >= 75) { status = "CRITICAL"; color = "#ff1744"; } 
 
     return {
-        ph,
-        lead,
-        pm25,
+        ph: parseFloat(ph.toFixed(2)),
+        lead: parseFloat(lead.toFixed(1)),
+        pm25: parseFloat(pm25.toFixed(1)),
         riskScore: totalRisk,
         status,
         color
