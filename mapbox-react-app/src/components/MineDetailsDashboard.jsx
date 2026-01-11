@@ -18,8 +18,19 @@ export default function MineDetailsDashboard({
   const mineHistory = telemetryHistory[currentMine.id] || [];
   const mineId = currentMine.id;
 
-  // future risk calc
-  const futureRiskScore = calculateFutureRiskScore(mineHistory, currentMine.riskScore);
+  const rawFutureRisk = calculateFutureRiskScore(mineHistory, currentMine.riskScore);
+  
+  // if risk > 85, simulate a restoration event (reset to 25)
+  let futureRiskScore = rawFutureRisk;
+  let restorationCount = 0;
+  let isRestored = false;
+
+  if (rawFutureRisk > 85) {
+      futureRiskScore = 25; 
+      restorationCount = 1;
+      isRestored = true;
+  }
+
   const riskTrend = futureRiskScore - currentMine.riskScore;
 
   return (
@@ -181,24 +192,24 @@ export default function MineDetailsDashboard({
             </div>
           </div>
 
-          {/* risk  */}
+          {/* Future Risk Index */}
           <div style={{ 
-            background: theme === 'light' ? '#eef2ff' : '#1e2a38', 
+            background: theme === 'light' ? (isRestored ? '#f0fff4' : '#eef2ff') : '#1e2a38', 
             padding: '15px', 
             borderRadius: '8px', 
-            border: `1px solid ${theme === 'light' ? '#c7d2fe' : '#374151'}`,
+            border: `1px solid ${isRestored ? '#48bb78' : (theme === 'light' ? '#c7d2fe' : '#374151')}`,
             minWidth: 0 
           }}>
             <div className="tooltip-trigger" style={{ 
-              color: theme === 'light' ? '#4f46e5' : '#818cf8', 
+              color: isRestored ? '#38a169' : (theme === 'light' ? '#4f46e5' : '#818cf8'), 
               fontSize: '11px', 
               fontWeight: 'bold', 
               marginBottom: '5px', 
               cursor: 'help'
             }}>
               Future Risk Index
-              <span className="tooltip-text" style={{ textAlign: 'left', width: '140px' }}>
-                <strong> Risk index 1 year from now</strong><br/>
+              <span className="tooltip-text" style={{ textAlign: 'left', width: '150px' }}>
+                <strong>Risk index 1 year from now</strong><br/>
               </span>
             </div>
 
@@ -210,9 +221,23 @@ export default function MineDetailsDashboard({
             <div style={{ 
               fontSize: '11px', 
               fontWeight: 'bold', 
-              color: riskTrend > 0 ? '#f44336' : (riskTrend < 0 ? '#4caf50' : '#888') 
+              color: isRestored ? '#38a169' : (riskTrend > 0 ? '#ff1744' : (riskTrend < 0 ? '#4caf50' : '#888')) 
             }}>
-              {riskTrend > 0 ? `↗ +${Math.abs(riskTrend)} Increasing` : (riskTrend < 0 ? `↘ -${Math.abs(riskTrend)} Improving` : '→ Stable')}
+              {isRestored ? '✓ Restored (Safe)' : (riskTrend > 0 ? `↗ +${Math.abs(riskTrend)} Increasing` : (riskTrend < 0 ? `↘ -${Math.abs(riskTrend)} Improving` : '→ Stable'))}
+            </div>
+
+            {/* Restoration Counter */}
+            <div style={{ 
+                marginTop: '8px', 
+                paddingTop: '8px', 
+                borderTop: `1px solid ${theme === 'light' ? '#e2e8f0' : '#4a5568'}`,
+                display: 'flex', 
+                justifyContent: 'space-between',
+                fontSize: '10px', 
+                color: theme === 'light' ? '#555' : '#aaa'
+            }}>
+                <span>Restorations:</span>
+                <strong style={{ color: isRestored ? '#38a169' : 'inherit' }}>{restorationCount}</strong>
             </div>
 
             <div style={{ fontSize: '9px', color: theme === 'light' ? '#888' : '#aaa', marginTop: '6px' }}>
