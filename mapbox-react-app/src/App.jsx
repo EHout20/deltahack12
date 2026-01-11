@@ -29,7 +29,7 @@ function App() {
      mapRef.current = new mapboxgl.Map({
       container: mapContainerRef.current,
       // use a base style that shows topo; change to your preferred Mapbox style
-      style: 'mapbox://styles/markokosoric/cmk9062a3000u01s0ed52gb7g',
+      style: theme === "light" ? lightStyle : darkStyle,
       center: canadaCenter,
       zoom: 3.5,
       // pitch: 40, // tilt for 3D look
@@ -207,11 +207,44 @@ function App() {
     return () => {
       mapRef.current.remove()
     }
-  }, [])
+  }, [theme]);
 
 
 return (
   <>
+        {/* Theme Toggle Button */}
+   <div style={{
+        position: 'absolute',
+        top: '10px',
+        left: '10px',
+        zIndex: 30
+    }}>
+      <button
+        onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+        style={{
+          padding: '10px 16px',
+         backgroundColor: theme === 'light' ? '#fff' : '#333',
+          color: theme === 'light' ? '#333' : '#fff',
+          border: 'none',
+          borderRadius: '8px',
+          cursor: 'pointer',
+          fontWeight: 'bold',
+          fontSize: '14px',
+          boxShadow: '0 2px 8px rgba(0,0,0,0.15)',
+          transition: 'all 0.3s ease'
+        }}
+      >
+        {theme === 'light' ? ' Dark Mode' : ' Light Mode'}
+      </button>
+    </div>
+
+    <div style={{
+        margin: '10px 10px 0 0',
+        width: 300,
+        right: 0,
+        top: 0,
+        position: 'absolute',
+        zIndex: 30 }}></div>
     <div style={{
         margin: '10px 10px 0 0',
         width: 300,
@@ -240,7 +273,7 @@ return (
         right: 0,
         top: 0,
         bottom: 0,
-        backgroundColor: 'white',
+        backgroundColor: theme === 'light' ? 'white' : '#1e1e1e',
         padding: '24px',
         boxShadow: '-4px 0 20px rgba(0,0,0,0.15)',
         zIndex: 20,
@@ -250,9 +283,9 @@ return (
       }}>
         
         {/* HEADER */}
-        <div style={{ borderBottom: '1px solid #eee', paddingBottom: '15px', marginBottom: '20px' }}>
-          <h2 style={{ margin: 0, fontSize: '24px', color: '#333' }}>Analytics</h2>
-          <p style={{ margin: '5px 0 0', color: '#666' }}>
+       <div style={{ borderBottom: `1px solid ${theme === 'light' ? '#eee' : '#333'}`, paddingBottom: '15px', marginBottom: '20px' }}>
+         <h2 style={{ margin: 0, fontSize: '24px', color: theme === 'light' ? '#333' : '#fff' }}>Analytics</h2>
+         <p style={{ margin: '5px 0 0', color: theme === 'light' ? '#666' : '#aaa' }}>
             Latitude: {popup.coordinates[1].toFixed(4)}, Longitude: {popup.coordinates[0].toFixed(4)}
           </p>
         </div>
@@ -278,14 +311,14 @@ return (
         </div>
 
         
-        <h4 style={{ color: '#888', textTransform: 'uppercase', fontSize: '12px' }}>Live Sensor Readings</h4>
+       <h4 style={{ color: theme === 'light' ? '#888' : '#666', textTransform: 'uppercase', fontSize: '12px' }}>Live Sensor Readings</h4>
         
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px', marginBottom: '30px' }}>
           
           {/* Water  */}
-          <div style={{ background: '#f8f9fa', padding: '15px', borderRadius: '8px' }}>
-            <div style={{ color: '#666', fontSize: '12px' }}>Water Acidity</div>
-            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#333' }}>
+         <div style={{ background: theme === 'light' ? '#f8f9fa' : '#2a2a2a', padding: '15px', borderRadius: '8px' }}>
+           <div style={{ color: theme === 'light' ? '#666' : '#aaa', fontSize: '12px' }}>Water Acidity</div>
+           <div style={{ fontSize: '24px', fontWeight: 'bold', color: theme === 'light' ? '#333' : '#fff' }}>
               {popup.properties.ph} <span style={{fontSize:'14px'}}>pH</span>
             </div>
             <div style={{ fontSize: '11px', color: popup.properties.ph < 5 ? 'red' : 'green' }}>
@@ -294,9 +327,9 @@ return (
           </div>
 
           {/* Soil  */}
-          <div style={{ background: '#f8f9fa', padding: '15px', borderRadius: '8px' }}>
-            <div style={{ color: '#666', fontSize: '12px' }}>Soil Lead (Pb)</div>
-            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#333' }}>
+         <div style={{ background: theme === 'light' ? '#f8f9fa' : '#2a2a2a', padding: '15px', borderRadius: '8px' }}>
+           <div style={{ color: theme === 'light' ? '#666' : '#aaa', fontSize: '12px' }}>Soil Lead (Pb)</div>
+           <div style={{ fontSize: '24px', fontWeight: 'bold', color: theme === 'light' ? '#333' : '#fff' }}>
               {popup.properties.lead} <span style={{fontSize:'14px'}}>ppm</span>
             </div>
             <div style={{ fontSize: '11px', color: popup.properties.lead > 70 ? 'red' : 'green' }}>
@@ -305,9 +338,9 @@ return (
           </div>
 
           {/* Air  */}
-          <div style={{ background: '#f8f9fa', padding: '15px', borderRadius: '8px' }}>
-            <div style={{ color: '#666', fontSize: '12px' }}>Air Quality</div>
-            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#333' }}>
+         <div style={{ background: theme === 'light' ? '#f8f9fa' : '#2a2a2a', padding: '15px', borderRadius: '8px' }}>
+           <div style={{ color: theme === 'light' ? '#666' : '#aaa', fontSize: '12px' }}>Air Quality</div>
+           <div style={{ fontSize: '24px', fontWeight: 'bold', color: theme === 'light' ? '#333' : '#fff' }}>
               {popup.properties.pm25} <span style={{fontSize:'14px'}}>µg/m³</span>
             </div>
             <div style={{ fontSize: '11px', color: popup.properties.pm25 > 35 ? 'orange' : 'green' }}>
@@ -321,12 +354,12 @@ return (
           style={{
             width: '100%',
             padding: '12px',
-            backgroundColor: '#eee',
+            backgroundColor: theme === 'light' ? '#eee' : '#333',
             border: 'none',
             borderRadius: '8px',
             cursor: 'pointer',
             fontWeight: 'bold',
-            color: '#555'
+           color: theme === 'light' ? '#555' : '#aaa'
           }}
         >
           Close Dashboard
