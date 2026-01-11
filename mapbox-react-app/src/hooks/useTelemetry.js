@@ -1,23 +1,26 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 export function useTelemetry(allMines, setAllMines, setDateDisplay) {
+  const elapsedDaysRef = useRef(0);
+  
   useEffect(() => {
-    let elapsedDays = 0;
-    const telemetryInterval = setInterval(() => {
-      elapsedDays += 1;
+    // Update date every second (1 simulated day)
+    const dateInterval = setInterval(() => {
+      elapsedDaysRef.current += 1;
       
-      // Update date
       const newDate = new Date();
-      newDate.setDate(newDate.getDate() + elapsedDays);
+      newDate.setDate(newDate.getDate() + elapsedDaysRef.current);
       setDateDisplay(newDate.toLocaleDateString('en-US', { 
         year: 'numeric', 
         month: 'short', 
         day: 'numeric' 
       }));
-      
-      // Update mines data
+    }, 1000);
+    
+    // Update sensor data every 7 seconds (7 simulated days)
+    const telemetryInterval = setInterval(() => {
       setAllMines(prevMines => prevMines.map(mine => {
-        const timeFactorDays = elapsedDays;
+        const timeFactorDays = elapsedDaysRef.current;
         
         // Add random fluctuations (each mine gets unique random variations)
         const phNoise = (Math.random() - 0.5) * 0.4; // ±0.2 fluctuation
@@ -59,8 +62,13 @@ export function useTelemetry(allMines, setAllMines, setDateDisplay) {
           color
         };
       }));
-    }, 1000);
+    }, 7000); // Update sensor data every 7 seconds (7 simulated days)
     
-    return () => clearInterval(telemetryInterval);
+    return () => {
+      clearInterval(dateInterval);
+      clearInterval(telemetryInterval);
+    };
   }, [setAllMines, setDateDisplay]);
+  
+  return elapsedDaysRef;
 }

@@ -7,7 +7,8 @@ export default function MineDetailsDashboard({
   onClose,
   onDateClick,
   telemetryHistory,
-  allMines
+  allMines,
+  totalReadings
 }) {
   if (!popup) return null;
 
@@ -77,9 +78,9 @@ export default function MineDetailsDashboard({
           Live Sensor Readings
         </h4>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px', marginBottom: '30px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px', marginBottom: '30px', width: '100%' }}>
           {/* Water Acidity */}
-          <div style={{ background: theme === 'light' ? '#f8f9fa' : '#2a2a2a', padding: '15px', borderRadius: '8px' }}>
+          <div style={{ background: theme === 'light' ? '#f8f9fa' : '#2a2a2a', padding: '15px', borderRadius: '8px', minWidth: 0 }}>
             <div className="tooltip-trigger" style={{ color: theme === 'light' ? '#666' : '#aaa', fontSize: '12px', marginBottom: '5px' }}>
               Water Acidity
               <span className="tooltip-text" style={{ textAlign: 'left' }}>
@@ -93,6 +94,8 @@ export default function MineDetailsDashboard({
             <div style={{ 
               fontSize: '11px', 
               fontWeight: 'bold',
+              width: '85px',
+              display: 'inline-block',
               color: currentMine.ph < 5.0 ? '#f44336' : (currentMine.ph < 6.8 ? '#ff9800' : '#4caf50') 
             }}>
               {currentMine.ph < 5.0 ? '✗ Hazardous' : (currentMine.ph < 6.8 ? '⚠ Warning' : '✓ Safe')}
@@ -100,7 +103,7 @@ export default function MineDetailsDashboard({
           </div>
 
           {/* Soil Lead */}
-          <div style={{ background: theme === 'light' ? '#f8f9fa' : '#2a2a2a', padding: '15px', borderRadius: '8px' }}>
+          <div style={{ background: theme === 'light' ? '#f8f9fa' : '#2a2a2a', padding: '15px', borderRadius: '8px', minWidth: 0 }}>
             <div className="tooltip-trigger" style={{ color: theme === 'light' ? '#666' : '#aaa', fontSize: '12px', marginBottom: '5px' }}>
               Soil Lead (Pb)
               <span className="tooltip-text" style={{ textAlign: 'left' }}>
@@ -114,6 +117,8 @@ export default function MineDetailsDashboard({
             <div style={{ 
               fontSize: '11px', 
               fontWeight: 'bold',
+              width: '85px',
+              display: 'inline-block',
               color: currentMine.lead > 70 ? '#f44336' : (currentMine.lead > 40 ? '#ff9800' : '#4caf50') 
             }}>
               {currentMine.lead > 70 ? '✗ Hazardous' : (currentMine.lead > 40 ? '⚠ Warning' : '✓ Safe')}
@@ -121,7 +126,7 @@ export default function MineDetailsDashboard({
           </div>
 
           {/* Air Quality */}
-          <div style={{ background: theme === 'light' ? '#f8f9fa' : '#2a2a2a', padding: '15px', borderRadius: '8px' }}>
+          <div style={{ background: theme === 'light' ? '#f8f9fa' : '#2a2a2a', padding: '15px', borderRadius: '8px', minWidth: 0 }}>
             <div className="tooltip-trigger" style={{ color: theme === 'light' ? '#666' : '#aaa', fontSize: '12px', marginBottom: '5px' }}>
               Air Quality 
               <span className="tooltip-text" style={{ textAlign: 'left' }}>
@@ -135,6 +140,8 @@ export default function MineDetailsDashboard({
             <div style={{ 
               fontSize: '11px', 
               fontWeight: 'bold',
+              width: '85px',
+              display: 'inline-block',
               color: currentMine.pm25 > 80 ? '#f44336' : (currentMine.pm25 > 20 ? '#ff9800' : '#4caf50') 
             }}>
               {currentMine.pm25 > 80 ? '✗ Hazardous' : (currentMine.pm25 > 20 ? '⚠ Warning' : '✓ Safe')}
@@ -144,11 +151,12 @@ export default function MineDetailsDashboard({
 
         {/* Each mine gets its own isolated graph with key={mineId} to force re-render on mine change */}
         <SensorVisualization 
-          key={`sensor-${mineId}`}
+          key={`sensor-${mineId}-${mineHistory.length}`}
           mine={currentMine} 
           theme={theme} 
           history={mineHistory}
           mineId={mineId}
+          totalReadings={totalReadings}
         />
 
         <button

@@ -23,7 +23,7 @@ function App() {
   const searchTimeoutRef = useRef(null);
 
   // Custom hooks
-  useTelemetry(allMines, setAllMines, setDateDisplay);
+  const elapsedDaysRef = useTelemetry(allMines, setAllMines, setDateDisplay);
 
   // Memoize mine names for faster search (only updates when count changes)
   const mineNameMap = useMemo(() => {
@@ -60,33 +60,62 @@ function App() {
     }, 150); // 150ms debounce delay
   }, [mineNameMap, popup, locationSearch]);
 
-  // Track telemetry history for each mine
+  // Track telemetry history only for the currently viewed mine
   useEffect(() => {
-    if (allMines.length > 0) {
-      setTelemetryHistory(prevHistory => {
-        const newHistory = { ...prevHistory };
-        
-        allMines.forEach(mine => {
-          if (!newHistory[mine.id]) {
-            newHistory[mine.id] = [];
+    if (popup && allMines.length > 0) {
+      const currentMine = allMines.find(m => m.id === popup.properties.id);
+      if (currentMine) {
+        setTelemetryHistory(prevHistory => {
+          // If this mine has no history yet, backfill it with historical data
+          if (!prevHistory[currentMine.id]) {
+            const totalReadings = Math.floor(elapsedDaysRef.current / 7);
+            const readingsToGenerate = Math.min(totalReadings, 20);
+            const historicalData = [];
+            
+            for (let i = 0; i < readingsToGenerate; i++) {
+              const readingNumber = Math.floor(elapsedDaysRef.current / 7) - readingsToGenerate + i + 1;
+              const days = readingNumber * 7; // Each reading represents 7 days
+              const basePh = 7.0;
+              const phTrend = basePh - (2.0 * (1 - Math.exp(-days / 50)));
+              const leadTrend = 20 * Math.exp(days / 100);
+              const pm25Trend = 15 + (Math.log(1 + days / 5) * 8);
+              
+              historicalData.push({
+                timestamp: Date.now() - (readingsToGenerate - i) * 7000,
+                ph: Math.max(2, Math.min(10, phTrend + (Math.random() - 0.5) * 0.4)),
+                lead: Math.max(0, Math.min(300, leadTrend + (Math.random() - 0.5) * 8)),
+                pm25: Math.max(0, Math.min(200, pm25Trend + (Math.random() - 0.5) * 6))
+              });
+            }
+            
+            return {
+              ...prevHistory,
+              [currentMine.id]: historicalData
+            };
           }
           
-          // Add current reading to this mine's history
-          newHistory[mine.id] = [
-            ...newHistory[mine.id],
-            {
-              timestamp: Date.now(),
-              ph: mine.ph,
-              lead: mine.lead,
-              pm25: mine.pm25
-            }
-          ].slice(-50); // Keep last 50 readings per mine
+          // Otherwise, add new reading
+          const mineHistory = prevHistory[currentMine.id];
+          const newEntry = {
+            timestamp: Date.now(),
+            ph: currentMine.ph,
+            lead: currentMine.lead,
+            pm25: currentMine.pm25
+          };
+          
+          // Keep only last 20 readings - remove oldest if we're at capacity
+          const updatedHistory = mineHistory.length >= 20 
+            ? [...mineHistory.slice(1), newEntry]  // Drop first, add to end
+            : [...mineHistory, newEntry];           // Just append
+          
+          return {
+            ...prevHistory,
+            [currentMine.id]: updatedHistory
+          };
         });
-        
-        return newHistory;
-      });
+      }
     }
-  }, [allMines]);
+  }, [allMines, popup, elapsedDaysRef]);
 
   useMapboxInit(mapRef, mapContainerRef, minesGeoRef, setAllMines, setPopup, setLocationSearch);
   useMapboxTheme(mapRef, minesGeoRef, theme);
@@ -249,6 +278,7 @@ function App() {
         onDateClick={handleDateClick}
         telemetryHistory={telemetryHistory}
         allMines={allMines}
+        totalReadings={Math.floor(elapsedDaysRef.current / 7)}
       />
     </>
   )
