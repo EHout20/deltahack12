@@ -48,10 +48,16 @@ export function useTelemetry(allMines, setAllMines, setDateDisplay) {
         const pm25Score = Math.max(0, Math.min(100, (pm25Growth / 50) * 50));
         const riskScore = Math.round((phScore + leadScore + pm25Score) / 3);
         
-        // Determine color
+        // Determine color and status
         let color = '#4caf50';
-        if (riskScore >= 75) color = '#f44336';
-        else if (riskScore >= 35) color = '#ff9800';
+        let status = 'LOW RISK';
+        if (riskScore >= 75) {
+          color = '#ff1744';
+          status = 'CRITICAL';
+        } else if (riskScore >= 35) {
+          color = '#ff9800';
+          status = 'MODERATE';
+        }
         
         return {
           ...mine,
@@ -59,7 +65,8 @@ export function useTelemetry(allMines, setAllMines, setDateDisplay) {
           lead: Math.max(0, Math.min(300, parseFloat(leadGrowth.toFixed(1)))),
           pm25: Math.max(0, Math.min(200, parseFloat(pm25Growth.toFixed(1)))),
           riskScore,
-          color
+          color,
+          status
         };
       }));
     }, 7000); // Update sensor data every 7 seconds (7 simulated days)

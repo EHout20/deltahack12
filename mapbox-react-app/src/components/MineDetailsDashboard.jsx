@@ -30,6 +30,7 @@ export default function MineDetailsDashboard({
       zIndex: 20,
       width: '400px', 
       overflowY: 'auto',
+      overflowX: 'hidden',
       fontFamily: 'Arial, sans-serif',
       transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)'
     }}>
@@ -42,7 +43,10 @@ export default function MineDetailsDashboard({
                 {currentMine.name || 'Unknown Mine'}
               </h2>
               <p style={{ margin: '5px 0 0', color: theme === 'light' ? '#666' : '#aaa' }}>
-                Latitude: {popup.coordinates[1].toFixed(4)}, Longitude: {popup.coordinates[0].toFixed(4)}
+                Latitude: {popup.coordinates[1].toFixed(4)}
+              </p>
+              <p style={{ margin: '2px 0 0', color: theme === 'light' ? '#666' : '#aaa' }}>
+                Longitude: {popup.coordinates[0].toFixed(4)}
               </p>
             </div>
             <div 
@@ -84,7 +88,7 @@ export default function MineDetailsDashboard({
           <div style={{ background: theme === 'light' ? '#f8f9fa' : '#2a2a2a', padding: '15px', borderRadius: '8px', minWidth: 0 }}>
             <div className="tooltip-trigger" style={{ color: theme === 'light' ? '#666' : '#aaa', fontSize: '12px', marginBottom: '5px' }}>
               Water Acidity
-              <span className="tooltip-text" style={{ textAlign: 'left' }}>
+              <span className="tooltip-text" style={{ textAlign: 'left', left: 0, transform: 'none' }}>
                 <strong>pH Scale</strong><br/>
                 Measures water acidity. Low pH (&lt;6.5) can kill fish and leach heavy metals.
               </span>
@@ -97,7 +101,7 @@ export default function MineDetailsDashboard({
               fontWeight: 'bold',
               width: '85px',
               display: 'inline-block',
-              color: currentMine.ph < 5.0 ? '#f44336' : (currentMine.ph < 6.8 ? '#ff9800' : '#4caf50') 
+              color: currentMine.ph < 5.0 ? '#ff1744' : (currentMine.ph < 6.8 ? '#ff9800' : '#4caf50') 
             }}>
               {currentMine.ph < 5.0 ? '✗ Hazardous' : (currentMine.ph < 6.8 ? '⚠ Warning' : '✓ Safe')}
             </div>
@@ -116,7 +120,7 @@ export default function MineDetailsDashboard({
           <div style={{ background: theme === 'light' ? '#f8f9fa' : '#2a2a2a', padding: '15px', borderRadius: '8px', minWidth: 0 }}>
             <div className="tooltip-trigger" style={{ color: theme === 'light' ? '#666' : '#aaa', fontSize: '12px', marginBottom: '5px' }}>
               Soil Lead (Pb)
-              <span className="tooltip-text" style={{ textAlign: 'left' }}>
+              <span className="tooltip-text" style={{ textAlign: 'left', left: '50%', transform: 'translateX(-50%)' }}>
                 <strong>lead parts per million (ppm)</strong><br/>
                 Concentration of lead in soil. Levels above 70 ppm are toxic to wildlife and humans.
               </span>
@@ -129,7 +133,7 @@ export default function MineDetailsDashboard({
               fontWeight: 'bold',
               width: '85px',
               display: 'inline-block',
-              color: currentMine.lead > 70 ? '#f44336' : (currentMine.lead > 40 ? '#ff9800' : '#4caf50') 
+              color: currentMine.lead > 70 ? '#ff1744' : (currentMine.lead > 40 ? '#ff9800' : '#4caf50') 
             }}>
               {currentMine.lead > 70 ? '✗ Hazardous' : (currentMine.lead > 40 ? '⚠ Warning' : '✓ Safe')}
             </div>
@@ -148,7 +152,7 @@ export default function MineDetailsDashboard({
           <div style={{ background: theme === 'light' ? '#f8f9fa' : '#2a2a2a', padding: '15px', borderRadius: '8px', minWidth: 0 }}>
             <div className="tooltip-trigger" style={{ color: theme === 'light' ? '#666' : '#aaa', fontSize: '12px', marginBottom: '5px' }}>
               Air Quality 
-              <span className="tooltip-text" style={{ textAlign: 'left' }}>
+              <span className="tooltip-text" style={{ textAlign: 'left', left: 0, transform: 'none' }}>
                 <strong>particulate matter (µg/m³)</strong><br/>
                 Measures microscopic dust particles. High levels indicate industrial pollution.
               </span>
@@ -161,7 +165,7 @@ export default function MineDetailsDashboard({
               fontWeight: 'bold',
               width: '85px',
               display: 'inline-block',
-              color: currentMine.pm25 > 80 ? '#f44336' : (currentMine.pm25 > 20 ? '#ff9800' : '#4caf50') 
+              color: currentMine.pm25 > 80 ? '#ff1744' : (currentMine.pm25 > 20 ? '#ff9800' : '#4caf50') 
             }}>
               {currentMine.pm25 > 80 ? '✗ Hazardous' : (currentMine.pm25 > 20 ? '⚠ Warning' : '✓ Safe')}
             </div>

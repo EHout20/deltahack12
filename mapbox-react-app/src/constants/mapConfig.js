@@ -1,4 +1,4 @@
-export const accessToken = "YOUR_MAPBOX_ACCESS_TOKEN_HERE";
+export const accessToken = "pk.eyJ1IjoiYXl1c2huYWlyIiwiYSI6ImNtazhxZnN3azFpZ3YzZ3BsbjBvM2RnZmwifQ.uvDsRFbJ4PVoXXkrCPVmJQ";
 export const canadaCenter = [-106.3, 56.1];
 export const canadaBounds = [
   [-145.0, 38.0],
