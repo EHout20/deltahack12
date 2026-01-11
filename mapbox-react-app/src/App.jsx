@@ -13,27 +13,35 @@ const canadaBounds = [
 ];
 
 function App() {
-
+  const lightStyle = 'mapbox://styles/markokosoric/cmk8z3ajc000y01s98ipybdn2';
+  const darkStyle = 'mapbox://styles/markokosoric/cmk9062a3000u01s0ed52gb7g';
+    
+  const [theme, setTheme] = useState("light");
   const mapRef = useRef()
   const mapContainerRef = useRef()
   const [inputValue, setInputValue] = useState("");
   const [popup, setPopup] = useState(null);
 
   useEffect(() => {
+
     mapboxgl.accessToken = accessToken
 
      mapRef.current = new mapboxgl.Map({
       container: mapContainerRef.current,
+      // use a base style that shows topo; change to your preferred Mapbox style
+      style: 'mapbox://styles/markokosoric/cmk9062a3000u01s0ed52gb7g',
       center: canadaCenter,
       zoom: 3.5,
+      // pitch: 40, // tilt for 3D look
       projection: 'mercator',
       maxBounds: canadaBounds,
       minZoom: 3,
       maxZoom: 15
     });
-
+    
     // Wait for map to load before adding data
     mapRef.current.on('load', () => {
+
       // Fetch and parse CSV data once
       fetch('/data.csv')
         .then(response => response.text())
