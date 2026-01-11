@@ -1,0 +1,2855 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.904823,
+          48.647931
+        ]
+      },
+      "properties": {
+        "name": "Claverny",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.647931,
+        "longitude": -77.904823
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.327615,
+          48.308803
+        ]
+      },
+      "properties": {
+        "name": "Inmont Copper",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.308803,
+        "longitude": -79.327615
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.96316281,
+          61.81134636
+        ]
+      },
+      "properties": {
+        "name": "Asbestos Hill",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 61.81134636,
+        "longitude": -73.96316281
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.418732,
+          48.092516
+        ]
+      },
+      "properties": {
+        "name": "Bevcon",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.092516,
+        "longitude": -77.418732
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39365989,
+          45.98360035
+        ]
+      },
+      "properties": {
+        "name": "Continental",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 45.98360035,
+        "longitude": -71.39365989
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.07239,
+          49.41235
+        ]
+      },
+      "properties": {
+        "name": "Certac",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 49.41235,
+        "longitude": -76.07239
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.83765982,
+          48.12846114
+        ]
+      },
+      "properties": {
+        "name": "Site minier Sullivan",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.12846114,
+        "longitude": -77.83765982
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.34314101,
+          48.23483286
+        ]
+      },
+      "properties": {
+        "name": "Wood Cadillac",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.23483286,
+        "longitude": -78.34314101
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.392101,
+          48.334747
+        ]
+      },
+      "properties": {
+        "name": "Preissac",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.334747,
+        "longitude": -78.392101
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.03179539,
+          48.21463245
+        ]
+      },
+      "properties": {
+        "name": "Stadacona",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.21463245,
+        "longitude": -79.03179539
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.94230486,
+          47.35990987
+        ]
+      },
+      "properties": {
+        "name": " Lorraine",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 47.35990987,
+        "longitude": -78.94230486
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.06491076,
+          49.06201649
+        ]
+      },
+      "properties": {
+        "name": " Candego",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 49.06201649,
+        "longitude": -66.06491076
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.018809,
+          48.9903
+        ]
+      },
+      "properties": {
+        "name": " Mines Madeleine ",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.9903,
+        "longitude": -66.018809
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.37851774,
+          47.65625549
+        ]
+      },
+      "properties": {
+        "name": " Somex",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 47.65625549,
+        "longitude": -72.37851774
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.60995309,
+          48.08651862
+        ]
+      },
+      "properties": {
+        "name": " Manitou",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.08651862,
+        "longitude": -77.60995309
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.231219,
+          48.219539
+        ]
+      },
+      "properties": {
+        "name": " Aldermac",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.219539,
+        "longitude": -79.231219
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.66209489,
+          48.52648163
+        ]
+      },
+      "properties": {
+        "name": " Barvue",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.52648163,
+        "longitude": -77.66209489
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.91676027,
+          45.313906
+        ]
+      },
+      "properties": {
+        "name": "Sites miniers Eustis",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 45.313906,
+        "longitude": -71.91676027
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.868844,
+          48.140614
+        ]
+      },
+      "properties": {
+        "name": " Siscoe",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.140614,
+        "longitude": -77.868844
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.08227232,
+          48.35983934
+        ]
+      },
+      "properties": {
+        "name": " Vauze",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.35983934,
+        "longitude": -79.08227232
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.70360508,
+          46.80991475
+        ]
+      },
+      "properties": {
+        "name": " Lac Renzy",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 46.80991475,
+        "longitude": -76.70360508
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.99445674,
+          48.28945511
+        ]
+      },
+      "properties": {
+        "name": " Molybdenite Corporation",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.28945511,
+        "longitude": -77.99445674
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.810458,
+          50.235575
+        ]
+      },
+      "properties": {
+        "name": " Icon Sullivan",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 50.235575,
+        "longitude": -73.810458
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.02702955,
+          48.18146546
+        ]
+      },
+      "properties": {
+        "name": "\" Granada",
+        "jurisdiction": "QC",
+        "status": " ancien parc\"",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.18146546,
+        "longitude": -79.02702955
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.54043123,
+          48.13421262
+        ]
+      },
+      "properties": {
+        "name": " Cournor",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.13421262,
+        "longitude": -77.54043123
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.23063115,
+          48.18033474
+        ]
+      },
+      "properties": {
+        "name": " West Malartic",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.18033474,
+        "longitude": -78.23063115
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.34321849,
+          46.01044659
+        ]
+      },
+      "properties": {
+        "name": " Reed-Bélanger",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 46.01044659,
+        "longitude": -71.34321849
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.964106,
+          48.265854
+        ]
+      },
+      "properties": {
+        "name": " Delbridge",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.265854,
+        "longitude": -78.964106
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.95931662,
+          45.31815278
+        ]
+      },
+      "properties": {
+        "name": " Suffield",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 45.31815278,
+        "longitude": -71.95931662
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.26142576,
+          48.20220224
+        ]
+      },
+      "properties": {
+        "name": " Arntfield",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.20220224,
+        "longitude": -79.26142576
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.68170995,
+          45.70015112
+        ]
+      },
+      "properties": {
+        "name": " New Calumet",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 45.70015112,
+        "longitude": -76.68170995
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.02903981,
+          45.50071131
+        ]
+      },
+      "properties": {
+        "name": " St-Lawrence Columbium",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 45.50071131,
+        "longitude": -74.02903981
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.255483,
+          48.501681
+        ]
+      },
+      "properties": {
+        "name": "\" Beattie",
+        "jurisdiction": "QC",
+        "status": " parc\"",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.501681,
+        "longitude": -79.255483
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.6966,
+          48.07243
+        ]
+      },
+      "properties": {
+        "name": " East-Sullivan",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.07243,
+        "longitude": -77.6966
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.08056872,
+          51.86329817
+        ]
+      },
+      "properties": {
+        "name": " Lac Jeannine",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 51.86329817,
+        "longitude": -68.08056872
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.88974008,
+          54.81804256
+        ]
+      },
+      "properties": {
+        "name": "\" French",
+        "jurisdiction": "QC",
+        "status": " Schefferville \"",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 54.81804256,
+        "longitude": -66.88974008
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.89323768,
+          54.81171511
+        ]
+      },
+      "properties": {
+        "name": "\" Burnt Creek",
+        "jurisdiction": "QC",
+        "status": " Schefferville\"",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 54.81171511,
+        "longitude": -66.89323768
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.90888032,
+          54.81023743
+        ]
+      },
+      "properties": {
+        "name": "\" Rowe",
+        "jurisdiction": "QC",
+        "status": " Schefferville\"",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 54.81023743,
+        "longitude": -66.90888032
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.93201169,
+          54.81373679
+        ]
+      },
+      "properties": {
+        "name": "\" Ferriman",
+        "jurisdiction": "QC",
+        "status": " Schefferville\"",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 54.81373679,
+        "longitude": -66.93201169
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.91738347,
+          54.83306304
+        ]
+      },
+      "properties": {
+        "name": "\" Gagnon",
+        "jurisdiction": "QC",
+        "status": " Schefferville\"",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 54.83306304,
+        "longitude": -66.91738347
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.90114015,
+          54.8327894
+        ]
+      },
+      "properties": {
+        "name": "\" Gagnon-A",
+        "jurisdiction": "QC",
+        "status": " Schefferville\"",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 54.8327894,
+        "longitude": -66.90114015
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.93185926,
+          54.848237
+        ]
+      },
+      "properties": {
+        "name": "\" Star Creek",
+        "jurisdiction": "QC",
+        "status": " Schefferville\"",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 54.848237,
+        "longitude": -66.93185926
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.98416406,
+          54.85789633
+        ]
+      },
+      "properties": {
+        "name": "\" Knox",
+        "jurisdiction": "QC",
+        "status": " Schefferville\"",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 54.85789633,
+        "longitude": -66.98416406
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.99998797,
+          54.86097903
+        ]
+      },
+      "properties": {
+        "name": "\" Retty",
+        "jurisdiction": "QC",
+        "status": " Schefferville\"",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 54.86097903,
+        "longitude": -66.99998797
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.02869028,
+          54.86220536
+        ]
+      },
+      "properties": {
+        "name": "\" Fleming no3",
+        "jurisdiction": "QC",
+        "status": " Schefferville\"",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 54.86220536,
+        "longitude": -67.02869028
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.03375429,
+          54.87084316
+        ]
+      },
+      "properties": {
+        "name": "\" Fleming no7",
+        "jurisdiction": "QC",
+        "status": " Schefferville\"",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 54.87084316,
+        "longitude": -67.03375429
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.397174,
+          48.234816
+        ]
+      },
+      "properties": {
+        "name": " Darius O'Brien",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.234816,
+        "longitude": -78.397174
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.26878682,
+          48.22125431
+        ]
+      },
+      "properties": {
+        "name": " Lapa Zulapa",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.22125431,
+        "longitude": -78.26878682
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.30662641,
+          48.22812225
+        ]
+      },
+      "properties": {
+        "name": " Pandora",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.22812225,
+        "longitude": -78.30662641
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.41352067,
+          48.23473956
+        ]
+      },
+      "properties": {
+        "name": " Thompson Cadillac",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.23473956,
+        "longitude": -78.41352067
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.67133,
+          48.522503
+        ]
+      },
+      "properties": {
+        "name": "\" Abcourt",
+        "jurisdiction": "QC",
+        "status": " Halde\"",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.522503,
+        "longitude": -77.67133
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.07784,
+          48.32201
+        ]
+      },
+      "properties": {
+        "name": " Waite-Amulet",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.32201,
+        "longitude": -79.07784
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.32717585,
+          49.8691762
+        ]
+      },
+      "properties": {
+        "name": " Mine Principale",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 49.8691762,
+        "longitude": -74.32717585
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.44712,
+          49.49465
+        ]
+      },
+      "properties": {
+        "name": "\" Joe Mann",
+        "jurisdiction": "QC",
+        "status": " parc\"",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 49.49465,
+        "longitude": -74.44712
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.39875,
+          48.34625
+        ]
+      },
+      "properties": {
+        "name": " Preissac Molybdenite",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.34625,
+        "longitude": -78.39875
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.36344444,
+          48.999956
+        ]
+      },
+      "properties": {
+        "name": " Normétal",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.999956,
+        "longitude": -79.36344444
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.20022,
+          49.93041
+        ]
+      },
+      "properties": {
+        "name": " Grandroy",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 49.93041,
+        "longitude": -74.20022
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.279137,
+          49.878508
+        ]
+      },
+      "properties": {
+        "name": "\" Copper Rand",
+        "jurisdiction": "QC",
+        "status": " parc\"",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 49.878508,
+        "longitude": -74.279137
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.55928515,
+          48.10813987
+        ]
+      },
+      "properties": {
+        "name": "\" Dorval Beacon",
+        "jurisdiction": "QC",
+        "status": " parc\"",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.10813987,
+        "longitude": -77.55928515
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.37459986,
+          49.00131241
+        ]
+      },
+      "properties": {
+        "name": " Normetmar",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 49.00131241,
+        "longitude": -79.37459986
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.25281947,
+          45.99855897
+        ]
+      },
+      "properties": {
+        "name": " Montréal Coleraine",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 45.99855897,
+        "longitude": -71.25281947
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.99324144,
+          48.11397481
+        ]
+      },
+      "properties": {
+        "name": " Terrains Aurifères",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.11397481,
+        "longitude": -77.99324144
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.10681086,
+          49.76173531
+        ]
+      },
+      "properties": {
+        "name": " Lemoine",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 49.76173531,
+        "longitude": -74.10681086
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.986158,
+          48.262644
+        ]
+      },
+      "properties": {
+        "name": " Donalda ",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.262644,
+        "longitude": -78.986158
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.30976813,
+          45.77193127
+        ]
+      },
+      "properties": {
+        "name": " Cupra",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 45.77193127,
+        "longitude": -71.30976813
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.37162887,
+          45.70286354
+        ]
+      },
+      "properties": {
+        "name": " Weedon",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 45.70286354,
+        "longitude": -71.37162887
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.07872954,
+          48.25299971
+        ]
+      },
+      "properties": {
+        "name": " Silidor",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.25299971,
+        "longitude": -79.07872954
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.20180644,
+          48.31715543
+        ]
+      },
+      "properties": {
+        "name": " Pierre Beauchemin",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.31715543,
+        "longitude": -79.20180644
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.92643597,
+          45.42681972
+        ]
+      },
+      "properties": {
+        "name": " Clinton",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 45.42681972,
+        "longitude": -70.92643597
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.554606,
+          46.144222
+        ]
+      },
+      "properties": {
+        "name": " Asbury Graphite",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 46.144222,
+        "longitude": -75.554606
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.81791108,
+          45.409406
+        ]
+      },
+      "properties": {
+        "name": " Moulton Hill",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 45.409406,
+        "longitude": -71.81791108
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.91221158,
+          45.32164276
+        ]
+      },
+      "properties": {
+        "name": " Albert ",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 45.32164276,
+        "longitude": -71.91221158
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.5622386,
+          48.15751877
+        ]
+      },
+      "properties": {
+        "name": " Perron",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.15751877,
+        "longitude": -77.5622386
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.39481481,
+          45.15464599
+        ]
+      },
+      "properties": {
+        "name": " Van Reet",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 45.15464599,
+        "longitude": -72.39481481
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.862733,
+          49.786489
+        ]
+      },
+      "properties": {
+        "name": " Opémiska",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 49.786489,
+        "longitude": -74.862733
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.50727067,
+          48.13667245
+        ]
+      },
+      "properties": {
+        "name": " Lucien Béliveau ",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.13667245,
+        "longitude": -77.50727067
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.30252981,
+          49.9004047
+        ]
+      },
+      "properties": {
+        "name": " Copper Cliff",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 49.9004047,
+        "longitude": -74.30252981
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.40464277,
+          45.09584064
+        ]
+      },
+      "properties": {
+        "name": " Marcoux",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 45.09584064,
+        "longitude": -72.40464277
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.45886899,
+          45.03700157
+        ]
+      },
+      "properties": {
+        "name": " High Water",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 45.03700157,
+        "longitude": -72.45886899
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.2740361,
+          49.90829979
+        ]
+      },
+      "properties": {
+        "name": " Jaculet",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 49.90829979,
+        "longitude": -74.2740361
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.57633935,
+          49.77045942
+        ]
+      },
+      "properties": {
+        "name": " Lac Garon",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 49.77045942,
+        "longitude": -77.57633935
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.33241846,
+          48.62499787
+        ]
+      },
+      "properties": {
+        "name": " Uniquartz",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.62499787,
+        "longitude": -67.33241846
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.56322968,
+          48.04672237
+        ]
+      },
+      "properties": {
+        "name": " Akasaba",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.04672237,
+        "longitude": -77.56322968
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.176787,
+          48.123742
+        ]
+      },
+      "properties": {
+        "name": " Beaudry",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.123742,
+        "longitude": -79.176787
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.33111465,
+          48.18580061
+        ]
+      },
+      "properties": {
+        "name": " Lac Fortune ouest",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.18580061,
+        "longitude": -79.33111465
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.50229174,
+          49.45199119
+        ]
+      },
+      "properties": {
+        "name": " Chesbar",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 49.45199119,
+        "longitude": -76.50229174
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.806198,
+          49.371214
+        ]
+      },
+      "properties": {
+        "name": " Lac Rose",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 49.371214,
+        "longitude": -76.806198
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.90665698,
+          48.21243018
+        ]
+      },
+      "properties": {
+        "name": " Mc Watters",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.21243018,
+        "longitude": -78.90665698
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.21483082,
+          48.2949445
+        ]
+      },
+      "properties": {
+        "name": " Quésabé ",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.2949445,
+        "longitude": -79.21483082
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.049765,
+          48.261104
+        ]
+      },
+      "properties": {
+        "name": "\" Powell",
+        "jurisdiction": "QC",
+        "status": " Rouyn\"",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.261104,
+        "longitude": -79.049765
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.327501,
+          49.887694
+        ]
+      },
+      "properties": {
+        "name": " Québec-Chibougamau",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 49.887694,
+        "longitude": -74.327501
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.583716,
+          48.098092
+        ]
+      },
+      "properties": {
+        "name": " Wrightbar",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.098092,
+        "longitude": -77.583716
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.351648,
+          49.453203
+        ]
+      },
+      "properties": {
+        "name": " Joutel Copper",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 49.453203,
+        "longitude": -78.351648
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.806752,
+          48.415147
+        ]
+      },
+      "properties": {
+        "name": "\" Québec Lithium",
+        "jurisdiction": "QC",
+        "status": " ancien parc\"",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.415147,
+        "longitude": -77.806752
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.45563595,
+          45.73181553
+        ]
+      },
+      "properties": {
+        "name": " Bertrand",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 45.73181553,
+        "longitude": -75.45563595
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.25281625,
+          48.01153575
+        ]
+      },
+      "properties": {
+        "name": " Chimo ",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.01153575,
+        "longitude": -77.25281625
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.45405251,
+          45.7188067
+        ]
+      },
+      "properties": {
+        "name": " Asselin",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 45.7188067,
+        "longitude": -75.45405251
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.459725,
+          45.730512
+        ]
+      },
+      "properties": {
+        "name": " Lac Jake",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 45.730512,
+        "longitude": -75.459725
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.44274967,
+          45.72487697
+        ]
+      },
+      "properties": {
+        "name": "\" Back",
+        "jurisdiction": "QC",
+        "status": " Lac Smith\"",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 45.72487697,
+        "longitude": -75.44274967
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.03383309,
+          49.19128611
+        ]
+      },
+      "properties": {
+        "name": " Abitibi Asbestos",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 49.19128611,
+        "longitude": -78.03383309
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.05101476,
+          48.27324684
+        ]
+      },
+      "properties": {
+        "name": " Anglo-Rouyn",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.27324684,
+        "longitude": -79.05101476
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.11656758,
+          48.35518699
+        ]
+      },
+      "properties": {
+        "name": " Ansil",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.35518699,
+        "longitude": -79.11656758
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.67606241,
+          48.27310511
+        ]
+      },
+      "properties": {
+        "name": " Arrowhead",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.27310511,
+        "longitude": -78.67606241
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.70949346,
+          47.40387342
+        ]
+      },
+      "properties": {
+        "name": " Aubelle",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 47.40387342,
+        "longitude": -78.70949346
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.07194311,
+          48.16527472
+        ]
+      },
+      "properties": {
+        "name": " Black Cliff",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.16527472,
+        "longitude": -78.07194311
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.19201609,
+          48.18109134
+        ]
+      },
+      "properties": {
+        "name": " Blairdon",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.18109134,
+        "longitude": -77.19201609
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.73732406,
+          47.40374998
+        ]
+      },
+      "properties": {
+        "name": " Blondeau Nickel",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 47.40374998,
+        "longitude": -78.73732406
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.43847392,
+          48.23226946
+        ]
+      },
+      "properties": {
+        "name": " Bouscadillac",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.23226946,
+        "longitude": -78.43847392
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.42995101,
+          48.09476154
+        ]
+      },
+      "properties": {
+        "name": " Buffadisson",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.09476154,
+        "longitude": -77.42995101
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.09815103,
+          47.98048368
+        ]
+      },
+      "properties": {
+        "name": " Denain",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 47.98048368,
+        "longitude": -77.09815103
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.78958476,
+          48.49053799
+        ]
+      },
+      "properties": {
+        "name": " Fisher",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.49053799,
+        "longitude": -77.78958476
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.94345013,
+          49.31281769
+        ]
+      },
+      "properties": {
+        "name": " Flordin ",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 49.31281769,
+        "longitude": -76.94345013
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.919453,
+          48.646382
+        ]
+      },
+      "properties": {
+        "name": " Fontana ",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.646382,
+        "longitude": -77.919453
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.37561306,
+          48.23428967
+        ]
+      },
+      "properties": {
+        "name": " Kéwagama",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.23428967,
+        "longitude": -78.37561306
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.92212959,
+          48.15330285
+        ]
+      },
+      "properties": {
+        "name": " Lacoma",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.15330285,
+        "longitude": -76.92212959
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.52146041,
+          48.0605115
+        ]
+      },
+      "properties": {
+        "name": " Lapaska",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.0605115,
+        "longitude": -77.52146041
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.69911878,
+          48.11009558
+        ]
+      },
+      "properties": {
+        "name": " New Bidlamaque ",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.11009558,
+        "longitude": -77.69911878
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.836239,
+          49.790265
+        ]
+      },
+      "properties": {
+        "name": " New Hosco",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 49.790265,
+        "longitude": -77.836239
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.07156265,
+          48.26520994
+        ]
+      },
+      "properties": {
+        "name": " New Marlon",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.26520994,
+        "longitude": -79.07156265
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.14340133,
+          49.75851545
+        ]
+      },
+      "properties": {
+        "name": " Phelps Dodge",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 49.75851545,
+        "longitude": -78.14340133
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.80261888,
+          48.48595302
+        ]
+      },
+      "properties": {
+        "name": " Randall",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.48595302,
+        "longitude": -77.80261888
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.35627039,
+          48.09528134
+        ]
+      },
+      "properties": {
+        "name": " Regcourt",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.09528134,
+        "longitude": -77.35627039
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.55905844,
+          48.17246356
+        ]
+      },
+      "properties": {
+        "name": " Resenore",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.17246356,
+        "longitude": -77.55905844
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.11669815,
+          49.01372103
+        ]
+      },
+      "properties": {
+        "name": " Rollmac",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 49.01372103,
+        "longitude": -79.11669815
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.27621934,
+          48.0140435
+        ]
+      },
+      "properties": {
+        "name": " Simon Ouest ",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.0140435,
+        "longitude": -77.27621934
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.23266019,
+          48.16885004
+        ]
+      },
+      "properties": {
+        "name": " South Tiblemont",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.16885004,
+        "longitude": -77.23266019
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.8215401,
+          48.11207322
+        ]
+      },
+      "properties": {
+        "name": " Stabell",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.11207322,
+        "longitude": -77.8215401
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.89188522,
+          48.67280901
+        ]
+      },
+      "properties": {
+        "name": " Standard Gold Mines",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.67280901,
+        "longitude": -77.89188522
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.56688026,
+          48.55341414
+        ]
+      },
+      "properties": {
+        "name": " Swanson",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.55341414,
+        "longitude": -77.56688026
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.72194046,
+          48.46557697
+        ]
+      },
+      "properties": {
+        "name": " Vénus",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.46557697,
+        "longitude": -77.72194046
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.24090237,
+          48.24906576
+        ]
+      },
+      "properties": {
+        "name": " Vianor",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.24906576,
+        "longitude": -77.24090237
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.0889728,
+          48.33993133
+        ]
+      },
+      "properties": {
+        "name": " Waite Ackerman ",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.33993133,
+        "longitude": -79.0889728
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.95573069,
+          48.57896322
+        ]
+      },
+      "properties": {
+        "name": " Wendell ",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.57896322,
+        "longitude": -77.95573069
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.9017654,
+          48.0818899
+        ]
+      },
+      "properties": {
+        "name": " Québec Explorers",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.0818899,
+        "longitude": -77.9017654
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.91559869,
+          49.30631889
+        ]
+      },
+      "properties": {
+        "name": " Cartwright",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 49.30631889,
+        "longitude": -76.91559869
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.82620174,
+          48.29538362
+        ]
+      },
+      "properties": {
+        "name": " Claremont",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.29538362,
+        "longitude": -78.82620174
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.30940339,
+          49.8926076
+        ]
+      },
+      "properties": {
+        "name": " Cedar Bay",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 49.8926076,
+        "longitude": -74.30940339
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.91782502,
+          48.18451201
+        ]
+      },
+      "properties": {
+        "name": " Adanac",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.18451201,
+        "longitude": -78.91782502
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.0711419,
+          48.21748852
+        ]
+      },
+      "properties": {
+        "name": " Abbeville",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.21748852,
+        "longitude": -79.0711419
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.27652555,
+          48.17750166
+        ]
+      },
+      "properties": {
+        "name": " Guinard",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.17750166,
+        "longitude": -79.27652555
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.07646484,
+          48.34345663
+        ]
+      },
+      "properties": {
+        "name": " East-Waite",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.34345663,
+        "longitude": -79.07646484
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.10037494,
+          48.49877835
+        ]
+      },
+      "properties": {
+        "name": " Garney",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.49877835,
+        "longitude": -79.10037494
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.16402425,
+          48.65717311
+        ]
+      },
+      "properties": {
+        "name": " Nortrac",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.65717311,
+        "longitude": -78.16402425
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.560059,
+          49.753305
+        ]
+      },
+      "properties": {
+        "name": " Radiore",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 49.753305,
+        "longitude": -77.560059
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.18830963,
+          48.79157612
+        ]
+      },
+      "properties": {
+        "name": " Fédéral-22B16",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.79157612,
+        "longitude": -66.18830963
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.52772665,
+          45.77199545
+        ]
+      },
+      "properties": {
+        "name": " St-Robert-Metals",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 45.77199545,
+        "longitude": -70.52772665
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.9582,
+          48.872743
+        ]
+      },
+      "properties": {
+        "name": " Sullipek",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.872743,
+        "longitude": -65.9582
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.3325097,
+          49.88111247
+        ]
+      },
+      "properties": {
+        "name": " Kokko Creek",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 49.88111247,
+        "longitude": -74.3325097
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.42688148,
+          48.88953449
+        ]
+      },
+      "properties": {
+        "name": " Duvan Copper",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 48.88953449,
+        "longitude": -79.42688148
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.67967869,
+          47.41222081
+        ]
+      },
+      "properties": {
+        "name": " Belleterre - Infrastructures",
+        "jurisdiction": "QC",
+        "status": "NULL",
+        "commodity": "NULL",
+        "mineType": "NULL",
+        "latitude": 47.41222081,
+        "longitude": -78.67967869
+      }
+    }
+  ]
+}

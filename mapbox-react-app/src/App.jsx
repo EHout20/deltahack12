@@ -462,39 +462,51 @@ return (
         
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px', marginBottom: '30px' }}>
           
-          {/* Water  */}
-          <div style={{ background: '#f8f9fa', padding: '15px', borderRadius: '8px' }}>
-            <div style={{ color: '#666', fontSize: '12px' }}>Water Acidity</div>
-            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#333' }}>
-              {popup.properties.ph} <span style={{fontSize:'14px'}}>pH</span>
-            </div>
-            <div style={{ fontSize: '11px', color: popup.properties.ph < 5 ? 'red' : 'green' }}>
-              {popup.properties.ph < 5 ? '⚠ Acidic' : '✓ Normal'}
-            </div>
-          </div>
+        {/*water */}
+  <div style={{ background: '#f8f9fa', padding: '15px', borderRadius: '8px' }}>
+    <div style={{ color: '#666', fontSize: '12px' }}>Water Acidity</div>
+    <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#333' }}>
+      {popup.properties.ph} <span style={{fontSize:'14px'}}>pH</span>
+    </div>
+    <div style={{ 
+        fontSize: '11px', 
+        fontWeight: 'bold',
+        color: popup.properties.ph < 5.0 ? '#f44336' : (popup.properties.ph < 6.8 ? '#ff9800' : '#4caf50') 
+    }}>
+      {popup.properties.ph < 5.0 ? '✗ Hazardous' : (popup.properties.ph < 6.8 ? '⚠ Warning' : '✓ Safe')}
+    </div>
+  </div>
 
-          {/* Soil  */}
-          <div style={{ background: '#f8f9fa', padding: '15px', borderRadius: '8px' }}>
-            <div style={{ color: '#666', fontSize: '12px' }}>Soil Lead (Pb)</div>
-            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#333' }}>
-              {popup.properties.lead} <span style={{fontSize:'14px'}}>ppm</span>
-            </div>
-            <div style={{ fontSize: '11px', color: popup.properties.lead > 70 ? 'red' : 'green' }}>
-              {popup.properties.lead > 70 ? '⚠ Contaminated' : '✓ Safe'}
-            </div>
-          </div>
+  {/*soil */}
+  <div style={{ background: '#f8f9fa', padding: '15px', borderRadius: '8px' }}>
+    <div style={{ color: '#666', fontSize: '12px' }}>Soil Lead (Pb)</div>
+    <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#333' }}>
+      {popup.properties.lead} <span style={{fontSize:'14px'}}>ppm</span>
+    </div>
+    <div style={{ 
+        fontSize: '11px', 
+        fontWeight: 'bold',
+        color: popup.properties.lead > 70 ? '#f44336' : (popup.properties.lead > 40 ? '#ff9800' : '#4caf50') 
+    }}>
+      {popup.properties.lead > 70 ? '✗ Hazardous' : (popup.properties.lead > 40 ? '⚠ Warning' : '✓ Safe')}
+    </div>
+  </div>
 
-          {/* Air  */}
-          <div style={{ background: '#f8f9fa', padding: '15px', borderRadius: '8px' }}>
-            <div style={{ color: '#666', fontSize: '12px' }}>Air Quality</div>
-            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#333' }}>
-              {popup.properties.pm25} <span style={{fontSize:'14px'}}>µg/m³</span>
-            </div>
-            <div style={{ fontSize: '11px', color: popup.properties.pm25 > 35 ? 'orange' : 'green' }}>
-              {popup.properties.pm25 > 35 ? '⚠ High Dust' : '✓ Clear'}
-            </div>
-          </div>
-        </div>
+  {/* air */}
+  <div style={{ background: '#f8f9fa', padding: '15px', borderRadius: '8px' }}>
+    <div style={{ color: '#666', fontSize: '12px' }}>Air Quality</div>
+    <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#333' }}>
+      {popup.properties.pm25} <span style={{fontSize:'14px'}}>µg/m³</span>
+    </div>
+    <div style={{ 
+        fontSize: '11px', 
+        fontWeight: 'bold',
+        color: popup.properties.pm25 > 80 ? '#f44336' : (popup.properties.pm25 > 20 ? '#ff9800' : '#4caf50') 
+    }}>
+      {popup.properties.pm25 > 80 ? '✗ Hazardous' : (popup.properties.pm25 > 20 ? '⚠ Warning' : '✓ Safe')}
+    </div>
+  </div>
+</div>
 
         <button
           onClick={() => setPopup(null)}
