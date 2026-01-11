@@ -98,7 +98,7 @@ export default function MineDetailsDashboard({
             }}>
               {currentMine.ph < 5.0 ? '✗ Hazardous' : (currentMine.ph < 6.8 ? '⚠ Warning' : '✓ Safe')}
             </div>
-            {/* NEW: AI PREDICTION FOR WATER */}
+            {/* forecast */}
             <div style={{ marginTop: '12px', paddingTop: '10px', borderTop: `1px solid ${theme === 'light' ? '#ddd' : '#444'}` }}>
                 <div style={{ fontSize: '10px', color: theme === 'light' ? '#888' : '#aaa', textTransform: 'uppercase' }}>
                     1-Year Forecast
@@ -128,7 +128,7 @@ export default function MineDetailsDashboard({
             }}>
               {currentMine.lead > 70 ? '✗ Hazardous' : (currentMine.lead > 40 ? '⚠ Warning' : '✓ Safe')}
             </div>
-            {/* NEW: AI PREDICTION FOR LEAD */}
+            {/* forecast */}
             <div style={{ marginTop: '12px', paddingTop: '10px', borderTop: `1px solid ${theme === 'light' ? '#ddd' : '#444'}` }}>
                 <div style={{ fontSize: '10px', color: theme === 'light' ? '#888' : '#aaa', textTransform: 'uppercase' }}>
                     1-Year Forecast
@@ -158,7 +158,7 @@ export default function MineDetailsDashboard({
             }}>
               {currentMine.pm25 > 80 ? '✗ Hazardous' : (currentMine.pm25 > 20 ? '⚠ Warning' : '✓ Safe')}
             </div>
-            {/* NEW: AI PREDICTION FOR AIR */}
+            {/* forecase */}
             <div style={{ marginTop: '12px', paddingTop: '10px', borderTop: `1px solid ${theme === 'light' ? '#ddd' : '#444'}` }}>
                 <div style={{ fontSize: '10px', color: theme === 'light' ? '#888' : '#aaa', textTransform: 'uppercase' }}>
                     1-Year Forecast
