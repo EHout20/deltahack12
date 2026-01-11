@@ -774,13 +774,23 @@ return (
         </div>
 
         
-       <h4 style={{ color: theme === 'light' ? '#888' : '#666', textTransform: 'uppercase', fontSize: '12px' }}>Live Sensor Readings</h4>
-        
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px', marginBottom: '30px' }}>
-          
-        {/*water */}
+       {/* sesnors */}
+<h4 style={{ color: theme === 'light' ? '#888' : '#666', textTransform: 'uppercase', fontSize: '12px' }}>Live Sensor Readings</h4>
+
+<div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px', marginBottom: '30px' }}>
+  
+  {/* water*/}
   <div style={{ background: theme === 'light' ? '#f8f9fa' : '#2a2a2a', padding: '15px', borderRadius: '8px' }}>
-    <div style={{ color: theme === 'light' ? '#666' : '#aaa', fontSize: '12px' }}>Water Acidity</div>
+    
+    {/* Tooltip Wrapper */}
+    <div className="tooltip-trigger" style={{ color: theme === 'light' ? '#666' : '#aaa', fontSize: '12px', marginBottom: '5px' }}>
+      Water Acidity
+      <span className="tooltip-text" style={{ textAlign: 'left' }}>
+        <strong>pH Scale</strong><br/>
+        Measures water acidity. Low pH (&lt;6.5) can kill fish and leach heavy metals.
+      </span>
+    </div>
+
     <div style={{ fontSize: '24px', fontWeight: 'bold', color: theme === 'light' ? '#333' : '#fff' }}>
       {popup.properties.ph} <span style={{fontSize:'14px'}}>pH</span>
     </div>
@@ -793,9 +803,18 @@ return (
     </div>
   </div>
 
-  {/*soil */}
+  {/* soil */}
   <div style={{ background: theme === 'light' ? '#f8f9fa' : '#2a2a2a', padding: '15px', borderRadius: '8px' }}>
-    <div style={{ color: theme === 'light' ? '#666' : '#aaa', fontSize: '12px' }}>Soil Lead (Pb)</div>
+    
+    {/* Tooltip Wrapper */}
+    <div className="tooltip-trigger" style={{ color: theme === 'light' ? '#666' : '#aaa', fontSize: '12px', marginBottom: '5px' }}>
+      Soil Lead (Pb)
+      <span className="tooltip-text" style={{ textAlign: 'left' }}>
+        <strong>lead parts per million (ppm)</strong><br/>
+        Concentration of lead in soil. Levels above 70 ppm are toxic to wildlife and humans.
+      </span>
+    </div>
+
     <div style={{ fontSize: '24px', fontWeight: 'bold', color: theme === 'light' ? '#333' : '#fff' }}>
       {popup.properties.lead} <span style={{fontSize:'14px'}}>ppm</span>
     </div>
@@ -810,7 +829,16 @@ return (
 
   {/* air */}
   <div style={{ background: theme === 'light' ? '#f8f9fa' : '#2a2a2a', padding: '15px', borderRadius: '8px' }}>
-    <div style={{ color: theme === 'light' ? '#666' : '#aaa', fontSize: '12px' }}>Air Quality</div>
+    
+    {/* Tooltip Wrapper */}
+    <div className="tooltip-trigger" style={{ color: theme === 'light' ? '#666' : '#aaa', fontSize: '12px', marginBottom: '5px' }}>
+      Air Quality 
+      <span className="tooltip-text" style={{ textAlign: 'left' }}>
+        <strong>particulate matter (µg/m³)</strong><br/>
+        Measures microscopic dust particles. High levels indicate industrial pollution.
+      </span>
+    </div>
+
     <div style={{ fontSize: '24px', fontWeight: 'bold', color: theme === 'light' ? '#333' : '#fff' }}>
       {popup.properties.pm25} <span style={{fontSize:'14px'}}>µg/m³</span>
     </div>
