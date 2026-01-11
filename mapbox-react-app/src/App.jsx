@@ -4,7 +4,7 @@ import { generateSensorData } from './risk';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import './App.css'
 
-const accessToken = "pk.eyJ1IjoiYXl1c2huYWlyIiwiYSI6ImNtazhxZnN3azFpZ3YzZ3BsbjBvM2RnZmwifQ.uvDsRFbJ4PVoXXkrCPVmJQ";
+const accessToken = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN;
 const canadaCenter = [-106.3, 56.1]; // Center of Canada
 const canadaBounds = [
   [-145.0, 38.0],   // SW corner - extended bottom and left
