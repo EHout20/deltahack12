@@ -1,5 +1,5 @@
 import SensorVisualization from './SensorVisualization';
-import { getOneYearPrediction } from './predictionEngine';
+import { getOneYearPrediction, calculateFutureRiskScore } from './predictionEngine';
 
 export default function MineDetailsDashboard({ 
   popup, 
@@ -15,9 +15,12 @@ export default function MineDetailsDashboard({
 
   // Get current live data for this specific mine
   const currentMine = allMines.find(m => m.id === popup.properties.id) || popup.properties;
-  // Each mine has its own independent telemetry history
   const mineHistory = telemetryHistory[currentMine.id] || [];
   const mineId = currentMine.id;
+
+  // future risk calc
+  const futureRiskScore = calculateFutureRiskScore(mineHistory, currentMine.riskScore);
+  const riskTrend = futureRiskScore - currentMine.riskScore;
 
   return (
     <div style={{
@@ -80,6 +83,7 @@ export default function MineDetailsDashboard({
         </h4>
 
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px', marginBottom: '30px', width: '100%' }}>
+          
           {/* Water Acidity */}
           <div style={{ background: theme === 'light' ? '#f8f9fa' : '#2a2a2a', padding: '15px', borderRadius: '8px', minWidth: 0 }}>
             <div className="tooltip-trigger" style={{ color: theme === 'light' ? '#666' : '#aaa', fontSize: '12px', marginBottom: '5px' }}>
@@ -101,7 +105,6 @@ export default function MineDetailsDashboard({
             }}>
               {currentMine.ph < 5.0 ? '✗ Hazardous' : (currentMine.ph < 6.8 ? '⚠ Warning' : '✓ Safe')}
             </div>
-            {/* forecast */}
             <div style={{ marginTop: '12px', paddingTop: '10px', borderTop: `1px solid ${theme === 'light' ? '#ddd' : '#444'}` }}>
                 <div style={{ fontSize: '10px', color: theme === 'light' ? '#888' : '#aaa', textTransform: 'uppercase' }}>
                     1-Year Forecast
@@ -133,7 +136,6 @@ export default function MineDetailsDashboard({
             }}>
               {currentMine.lead > 70 ? '✗ Hazardous' : (currentMine.lead > 40 ? '⚠ Warning' : '✓ Safe')}
             </div>
-            {/* forecast */}
             <div style={{ marginTop: '12px', paddingTop: '10px', borderTop: `1px solid ${theme === 'light' ? '#ddd' : '#444'}` }}>
                 <div style={{ fontSize: '10px', color: theme === 'light' ? '#888' : '#aaa', textTransform: 'uppercase' }}>
                     1-Year Forecast
@@ -165,7 +167,6 @@ export default function MineDetailsDashboard({
             }}>
               {currentMine.pm25 > 80 ? '✗ Hazardous' : (currentMine.pm25 > 20 ? '⚠ Warning' : '✓ Safe')}
             </div>
-            {/* forecase */}
             <div style={{ marginTop: '12px', paddingTop: '10px', borderTop: `1px solid ${theme === 'light' ? '#ddd' : '#444'}` }}>
                 <div style={{ fontSize: '10px', color: theme === 'light' ? '#888' : '#aaa', textTransform: 'uppercase' }}>
                     1-Year Forecast
@@ -175,9 +176,48 @@ export default function MineDetailsDashboard({
                 </div>
             </div>
           </div>
+
+          {/* risk  */}
+          <div style={{ 
+            background: theme === 'light' ? '#eef2ff' : '#1e2a38', 
+            padding: '15px', 
+            borderRadius: '8px', 
+            border: `1px solid ${theme === 'light' ? '#c7d2fe' : '#374151'}`,
+            minWidth: 0 
+          }}>
+            <div className="tooltip-trigger" style={{ 
+              color: theme === 'light' ? '#4f46e5' : '#818cf8', 
+              fontSize: '11px', 
+              fontWeight: 'bold', 
+              marginBottom: '5px', 
+              cursor: 'help'
+            }}>
+              Future Risk Index
+              <span className="tooltip-text" style={{ textAlign: 'left', width: '140px' }}>
+                <strong> Risk index 1 year from now</strong><br/>
+              </span>
+            </div>
+
+            <div style={{ fontSize: '24px', fontWeight: 'bold', color: theme === 'light' ? '#333' : '#fff' }}>
+              {futureRiskScore}/100
+            </div>
+
+            {/* trend icon */}
+            <div style={{ 
+              fontSize: '11px', 
+              fontWeight: 'bold', 
+              color: riskTrend > 0 ? '#f44336' : (riskTrend < 0 ? '#4caf50' : '#888') 
+            }}>
+              {riskTrend > 0 ? `↗ +${Math.abs(riskTrend)} Increasing` : (riskTrend < 0 ? `↘ -${Math.abs(riskTrend)} Improving` : '→ Stable')}
+            </div>
+
+            <div style={{ fontSize: '9px', color: theme === 'light' ? '#888' : '#aaa', marginTop: '6px' }}>
+               Based on {mineHistory.length} historical readings
+            </div>
+          </div>
+
         </div>
 
-        {/* Each mine gets its own isolated graph with key={mineId} to force re-render on mine change */}
         <SensorVisualization 
           key={`sensor-${mineId}-${mineHistory.length}`}
           mine={currentMine} 
