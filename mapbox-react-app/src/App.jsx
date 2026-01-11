@@ -20,6 +20,60 @@ function App() {
   const [allMines, setAllMines] = useState([]);
   const [locationSearch, setLocationSearch] = useState(null);
   const [searchSuggestions, setSearchSuggestions] = useState([]);
+  const [dateDisplay, setDateDisplay] = useState(new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' }));
+
+  useEffect(() => {
+    // Telemetry loop: 1 second = 1 day of simulated time
+    let elapsedDays = 0;
+    const telemetryInterval = setInterval(() => {
+      elapsedDays += 1;
+      
+      // Update date (add days to today)
+      const newDate = new Date();
+      newDate.setDate(newDate.getDate() + elapsedDays);
+      setDateDisplay(newDate.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' }));
+      
+      // Update all mines data based on elapsed time
+      setAllMines(prevMines => prevMines.map(mine => {
+        const timeFactorDays = elapsedDays;
+        
+        // Calculate degradation based on time
+        // pH: decreases exponentially (becomes more acidic) - starts around 7, decreases
+        const basePh = 7.0;
+        const phDecay = basePh - (2.0 * (1 - Math.exp(-timeFactorDays / 50))); // Exponential decay towards acidic
+        
+        // Lead: increases exponentially (accumulation) - starts around 20, grows fast
+        const baseLead = 20;
+        const leadGrowth = baseLead * Math.exp(timeFactorDays / 100); // Exponential growth
+        
+        // PM2.5: increases logarithmically (gradual atmospheric buildup)
+        const basePm25 = 15;
+        const pm25Growth = basePm25 + (Math.log(1 + timeFactorDays / 5) * 8); // Logarithmic growth
+        
+        // Calculate risk score based on sensor values
+        const phScore = Math.max(0, Math.min(100, (7 - phDecay) * 15)); // Lower pH = higher risk
+        const leadScore = Math.max(0, Math.min(100, (leadGrowth / 100) * 50)); // Higher lead = higher risk
+        const pm25Score = Math.max(0, Math.min(100, (pm25Growth / 50) * 50)); // Higher pm25 = higher risk
+        const riskScore = Math.round((phScore + leadScore + pm25Score) / 3);
+        
+        // Determine color based on risk score
+        let color = '#4caf50'; // Green
+        if (riskScore >= 75) color = '#f44336'; // Red
+        else if (riskScore >= 35) color = '#ff9800'; // Orange
+        
+        return {
+          ...mine,
+          ph: Math.max(2, Math.min(10, parseFloat(phDecay.toFixed(2)))), // Clamp between 2-10
+          lead: Math.min(300, parseFloat(leadGrowth.toFixed(1))), // Cap at 300 ppm
+          pm25: Math.min(200, parseFloat(pm25Growth.toFixed(1))), // Cap at 200 µg/m³
+          riskScore,
+          color
+        };
+      }));
+    }, 1000);
+    
+    return () => clearInterval(telemetryInterval);
+  }, []);
 
   useEffect(() => {
     mapboxgl.accessToken = accessToken
@@ -170,8 +224,92 @@ function App() {
           // Add click listener to unclustered points
           mapRef.current.on('click', 'unclustered-point', (e) => {
             const feature = e.features[0];
+            const coordinates = feature.geometry.coordinates;
+            
+            // Zoom into the clicked mine
+            mapRef.current.fitBounds(
+              [
+                [coordinates[0] - 0.1, coordinates[1] - 0.1],
+                [coordinates[0] + 0.1, coordinates[1] + 0.1]
+              ],
+              { padding: 100, maxZoom: 14 }
+            );
+            
+            // Add breathing circle at mine location
+            if (!mapRef.current.getSource('search-marker')) {
+              mapRef.current.addSource('search-marker', {
+                type: 'geojson',
+                data: {
+                  type: 'FeatureCollection',
+                  features: [{
+                    type: 'Feature',
+                    geometry: {
+                      type: 'Point',
+                      coordinates: coordinates
+                    },
+                    properties: { name: feature.properties.name }
+                  }]
+                }
+              });
+              
+              // Add breathing circle layer
+              mapRef.current.addLayer({
+                id: 'search-marker-circle',
+                type: 'circle',
+                source: 'search-marker',
+                paint: {
+                  'circle-radius': 40,
+                  'circle-color': '#ff6b6b',
+                  'circle-opacity': 0.3,
+                  'circle-stroke-width': 2,
+                  'circle-stroke-color': '#ff6b6b',
+                  'circle-stroke-opacity': 0.6
+                }
+              });
+              
+              // Add marker symbol on top
+              mapRef.current.addLayer({
+                id: 'search-marker',
+                type: 'symbol',
+                source: 'search-marker',
+                layout: {
+                  'icon-image': 'marker-15',
+                  'icon-size': 2,
+                  'text-field': '⛏',
+                  'text-size': 20,
+                  'text-offset': [0, -0.6]
+                }
+              });
+              
+              // Breathing animation
+              let pulseIndex = 0;
+              const pulseInterval = setInterval(() => {
+                pulseIndex = (pulseIndex + 1) % 100;
+                const radiusScale = 0.8 + Math.sin((pulseIndex / 100) * Math.PI * 2) * 0.2;
+                const opacityScale = 0.2 + Math.sin((pulseIndex / 100) * Math.PI * 2) * 0.2;
+                
+                mapRef.current.setPaintProperty('search-marker-circle', 'circle-radius', 40 * radiusScale);
+                mapRef.current.setPaintProperty('search-marker-circle', 'circle-opacity', 0.3 * opacityScale);
+              }, 30);
+              
+              // Store interval ID for cleanup
+              mapRef.current.pulseInterval = pulseInterval;
+            } else {
+              mapRef.current.getSource('search-marker').setData({
+                type: 'FeatureCollection',
+                features: [{
+                  type: 'Feature',
+                  geometry: {
+                    type: 'Point',
+                    coordinates: coordinates
+                  },
+                  properties: { name: feature.properties.name }
+                }]
+              });
+            }
+            
             setPopup({
-              coordinates: feature.geometry.coordinates,
+              coordinates: coordinates,
               properties: feature.properties
             });
           });
@@ -302,14 +440,101 @@ return (
                   const lngs = matchingMines.map(m => m.coordinates[0]);
                   const lats = matchingMines.map(m => m.coordinates[1]);
                   const bbox = [
-                    Math.min(...lngs) - 0.5,
-                    Math.min(...lats) - 0.5,
-                    Math.max(...lngs) + 0.5,
-                    Math.max(...lats) + 0.5
+                    Math.min(...lngs) - 0.2,
+                    Math.min(...lats) - 0.2,
+                    Math.max(...lngs) + 0.2,
+                    Math.max(...lats) + 0.2
                   ];
                   
-                  // Zoom to bounds
-                  mapRef.current.fitBounds(bbox, { padding: 50 });
+                  // Zoom to bounds with tighter padding
+                  mapRef.current.fitBounds(bbox, { padding: 100, maxZoom: 14 });
+                  
+                  // Add a marker for the first mine at the location
+                  const firstMine = matchingMines[0];
+                  const el = document.createElement('div');
+                  el.style.width = '30px';
+                  el.style.height = '30px';
+                  el.style.backgroundColor = '#ff6b6b';
+                  el.style.borderRadius = '50%';
+                  el.style.border = '3px solid white';
+                  el.style.boxShadow = '0 2px 8px rgba(0,0,0,0.3)';
+                  el.style.display = 'flex';
+                  el.style.alignItems = 'center';
+                  el.style.justifyContent = 'center';
+                  el.style.fontSize = '16px';
+                  el.innerHTML = '⛏';
+                  
+                  if (!mapRef.current.getSource('search-marker')) {
+                    mapRef.current.addSource('search-marker', {
+                      type: 'geojson',
+                      data: {
+                        type: 'FeatureCollection',
+                        features: [{
+                          type: 'Feature',
+                          geometry: {
+                            type: 'Point',
+                            coordinates: firstMine.coordinates
+                          },
+                          properties: { name: name }
+                        }]
+                      }
+                    });
+                    
+                    // Add breathing circle layer
+                    mapRef.current.addLayer({
+                      id: 'search-marker-circle',
+                      type: 'circle',
+                      source: 'search-marker',
+                      paint: {
+                        'circle-radius': 40,
+                        'circle-color': '#ff6b6b',
+                        'circle-opacity': 0.3,
+                        'circle-stroke-width': 2,
+                        'circle-stroke-color': '#ff6b6b',
+                        'circle-stroke-opacity': 0.6
+                      }
+                    });
+                    
+                    // Add marker symbol on top
+                    mapRef.current.addLayer({
+                      id: 'search-marker',
+                      type: 'symbol',
+                      source: 'search-marker',
+                      layout: {
+                        'icon-image': 'marker-15',
+                        'icon-size': 2,
+                        'text-field': '⛏',
+                        'text-size': 20,
+                        'text-offset': [0, -0.6]
+                      }
+                    });
+                    
+                    // Breathing animation
+                    let pulseIndex = 0;
+                    const pulseInterval = setInterval(() => {
+                      pulseIndex = (pulseIndex + 1) % 100;
+                      const radiusScale = 0.8 + Math.sin((pulseIndex / 100) * Math.PI * 2) * 0.2;
+                      const opacityScale = 0.2 + Math.sin((pulseIndex / 100) * Math.PI * 2) * 0.2;
+                      
+                      mapRef.current.setPaintProperty('search-marker-circle', 'circle-radius', 40 * radiusScale);
+                      mapRef.current.setPaintProperty('search-marker-circle', 'circle-opacity', 0.3 * opacityScale);
+                    }, 30);
+                    
+                    // Store interval ID for cleanup
+                    mapRef.current.pulseInterval = pulseInterval;
+                  } else {
+                    mapRef.current.getSource('search-marker').setData({
+                      type: 'FeatureCollection',
+                      features: [{
+                        type: 'Feature',
+                        geometry: {
+                          type: 'Point',
+                          coordinates: firstMine.coordinates
+                        },
+                        properties: { name: name }
+                      }]
+                    });
+                  }
                   
                   setLocationSearch({
                     name: name,
@@ -354,10 +579,17 @@ return (
         <div style={{ padding: '24px' }}>
           {/* HEADER */}
           <div style={{ borderBottom: '1px solid #eee', paddingBottom: '15px', marginBottom: '20px' }}>
-            <h2 style={{ margin: 0, fontSize: '24px', color: '#333' }}>{locationSearch.name}</h2>
-            <p style={{ margin: '5px 0 0', color: '#666' }}>
-              {locationSearch.mines.length} mines found in this area
-            </p>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+              <div>
+                <h2 style={{ margin: 0, fontSize: '24px', color: '#333' }}>{locationSearch.name}</h2>
+                <p style={{ margin: '5px 0 0', color: '#666' }}>
+                  {locationSearch.mines.length} mines found in this area
+                </p>
+              </div>
+              <div style={{ fontSize: '12px', color: '#888', textAlign: 'right', cursor: 'pointer' }} onClick={() => setDateDisplay(new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' }))}>
+                {dateDisplay}
+              </div>
+            </div>
           </div>
           
           <div style={{ marginBottom: '20px' }}>
@@ -462,11 +694,18 @@ return (
         <div style={{ padding: '24px' }}>
           {/* HEADER */}
           <div style={{ borderBottom: '1px solid #eee', paddingBottom: '15px', marginBottom: '20px' }}>
-            <h2 style={{ margin: 0, fontSize: '24px', color: '#333' }}>{popup.properties.name || 'Unknown Mine'}</h2>
-            <p style={{ margin: '5px 0 0', color: '#666' }}>
-            Latitude: {popup.coordinates[1].toFixed(4)}, Longitude: {popup.coordinates[0].toFixed(4)}
-          </p>
-        </div>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+              <div>
+                <h2 style={{ margin: 0, fontSize: '24px', color: '#333' }}>{popup.properties.name || 'Unknown Mine'}</h2>
+                <p style={{ margin: '5px 0 0', color: '#666' }}>
+                  Latitude: {popup.coordinates[1].toFixed(4)}, Longitude: {popup.coordinates[0].toFixed(4)}
+                </p>
+              </div>
+              <div style={{ fontSize: '12px', color: '#888', textAlign: 'right', cursor: 'pointer' }} onClick={() => setDateDisplay(new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' }))}>
+                {dateDisplay}
+              </div>
+            </div>
+          </div>
 
         {/* risk */}
         <div style={{ 
