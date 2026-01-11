@@ -9,6 +9,7 @@ import { useTelemetry } from './hooks/useTelemetry';
 import { useMapboxInit, useMapboxTheme } from './hooks/useMapbox';
 
 function App() {
+  const [isVisible, setIsVisible] = useState(false);
   const [theme, setTheme] = useState("light");
   const mapRef = useRef();
   const minesGeoRef = useRef(null);
@@ -233,8 +234,20 @@ function App() {
     }));
   }, []);
 
+  useEffect(() => {
+    const handleTitleVisibility = () => {
+      setIsVisible(false);
+    };
+
+    document.addEventListener(`click`, handleTitleVisibility);
+    return () => {
+      document.removeEventListener(`click`, handleTitleVisibility);
+    };
+  }, []);
+
   return (
     <>
+      {isVisible && <Title theme={theme} />}
       <ThemeToggleButton 
         theme={theme} 
         onToggle={() => setTheme(theme === 'light' ? 'dark' : 'light')} 
