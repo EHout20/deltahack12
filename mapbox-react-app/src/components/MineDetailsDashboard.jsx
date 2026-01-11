@@ -1,11 +1,21 @@
+import SensorVisualization from './SensorVisualization';
+
 export default function MineDetailsDashboard({ 
   popup, 
   theme, 
   dateDisplay, 
   onClose,
-  onDateClick 
+  onDateClick,
+  telemetryHistory,
+  allMines
 }) {
   if (!popup) return null;
+
+  // Get current live data for this specific mine
+  const currentMine = allMines.find(m => m.id === popup.properties.id) || popup.properties;
+  // Each mine has its own independent telemetry history
+  const mineHistory = telemetryHistory[currentMine.id] || [];
+  const mineId = currentMine.id;
 
   return (
     <div style={{
@@ -27,7 +37,7 @@ export default function MineDetailsDashboard({
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
             <div>
               <h2 style={{ margin: 0, fontSize: '24px', color: theme === 'light' ? '#333' : '#fff' }}>
-                {popup.properties.name || 'Unknown Mine'}
+                {currentMine.name || 'Unknown Mine'}
               </h2>
               <p style={{ margin: '5px 0 0', color: theme === 'light' ? '#666' : '#aaa' }}>
                 Latitude: {popup.coordinates[1].toFixed(4)}, Longitude: {popup.coordinates[0].toFixed(4)}
@@ -44,7 +54,7 @@ export default function MineDetailsDashboard({
 
         {/* Risk Score */}
         <div style={{ 
-          backgroundColor: popup.properties.color, 
+          backgroundColor: currentMine.color, 
           color: 'white',
           borderRadius: '12px',
           padding: '20px',
@@ -55,10 +65,10 @@ export default function MineDetailsDashboard({
             Ecological Risk Index
           </div>
           <div style={{ fontSize: '48px', fontWeight: 'bold', margin: '10px 0' }}>
-            {popup.properties.riskScore}/100
+            {currentMine.riskScore}/100
           </div>
           <div style={{ fontSize: '18px', fontWeight: 'bold' }}>
-            {popup.properties.status}
+            {currentMine.status}
           </div>
         </div>
 
@@ -78,14 +88,14 @@ export default function MineDetailsDashboard({
               </span>
             </div>
             <div style={{ fontSize: '24px', fontWeight: 'bold', color: theme === 'light' ? '#333' : '#fff' }}>
-              {popup.properties.ph} <span style={{fontSize:'14px'}}>pH</span>
+              {currentMine.ph} <span style={{fontSize:'14px'}}>pH</span>
             </div>
             <div style={{ 
               fontSize: '11px', 
               fontWeight: 'bold',
-              color: popup.properties.ph < 5.0 ? '#f44336' : (popup.properties.ph < 6.8 ? '#ff9800' : '#4caf50') 
+              color: currentMine.ph < 5.0 ? '#f44336' : (currentMine.ph < 6.8 ? '#ff9800' : '#4caf50') 
             }}>
-              {popup.properties.ph < 5.0 ? '✗ Hazardous' : (popup.properties.ph < 6.8 ? '⚠ Warning' : '✓ Safe')}
+              {currentMine.ph < 5.0 ? '✗ Hazardous' : (currentMine.ph < 6.8 ? '⚠ Warning' : '✓ Safe')}
             </div>
           </div>
 
@@ -99,14 +109,14 @@ export default function MineDetailsDashboard({
               </span>
             </div>
             <div style={{ fontSize: '24px', fontWeight: 'bold', color: theme === 'light' ? '#333' : '#fff' }}>
-              {popup.properties.lead} <span style={{fontSize:'14px'}}>ppm</span>
+              {currentMine.lead} <span style={{fontSize:'14px'}}>ppm</span>
             </div>
             <div style={{ 
               fontSize: '11px', 
               fontWeight: 'bold',
-              color: popup.properties.lead > 70 ? '#f44336' : (popup.properties.lead > 40 ? '#ff9800' : '#4caf50') 
+              color: currentMine.lead > 70 ? '#f44336' : (currentMine.lead > 40 ? '#ff9800' : '#4caf50') 
             }}>
-              {popup.properties.lead > 70 ? '✗ Hazardous' : (popup.properties.lead > 40 ? '⚠ Warning' : '✓ Safe')}
+              {currentMine.lead > 70 ? '✗ Hazardous' : (currentMine.lead > 40 ? '⚠ Warning' : '✓ Safe')}
             </div>
           </div>
 
@@ -120,17 +130,26 @@ export default function MineDetailsDashboard({
               </span>
             </div>
             <div style={{ fontSize: '24px', fontWeight: 'bold', color: theme === 'light' ? '#333' : '#fff' }}>
-              {popup.properties.pm25} <span style={{fontSize:'14px'}}>µg/m³</span>
+              {currentMine.pm25} <span style={{fontSize:'14px'}}>µg/m³</span>
             </div>
             <div style={{ 
               fontSize: '11px', 
               fontWeight: 'bold',
-              color: popup.properties.pm25 > 80 ? '#f44336' : (popup.properties.pm25 > 20 ? '#ff9800' : '#4caf50') 
+              color: currentMine.pm25 > 80 ? '#f44336' : (currentMine.pm25 > 20 ? '#ff9800' : '#4caf50') 
             }}>
-              {popup.properties.pm25 > 80 ? '✗ Hazardous' : (popup.properties.pm25 > 20 ? '⚠ Warning' : '✓ Safe')}
+              {currentMine.pm25 > 80 ? '✗ Hazardous' : (currentMine.pm25 > 20 ? '⚠ Warning' : '✓ Safe')}
             </div>
           </div>
         </div>
+
+        {/* Each mine gets its own isolated graph with key={mineId} to force re-render on mine change */}
+        <SensorVisualization 
+          key={`sensor-${mineId}`}
+          mine={currentMine} 
+          theme={theme} 
+          history={mineHistory}
+          mineId={mineId}
+        />
 
         <button
           onClick={onClose}

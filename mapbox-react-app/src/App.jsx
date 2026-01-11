@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useRef, useState, useEffect, useCallback, useMemo } from 'react'
 import 'mapbox-gl/dist/mapbox-gl.css';
 import './App.css'
 import ThemeToggleButton from './components/ThemeToggleButton';
@@ -19,31 +19,79 @@ function App() {
   const [locationSearch, setLocationSearch] = useState(null);
   const [searchSuggestions, setSearchSuggestions] = useState([]);
   const [dateDisplay, setDateDisplay] = useState(new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' }));
+  const [telemetryHistory, setTelemetryHistory] = useState({});
+  const searchTimeoutRef = useRef(null);
 
   // Custom hooks
   useTelemetry(allMines, setAllMines, setDateDisplay);
-  useMapboxInit(mapRef, mapContainerRef, minesGeoRef, setAllMines, setPopup, setLocationSearch);
-  useMapboxTheme(mapRef, minesGeoRef, theme);
 
-  const handleSearchChange = (e) => {
+  // Memoize mine names for faster search (only updates when count changes)
+  const mineNameMap = useMemo(() => {
+    const map = {};
+    allMines.forEach(mine => {
+      if (!map[mine.name]) {
+        map[mine.name] = true;
+      }
+    });
+    return Object.keys(map);
+  }, [allMines.length]); // Only re-compute when count changes
+
+  // Debounced search handler
+  const handleSearchChange = useCallback((e) => {
     const query = e.target.value;
     setInputValue(query);
     
-    if (popup) setPopup(null);
-    if (locationSearch) setLocationSearch(null);
-    
-    if (query.length >= 2) {
-      const matches = allMines.filter(mine => 
-        mine.name.toLowerCase().includes(query.toLowerCase())
-      );
-      const uniqueNames = [...new Set(matches.map(m => m.name))].slice(0, 10);
-      setSearchSuggestions(uniqueNames);
-    } else {
-      setSearchSuggestions([]);
+    if (searchTimeoutRef.current) {
+      clearTimeout(searchTimeoutRef.current);
     }
-  };
+    
+    searchTimeoutRef.current = setTimeout(() => {
+      if (popup) setPopup(null);
+      if (locationSearch) setLocationSearch(null);
+      
+      if (query.length >= 2) {
+        const uniqueNames = mineNameMap.filter(name => 
+          name.toLowerCase().includes(query.toLowerCase())
+        ).slice(0, 10);
+        setSearchSuggestions(uniqueNames);
+      } else {
+        setSearchSuggestions([]);
+      }
+    }, 150); // 150ms debounce delay
+  }, [mineNameMap, popup, locationSearch]);
 
-  const handleSuggestionClick = (name) => {
+  // Track telemetry history for each mine
+  useEffect(() => {
+    if (allMines.length > 0) {
+      setTelemetryHistory(prevHistory => {
+        const newHistory = { ...prevHistory };
+        
+        allMines.forEach(mine => {
+          if (!newHistory[mine.id]) {
+            newHistory[mine.id] = [];
+          }
+          
+          // Add current reading to this mine's history
+          newHistory[mine.id] = [
+            ...newHistory[mine.id],
+            {
+              timestamp: Date.now(),
+              ph: mine.ph,
+              lead: mine.lead,
+              pm25: mine.pm25
+            }
+          ].slice(-50); // Keep last 50 readings per mine
+        });
+        
+        return newHistory;
+      });
+    }
+  }, [allMines]);
+
+  useMapboxInit(mapRef, mapContainerRef, minesGeoRef, setAllMines, setPopup, setLocationSearch);
+  useMapboxTheme(mapRef, minesGeoRef, theme);
+
+  const handleSuggestionClick = useCallback((name) => {
     const matchingMines = allMines.filter(mine => mine.name === name);
     
     const lngs = matchingMines.map(m => m.coordinates[0]);
@@ -134,9 +182,9 @@ function App() {
     
     setInputValue(name);
     setSearchSuggestions([]);
-  };
+  }, [allMines, mapRef]);
 
-  const handleLocationMineClick = (mine) => {
+  const handleLocationMineClick = useCallback((mine) => {
     mapRef.current.flyTo({
       center: mine.coordinates,
       zoom: 12
@@ -146,62 +194,63 @@ function App() {
       coordinates: mine.coordinates,
       properties: mine
     });
-  };
+  }, [mapRef]);
 
-  const handleDateClick = () => {
+  const handleDateClick = useCallback(() => {
     setDateDisplay(new Date().toLocaleDateString('en-US', { 
       year: 'numeric', 
       month: 'short', 
       day: 'numeric' 
     }));
-  };
+  }, []);
 
+  return (
+    <>
+      <ThemeToggleButton 
+        theme={theme} 
+        onToggle={() => setTheme(theme === 'light' ? 'dark' : 'light')} 
+      />
 
-return (
-  <>
-    <ThemeToggleButton 
-      theme={theme} 
-      onToggle={() => setTheme(theme === 'light' ? 'dark' : 'light')} 
-    />
-
-    <div style={{
-      margin: '10px 10px 0 0',
-      width: 300,
-      right: 0,
-      top: 0,
-      position: 'absolute',
-      zIndex: 30 
-    }} />
-    
-    <SearchBar
-      inputValue={inputValue}
-      onChange={handleSearchChange}
-      searchSuggestions={searchSuggestions}
-      onSuggestionClick={handleSuggestionClick}
-      theme={theme}
-      popup={popup}
-      locationSearch={locationSearch}
-    />
-    
-    <div id='map-container' ref={mapContainerRef} />
-    
-    <LocationDashboard
-      locationSearch={locationSearch}
-      theme={theme}
-      dateDisplay={dateDisplay}
-      onMineClick={handleLocationMineClick}
-      onClose={() => setLocationSearch(null)}
-      onDateClick={handleDateClick}
-    />
-    
-    <MineDetailsDashboard
-      popup={popup}
-      theme={theme}
-      dateDisplay={dateDisplay}
-      onClose={() => setPopup(null)}
-      onDateClick={handleDateClick}
-    />
-  </>
+      <div style={{
+        margin: '10px 10px 0 0',
+        width: 300,
+        right: 0,
+        top: 0,
+        position: 'absolute',
+        zIndex: 30 
+      }} />
+      
+      <SearchBar
+        inputValue={inputValue}
+        onChange={handleSearchChange}
+        searchSuggestions={searchSuggestions}
+        onSuggestionClick={handleSuggestionClick}
+        theme={theme}
+        popup={popup}
+        locationSearch={locationSearch}
+      />
+      
+      <div id='map-container' ref={mapContainerRef} />
+      
+      <LocationDashboard
+        locationSearch={locationSearch}
+        theme={theme}
+        dateDisplay={dateDisplay}
+        onMineClick={handleLocationMineClick}
+        onClose={() => setLocationSearch(null)}
+        onDateClick={handleDateClick}
+      />
+      
+      <MineDetailsDashboard
+        popup={popup}
+        theme={theme}
+        dateDisplay={dateDisplay}
+        onClose={() => setPopup(null)}
+        onDateClick={handleDateClick}
+        telemetryHistory={telemetryHistory}
+        allMines={allMines}
+      />
+    </>
   )
 }
 
