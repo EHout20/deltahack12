@@ -4,23 +4,26 @@
  */
 
   export function generateSensorData() {
-    // Use the same formulas as useTelemetry hook, starting at day 0
-    const timeFactorDays = 0;
+    // Generate varied initial values that are compatible with telemetry formulas
+    // Each mine simulates being at a different stage (0-400 days) for extreme variety
+    const simulatedDays = Math.random() * 400; 
     
-    const phNoise = (Math.random() - 0.5) * 0.4;
-    const leadNoise = (Math.random() - 0.5) * 8;
-    const pm25Noise = (Math.random() - 0.5) * 6;
+    // Use the same formulas as telemetry but with varied starting points
+    const phNoise = (Math.random() - 0.5) * 0.8; // More noise
+    const leadNoise = (Math.random() - 0.5) * 20; // More noise
+    const pm25Noise = (Math.random() - 0.5) * 15; // More noise
     
+    // Same base values and formulas as telemetry system
     const basePh = 7.0;
-    const phTrend = basePh - (2.0 * (1 - Math.exp(-timeFactorDays / 50)));
+    const phTrend = basePh - (2.0 * (1 - Math.exp(-simulatedDays / 50)));
     const ph = Math.max(2, Math.min(10, (phTrend + phNoise)));
     
     const baseLead = 20;
-    const leadTrend = baseLead * Math.exp(timeFactorDays / 100);
+    const leadTrend = baseLead * Math.exp(simulatedDays / 100);
     const lead = Math.max(0, Math.min(300, (leadTrend + leadNoise)));
     
     const basePm25 = 15;
-    const pm25Trend = basePm25 + (Math.log(1 + timeFactorDays / 5) * 8);
+    const pm25Trend = basePm25 + (Math.log(1 + simulatedDays / 5) * 8);
     const pm25 = Math.max(0, Math.min(200, (pm25Trend + pm25Noise)));
 
     // Calculate risk score using same logic as telemetry
@@ -31,8 +34,8 @@
 
     let status = "LOW RISK";
     let color = "#4caf50"; 
-    if (totalRisk >= 35) { status = "MODERATE"; color = "#ff9800"; }
-    if (totalRisk >= 75) { status = "CRITICAL"; color = "#ff1744"; } 
+    if (totalRisk >= 30) { status = "MODERATE"; color = "#ff9800"; }
+    if (totalRisk >= 60) { status = "CRITICAL"; color = "#ff1744"; } 
 
     return {
         ph: parseFloat(ph.toFixed(2)),
@@ -40,6 +43,7 @@
         pm25: parseFloat(pm25.toFixed(1)),
         riskScore: totalRisk,
         status,
-        color
+        color,
+        initialDaysOffset: simulatedDays // Track the initial time offset
     };
 }

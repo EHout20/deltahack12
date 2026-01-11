@@ -124,7 +124,7 @@ export default function MineDetailsDashboard({
                 <div style={{ fontSize: '10px', color: theme === 'light' ? '#888' : '#aaa', textTransform: 'uppercase' }}>
                     1-Year Forecast
                 </div>
-                <div style={{ fontSize: '12px', fontWeight: 'bold', color: theme === 'light' ? '#555' : '#ccc' }}>
+                <div style={{ fontSize: '12px', fontWeight: 'bold', color: theme === 'light' ? '#555' : '#ccc', marginTop: '6px' }}>
                     {getOneYearPrediction(currentMine.ph, 'ph', currentMine.riskScore).text}
                 </div>
             </div>
@@ -155,7 +155,7 @@ export default function MineDetailsDashboard({
                 <div style={{ fontSize: '10px', color: theme === 'light' ? '#888' : '#aaa', textTransform: 'uppercase' }}>
                     1-Year Forecast
                 </div>
-                <div style={{ fontSize: '12px', fontWeight: 'bold', color: theme === 'light' ? '#555' : '#ccc' }}>
+                <div style={{ fontSize: '12px', fontWeight: 'bold', color: theme === 'light' ? '#555' : '#ccc', marginTop: '6px' }}>
                     {getOneYearPrediction(currentMine.lead, 'lead', currentMine.riskScore).text}
                 </div>
             </div>
@@ -186,7 +186,7 @@ export default function MineDetailsDashboard({
                 <div style={{ fontSize: '10px', color: theme === 'light' ? '#888' : '#aaa', textTransform: 'uppercase' }}>
                     1-Year Forecast
                 </div>
-                <div style={{ fontSize: '12px', fontWeight: 'bold', color: theme === 'light' ? '#555' : '#ccc' }}>
+                <div style={{ fontSize: '12px', fontWeight: 'bold', color: theme === 'light' ? '#555' : '#ccc', marginTop: '6px' }}>
                     {getOneYearPrediction(currentMine.pm25, 'pm25', currentMine.riskScore).text}
                 </div>
             </div>
@@ -202,7 +202,7 @@ export default function MineDetailsDashboard({
           }}>
             <div className="tooltip-trigger" style={{ 
               color: isRestored ? '#38a169' : (theme === 'light' ? '#4f46e5' : '#818cf8'), 
-              fontSize: '11px', 
+              fontSize: '12px', 
               fontWeight: 'bold', 
               marginBottom: '5px', 
               cursor: 'help'
@@ -220,7 +220,9 @@ export default function MineDetailsDashboard({
             {/* trend icon */}
             <div style={{ 
               fontSize: '11px', 
-              fontWeight: 'bold', 
+              fontWeight: 'bold',
+              width: '85px',
+              display: 'inline-block',
               color: isRestored ? '#38a169' : (riskTrend > 0 ? '#ff1744' : (riskTrend < 0 ? '#4caf50' : '#888')) 
             }}>
               {isRestored ? '✓ Restored (Safe)' : (riskTrend > 0 ? `↗ +${Math.abs(riskTrend)} Increasing` : (riskTrend < 0 ? `↘ -${Math.abs(riskTrend)} Improving` : '→ Stable'))}
@@ -228,16 +230,16 @@ export default function MineDetailsDashboard({
 
             {/* Restoration Counter */}
             <div style={{ 
-                marginTop: '8px', 
-                paddingTop: '8px', 
-                borderTop: `1px solid ${theme === 'light' ? '#e2e8f0' : '#4a5568'}`,
-                display: 'flex', 
-                justifyContent: 'space-between',
-                fontSize: '10px', 
-                color: theme === 'light' ? '#555' : '#aaa'
+                marginTop: '12px', 
+                paddingTop: '10px', 
+                borderTop: `1px solid ${theme === 'light' ? '#e2e8f0' : '#4a5568'}`
             }}>
-                <span>Restorations:</span>
-                <strong style={{ color: isRestored ? '#38a169' : 'inherit' }}>{restorationCount}</strong>
+                <div style={{ fontSize: '10px', color: theme === 'light' ? '#888' : '#aaa', textTransform: 'uppercase' }}>
+                    RESTORATIONS
+                </div>
+                <div style={{ fontSize: '12px', fontWeight: 'bold', color: isRestored ? '#38a169' : (theme === 'light' ? '#555' : '#ccc'), marginTop: '6px' }}>
+                    {restorationCount}
+                </div>
             </div>
 
             <div style={{ fontSize: '9px', color: theme === 'light' ? '#888' : '#aaa', marginTop: '6px' }}>

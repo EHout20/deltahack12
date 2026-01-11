@@ -13,26 +13,45 @@ export function useMapboxInit(mapRef, mapContainerRef, minesGeoRef, setAllMines,
   useEffect(() => {
     mapboxgl.accessToken = accessToken;
     
-    // Hide map container initially to prevent visible transition
+    // Hide map container initially until bounds are calculated
     if (mapContainerRef.current) {
       mapContainerRef.current.style.opacity = '0';
     }
 
-    mapRef.current = new mapboxgl.Map({
-      container: mapContainerRef.current,
-      style: lightStyle,
-      center: canadaCenter,
-      zoom: 2.5,
-      projection: 'mercator',
-      maxBounds: canadaBounds,
-      minZoom: 3,
-      maxZoom: 15
-    });
+    try {
+      mapRef.current = new mapboxgl.Map({
+        container: mapContainerRef.current,
+        style: lightStyle,
+        center: [-96.0, 60.0], // Better initial center for Canada
+        zoom: 3.2, // Better initial zoom for Canada
+        projection: 'mercator',
+        maxBounds: canadaBounds,
+        minZoom: 3,
+        maxZoom: 15
+      });
+
+      console.log('Mapbox map created successfully');
+      
+      mapRef.current.on('error', (e) => {
+        console.error('Mapbox error:', e);
+      });
+    } catch (error) {
+      console.error('Failed to create Mapbox map:', error);
+      return;
+    }
     
     mapRef.current.on('load', () => {
+      console.log('Map loaded, fetching CSV data...');
       fetch('/data.csv')
-        .then(response => response.text())
+        .then(response => {
+          console.log('CSV response status:', response.status);
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          return response.text();
+        })
         .then(csvText => {
+          console.log('CSV data loaded, processing...');
           const lines = csvText.trim().split('\n');
           const headers = lines[0].split(',');
           
@@ -105,7 +124,7 @@ export function useMapboxInit(mapRef, mapContainerRef, minesGeoRef, setAllMines,
               duration: 0
             });
             
-            // Show map after bounds are set
+            // Show map after bounds are properly set
             if (mapContainerRef.current) {
               mapContainerRef.current.style.opacity = '1';
             }
@@ -295,7 +314,13 @@ export function useMapboxInit(mapRef, mapContainerRef, minesGeoRef, setAllMines,
             mapRef.current.getCanvas().style.cursor = '';
           });
         })
-        .catch(error => console.error('Error loading CSV:', error));
+        .catch(error => {
+          console.error('Error loading CSV:', error);
+          // Show map even if CSV loading fails
+          if (mapContainerRef.current) {
+            mapContainerRef.current.style.opacity = '1';
+          }
+        });
     });
 
     return () => {

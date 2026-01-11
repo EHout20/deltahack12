@@ -1,4 +1,4 @@
-export const accessToken = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN;
+export const accessToken = "pk.eyJ1IjoiYXl1c2huYWlyIiwiYSI6ImNtazl3ZmQ5NzFqYjMzZW9xZTRiZzdrb20ifQ.abAi0gpTK2yUe_FCElteRg";
 export const canadaCenter = [-106.3, 56.1];
 export const canadaBounds = [
   [-145.0, 38.0],

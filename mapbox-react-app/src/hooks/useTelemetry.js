@@ -20,7 +20,8 @@ export function useTelemetry(allMines, setAllMines, setDateDisplay) {
     // Update sensor data every 7 seconds (7 simulated days)
     const telemetryInterval = setInterval(() => {
       setAllMines(prevMines => prevMines.map(mine => {
-        const timeFactorDays = elapsedDaysRef.current;
+        // Use the mine's initial offset plus elapsed time for smooth continuation
+        const timeFactorDays = (mine.initialDaysOffset || 0) + elapsedDaysRef.current;
         
         // Add random fluctuations (each mine gets unique random variations)
         const phNoise = (Math.random() - 0.5) * 0.4; // ±0.2 fluctuation
@@ -51,10 +52,10 @@ export function useTelemetry(allMines, setAllMines, setDateDisplay) {
         // Determine color and status
         let color = '#4caf50';
         let status = 'LOW RISK';
-        if (riskScore >= 75) {
+        if (riskScore >= 60) {
           color = '#ff1744';
           status = 'CRITICAL';
-        } else if (riskScore >= 35) {
+        } else if (riskScore >= 30) {
           color = '#ff9800';
           status = 'MODERATE';
         }

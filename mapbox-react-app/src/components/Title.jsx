@@ -1,5 +1,5 @@
 import { useState, useEffect, use } from 'react';
-import logo from '../assets/minewatch.png';
+import logo from '../assets/MineWatch.png';
 
 export default function Title({ theme, isVisible }) {
     return (
@@ -9,7 +9,7 @@ export default function Title({ theme, isVisible }) {
                 top: '50%',
                 left: '50%',
                 transform: 'translate(-50%, -50%)',
-                zIndex: 10,
+                zIndex: 1000,
                 opacity: isVisible ? 1 : 0,
                 transition: 'opacity 2s ease-out',
                 pointerEvents: isVisible ? 'auto' : 'none',
