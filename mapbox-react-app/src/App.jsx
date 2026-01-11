@@ -199,6 +199,9 @@ function App() {
               'text-field': '{point_count_abbreviated}',
               'text-font': ['DIN Offc Pro Medium', 'Arial Unicode MS Bold'],
               'text-size': 12
+            },
+            paint: {
+              'text-color': theme === 'light' ? '#000' : '#fff'
             }
           });
           
@@ -462,8 +465,8 @@ return (
             position: 'absolute',
             top: '50px',
             width: '100%',
-            backgroundColor: 'white',
-            border: '1px solid #ccc',
+            backgroundColor: theme === 'light' ? 'white' : '#2a2a2a',
+            border: `1px solid ${theme === 'light' ? '#ccc' : '#444'}`,
             borderRadius: '8px',
             boxShadow: '0 4px 8px rgba(0,0,0,0.15)',
             maxHeight: '300px',
@@ -588,11 +591,12 @@ return (
                 style={{
                   padding: '12px',
                   cursor: 'pointer',
-                  borderBottom: idx < searchSuggestions.length - 1 ? '1px solid #eee' : 'none',
-                  transition: 'background 0.2s'
+                  borderBottom: idx < searchSuggestions.length - 1 ? `1px solid ${theme === 'light' ? '#eee' : '#444'}` : 'none',
+                  transition: 'background 0.2s',
+                  color: theme === 'light' ? '#333' : '#fff'
                 }}
-                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#f5f5f5'}
-                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'white'}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = theme === 'light' ? '#f5f5f5' : '#3a3a3a'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = theme === 'light' ? 'white' : '#2a2a2a'}
               >
                 {name}
               </div>
@@ -609,7 +613,7 @@ return (
         right: 0,
         top: '60px',
         bottom: 0,
-        backgroundColor: 'white',
+        backgroundColor: theme === 'light' ? '#fff' : '#1e1e1e',
         boxShadow: '-4px 0 20px rgba(0,0,0,0.15)',
         zIndex: 20,
         width: '400px', 
@@ -619,15 +623,15 @@ return (
       }}>
         <div style={{ padding: '24px' }}>
           {/* HEADER */}
-          <div style={{ borderBottom: '1px solid #eee', paddingBottom: '15px', marginBottom: '20px' }}>
+          <div style={{ borderBottom: theme === 'light' ? '1px solid #eee' : '1px solid #333', paddingBottom: '15px', marginBottom: '20px' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
               <div>
-                <h2 style={{ margin: 0, fontSize: '24px', color: '#333' }}>{locationSearch.name}</h2>
-                <p style={{ margin: '5px 0 0', color: '#666' }}>
+                <h2 style={{ margin: 0, fontSize: '24px', color: theme === 'light' ? '#333' : '#fff' }}>{locationSearch.name}</h2>
+                <p style={{ margin: '5px 0 0', color: theme === 'light' ? '#666' : '#aaa' }}>
                   {locationSearch.mines.length} mines found in this area
                 </p>
               </div>
-              <div style={{ fontSize: '12px', color: '#888', textAlign: 'right', cursor: 'pointer' }} onClick={() => setDateDisplay(new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' }))}>
+              <div style={{ fontSize: '12px', color: theme === 'light' ? '#888' : '#666', textAlign: 'right', cursor: 'pointer' }} onClick={() => setDateDisplay(new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' }))}>
                 {dateDisplay}
               </div>
             </div>
@@ -638,18 +642,19 @@ return (
               <div key={idx} style={{
                 padding: '16px',
                 marginBottom: '15px',
-                border: '1px solid #e0e0e0',
+                border: theme === 'light' ? '1px solid #e0e0e0' : '1px solid #333',
                 borderRadius: '12px',
                 cursor: 'pointer',
                 transition: 'all 0.2s',
-                boxShadow: '0 2px 4px rgba(0,0,0,0.05)'
+                boxShadow: '0 2px 4px rgba(0,0,0,0.05)',
+                backgroundColor: theme === 'light' ? 'white' : '#2a2a2a'
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = '#f8f9fa';
+                e.currentTarget.style.backgroundColor = theme === 'light' ? '#f8f9fa' : '#333';
                 e.currentTarget.style.boxShadow = '0 4px 8px rgba(0,0,0,0.1)';
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = 'white';
+                e.currentTarget.style.backgroundColor = theme === 'light' ? 'white' : '#2a2a2a';
                 e.currentTarget.style.boxShadow = '0 2px 4px rgba(0,0,0,0.05)';
               }}
               onClick={() => {
@@ -663,7 +668,7 @@ return (
                   properties: mine
                 });
               }}>
-                <div style={{ fontWeight: 'bold', color: '#333', marginBottom: '8px', fontSize: '16px' }}>
+                <div style={{ fontWeight: 'bold', color: theme === 'light' ? '#333' : '#fff', marginBottom: '8px', fontSize: '16px' }}>
                   {mine.name}
                 </div>
                 
@@ -683,12 +688,12 @@ return (
                   {mine.status} - {mine.riskScore}/100
                 </div>
                 
-                <div style={{ fontSize: '13px', color: '#666', marginTop: '6px' }}>
+                <div style={{ fontSize: '13px', color: theme === 'light' ? '#666' : '#aaa', marginTop: '6px' }}>
                   {mine.location !== 'Unknown' && `📍 ${mine.location}`}
                   {mine.county !== 'Unknown' && ` • ${mine.county}`}
                 </div>
                 
-                <div style={{ fontSize: '12px', color: '#888', marginTop: '6px' }}>
+                <div style={{ fontSize: '12px', color: theme === 'light' ? '#888' : '#666', marginTop: '6px' }}>
                   Lat: {mine.coordinates[1].toFixed(4)}, Lng: {mine.coordinates[0].toFixed(4)}
                 </div>
               </div>
@@ -701,12 +706,12 @@ return (
               width: 'calc(100% - 48px)',
               margin: '0 24px 24px 24px',
               padding: '12px',
-              backgroundColor: '#eee',
+              backgroundColor: theme === 'light' ? '#eee' : '#333',
               border: 'none',
               borderRadius: '8px',
               cursor: 'pointer',
               fontWeight: 'bold',
-              color: '#555'
+              color: theme === 'light' ? '#555' : '#aaa'
             }}
           >
             Close Dashboard
@@ -734,10 +739,10 @@ return (
         
         <div style={{ padding: '24px' }}>
           {/* HEADER */}
-          <div style={{ borderBottom: '1px solid ${theme === 'light' ? '#eee' : '#333'}', paddingBottom: '15px', marginBottom: '20px' }}>
+          <div style={{ borderBottom: `1px solid ${theme === 'light' ? '#eee' : '#333'}`, paddingBottom: '15px', marginBottom: '20px' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
               <div>
-                <h2 style={{ margin: 0, fontSize: '24px', color: '${theme === 'light' ? '#eee' : '#333'}' }}>{popup.properties.name || 'Unknown Mine'}</h2>
+                <h2 style={{ margin: 0, fontSize: '24px', color: `${theme === 'light' ? '#eee' : '#333'}` }}>{popup.properties.name || 'Unknown Mine'}</h2>
                 <p style={{ margin: '5px 0 0', color: '#666' }}>
                   Latitude: {popup.coordinates[1].toFixed(4)}, Longitude: {popup.coordinates[0].toFixed(4)}
                 </p>
